@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GoranHorvat
 {
-    class Racun
+    public class Racun
     {
-        private List<Usluga> listaStavki = new List<Usluga>();
+        public List<Usluga> listaStavki = new List<Usluga>();
 
         private int brojRacuna { get; set; }
         private string operater { get; set; }

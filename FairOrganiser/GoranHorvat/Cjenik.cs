@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoranHorvat
 {
-    class Cjenik
+    public class Cjenik
     {
         private DateTime vrijediOd { get; set; }
         private DateTime vrijediDo { get; set; }

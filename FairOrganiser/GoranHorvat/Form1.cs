@@ -17,6 +17,8 @@ namespace GoranHorvat
             InitializeComponent();
             //Application.Run(new FrmCjenik());
             //Application.Run(new FrmRacun());
+            //Application.Run(new FrmIzvjesce());
+            //Application.Run(new FrmKarta());
         }
     }
 }

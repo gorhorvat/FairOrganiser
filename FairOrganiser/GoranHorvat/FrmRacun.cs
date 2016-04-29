@@ -12,7 +12,7 @@ namespace GoranHorvat
 {
     public partial class FrmRacun : Form
     {
-        private List<Racun> listaRacuna = new List<Racun>();
+        public List<Racun> listaRacuna = new List<Racun>();
         //private Usluga novaStavka;
 
         public FrmRacun()

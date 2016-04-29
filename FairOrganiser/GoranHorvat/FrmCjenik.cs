@@ -12,7 +12,7 @@ namespace GoranHorvat
 {
     public partial class FrmCjenik : Form
     {
-        private List<TipKarte> listaTipova = new List<TipKarte>();
+        public List<TipKarte> listaTipova = new List<TipKarte>();
         //private Cjenik noviCjenik;
 
         public FrmCjenik()

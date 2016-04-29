@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoranHorvat
 {
-    class TipKarte
+    public class TipKarte
     {
         private int iznosPopusta { get; set; }
         private string naziv { get; set; }

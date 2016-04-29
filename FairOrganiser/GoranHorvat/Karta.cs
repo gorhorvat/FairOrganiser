@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoranHorvat
 {
-    class Karta
+    public class Karta
     {
         private int brojKarte { get; set; }
         private DateTime datum { get; set; }

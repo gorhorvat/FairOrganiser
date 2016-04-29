@@ -12,7 +12,7 @@ namespace GoranHorvat
 {
     public partial class FrmKarta : Form
     {
-        private List<Karta> listaKarata = new List<Karta>();
+        public List<Karta> listaKarata = new List<Karta>();
         //private Karta novaKarta;
 
         public FrmKarta()

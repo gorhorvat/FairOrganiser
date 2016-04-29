@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoranHorvat
 {
-    class Usluga
+    public class Usluga
     {
         private string naziv { get; set; }
         private string tip { get; set; }

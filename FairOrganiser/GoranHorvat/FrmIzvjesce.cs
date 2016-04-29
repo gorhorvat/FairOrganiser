@@ -12,7 +12,7 @@ namespace GoranHorvat
 {
     public partial class FrmIzvjesce : Form
     {
-        private List<Izvjesce> listaIzvjesca = new List<Izvjesce>();
+        public List<Izvjesce> listaIzvjesca = new List<Izvjesce>();
 
         public FrmIzvjesce()
         {
