@@ -15,7 +15,8 @@ namespace GoranHorvat
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("Test");
+            //Application.Run(new FrmCjenik());
+            //Application.Run(new FrmRacun());
         }
     }
 }

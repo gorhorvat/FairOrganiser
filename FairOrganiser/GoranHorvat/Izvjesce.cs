@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GoranHorvat
+{
+    class Izvjesce
+    {
+        private string nazivIzvjesca { get; set; }
+
+        public void brojPosjetitelja()
+        {
+
+        }
+
+        public void prodaneUsluge()
+        {
+
+        }
+
+        public void popunjenostKapaciteta()
+        {
+
+        }
+
+        public void organizatori()
+        {
+
+        }
+
+        public void ispisIzvjesca()
+        {
+
+        }
+    }
+}
