@@ -77,6 +77,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Baza\Baza.csproj">
+      <Project>{b53d13e6-2f8f-420b-99f9-a9a9cfc86b07}</Project>
+      <Name>Baza</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
       <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
       <Name>GeneriranjeIzvjesca</Name>
