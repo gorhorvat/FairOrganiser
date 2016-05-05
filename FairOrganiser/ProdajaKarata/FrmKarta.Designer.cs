@@ -1,4 +1,4 @@
-﻿namespace GoranHorvat
+﻿namespace ProdajaKarata
 {
     partial class FrmKarta
     {

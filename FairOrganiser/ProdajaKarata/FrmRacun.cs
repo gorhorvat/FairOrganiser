@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GoranHorvat
+namespace ProdajaKarata
 {
-    public partial class FrmIzvjesce : Form
+    public partial class FrmRacun : Form
     {
-        public List<Izvjesce> listaIzvjesca = new List<Izvjesce>();
+        public List<Racun> listaRacuna = new List<Racun>();
+        //private Usluga novaStavka;
 
-        public FrmIzvjesce()
+        public FrmRacun()
         {
             InitializeComponent();
         }

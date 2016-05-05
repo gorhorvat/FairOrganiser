@@ -1,4 +1,4 @@
-﻿namespace GoranHorvat
+﻿namespace GeneriranjeIzvjesca
 {
     partial class FrmIzvjesce
     {

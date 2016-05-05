@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoranHorvat
+namespace GeneriranjeIzvjesca
 {
     public class Izvjesce
     {
