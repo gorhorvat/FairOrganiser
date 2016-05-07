@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42C447F6-DA12-476D-8E31-6E3D313B24C4}</ProjectGuid>
+    <ProjectGuid>{92FE0752-68E1-47BC-A3D3-C14EA7719E80}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GlavnaForma</RootNamespace>
-    <AssemblyName>GlavnaForma</AssemblyName>
+    <RootNamespace>NajamOprme</RootNamespace>
+    <AssemblyName>NajamOprme</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,26 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPrijava.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrijava.Designer.cs">
-      <DependentUpon>FrmPrijava.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrijava.resx">
-      <DependentUpon>FrmPrijava.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,20 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Baza\Baza.csproj">
-      <Project>{b53d13e6-2f8f-420b-99f9-a9a9cfc86b07}</Project>
-      <Name>Baza</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
-      <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
-      <Name>GeneriranjeIzvjesca</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProdajaKarata\ProdajaKarata.csproj">
-      <Project>{d971579a-ffea-4d87-b982-3051ac2d3e27}</Project>
-      <Name>ProdajaKarata</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

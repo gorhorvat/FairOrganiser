@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GlavnaForma
 {
-    public partial class Form1 : Form
+    public partial class FrmMain : Form
     {
-        public Form1()
+        public FrmMain()
         {
             InitializeComponent();
             /*
@@ -24,5 +24,7 @@ namespace GlavnaForma
 
             //test
         }
+
+        
     }
 }
