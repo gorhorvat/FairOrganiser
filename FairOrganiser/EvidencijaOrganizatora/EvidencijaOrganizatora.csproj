@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42C447F6-DA12-476D-8E31-6E3D313B24C4}</ProjectGuid>
+    <ProjectGuid>{0D380934-B9A9-4FDA-A890-D12E18E2B9B8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GlavnaForma</RootNamespace>
-    <AssemblyName>GlavnaForma</AssemblyName>
+    <RootNamespace>EvidencijaOrganizatora</RootNamespace>
+    <AssemblyName>EvidencijaOrganizatora</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="FizickaOsoba.cs" />
+    <Compile Include="FrmNoviOrganizator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="FrmNoviOrganizator.Designer.cs">
+      <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrijava.cs">
+    <Compile Include="FrmOrganizator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrijava.Designer.cs">
-      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    <Compile Include="FrmOrganizator.Designer.cs">
+      <DependentUpon>FrmOrganizator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Organizator.cs" />
+    <Compile Include="PravnaOsoba.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNoviOrganizator.resx">
+      <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrijava.resx">
-      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOrganizator.resx">
+      <DependentUpon>FrmOrganizator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,32 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EvidencijaOrganizatora\EvidencijaOrganizatora.csproj">
-      <Project>{0d380934-b9a9-4fda-a890-d12e18e2b9b8}</Project>
-      <Name>EvidencijaOrganizatora</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EvidencijaSudionika\EvidencijaSudionika.csproj">
-      <Project>{42d40b3a-9862-4c22-9c6d-b582f47fa332}</Project>
-      <Name>EvidencijaSudionika</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
-      <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
-      <Name>GeneriranjeIzvjesca</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\KreiranjeDogadaja\KreiranjeDogadaja.csproj">
-      <Project>{26a4328b-e980-4b64-9b88-ac62a0c5d18f}</Project>
-      <Name>KreiranjeDogadaja</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NajamOprme\NajamOpreme.csproj">
-      <Project>{92fe0752-68e1-47bc-a3d3-c14ea7719e80}</Project>
-      <Name>NajamOpreme</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProdajaKarata\ProdajaKarata.csproj">
-      <Project>{d971579a-ffea-4d87-b982-3051ac2d3e27}</Project>
-      <Name>ProdajaKarata</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

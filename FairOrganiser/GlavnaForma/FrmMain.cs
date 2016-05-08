@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using ProdajaKarata;
 using GeneriranjeIzvjesca;
 using KreiranjeDogadaja;
+using EvidencijaSudionika;
+using EvidencijaOrganizatora;
 
 
 
@@ -27,9 +29,9 @@ namespace GlavnaForma
             Application.Run(new FrmDogadaj());
             Application.Run(new FrmRacun());
             Application.Run(new FrmIzvjesce());
+            Application.Run(new FrmSudionik());
+            Application.Run(new FrmOrganizator());
             */
-
-            //test
         }
 
 
