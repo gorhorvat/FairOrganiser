@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProdajaKarata;
+using GeneriranjeIzvjesca;
+using KreiranjeDogadaja;
+
+
 
 namespace GlavnaForma
 {
@@ -16,15 +21,17 @@ namespace GlavnaForma
         {
             InitializeComponent();
             /*
-            Application.Run(new ProdajaKarata.FrmKarta());
-            Application.Run(new ProdajaKarata.FrmRacun());
-            Application.Run(new ProdajaKarata.FrmCjenik());
-            Application.Run(new GeneriranjeIzvjesca.FrmIzvjesce());
+            Application.Run(new FrmPrijava());
+            Application.Run(new FrmKarta());
+            Application.Run(new FrmCjenik());
+            Application.Run(new FrmDogadaj());
+            Application.Run(new FrmRacun());
+            Application.Run(new FrmIzvjesce());
             */
 
             //test
         }
 
-        
+
     }
 }

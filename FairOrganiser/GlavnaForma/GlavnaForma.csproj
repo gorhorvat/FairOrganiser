@@ -89,13 +89,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Baza\Baza.csproj">
-      <Project>{b53d13e6-2f8f-420b-99f9-a9a9cfc86b07}</Project>
-      <Name>Baza</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
       <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
       <Name>GeneriranjeIzvjesca</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KreiranjeDogadaja\KreiranjeDogadaja.csproj">
+      <Project>{26a4328b-e980-4b64-9b88-ac62a0c5d18f}</Project>
+      <Name>KreiranjeDogadaja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NajamOprme\NajamOpreme.csproj">
+      <Project>{92fe0752-68e1-47bc-a3d3-c14ea7719e80}</Project>
+      <Name>NajamOpreme</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProdajaKarata\ProdajaKarata.csproj">
       <Project>{d971579a-ffea-4d87-b982-3051ac2d3e27}</Project>
