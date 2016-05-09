@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GeneriranjeIzvjesca
+namespace ProdajaKarata
 {
-    public partial class FrmIzvjesce : Form
+    public partial class FrmNovaStavka : Form
     {
-        public List<Izvjesce> listaIzvjesca = new List<Izvjesce>();
-
-        public FrmIzvjesce()
+        public FrmNovaStavka()
         {
             InitializeComponent();
         }
 
-        private void btnIspisiIzvjestaj_Click(object sender, EventArgs e)
+        private void btnPotvrdi_Click(object sender, EventArgs e)
         {
             Close();
         }

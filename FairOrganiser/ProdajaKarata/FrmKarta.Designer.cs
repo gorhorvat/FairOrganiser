@@ -125,6 +125,7 @@
             this.btnIspisi.TabIndex = 9;
             this.btnIspisi.Text = "Ispis";
             this.btnIspisi.UseVisualStyleBackColor = true;
+            this.btnIspisi.Click += new System.EventHandler(this.btnIspisi_Click);
             // 
             // FrmKarta
             // 
@@ -142,7 +143,7 @@
             this.Controls.Add(this.txtBrojKarte);
             this.Controls.Add(this.lblBrKarte);
             this.Name = "FrmKarta";
-            this.Text = "FrmKarta";
+            this.Text = "Karta";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -39,10 +39,13 @@
             this.txtNazivTvrtke = new System.Windows.Forms.TextBox();
             this.txtSjediste = new System.Windows.Forms.TextBox();
             this.txtOib = new System.Windows.Forms.TextBox();
-            this.txtListaStavki = new System.Windows.Forms.TextBox();
             this.lblUkupno = new System.Windows.Forms.Label();
             this.txtUkupno = new System.Windows.Forms.TextBox();
             this.btnIspisi = new System.Windows.Forms.Button();
+            this.dgvListaStavki = new System.Windows.Forms.DataGridView();
+            this.btnDodajStavku = new System.Windows.Forms.Button();
+            this.btnObrisiStavku = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBrojRacuna
@@ -137,15 +140,6 @@
             this.txtOib.Size = new System.Drawing.Size(100, 20);
             this.txtOib.TabIndex = 10;
             // 
-            // txtListaStavki
-            // 
-            this.txtListaStavki.Location = new System.Drawing.Point(15, 135);
-            this.txtListaStavki.Multiline = true;
-            this.txtListaStavki.Name = "txtListaStavki";
-            this.txtListaStavki.ReadOnly = true;
-            this.txtListaStavki.Size = new System.Drawing.Size(550, 302);
-            this.txtListaStavki.TabIndex = 11;
-            // 
             // lblUkupno
             // 
             this.lblUkupno.AutoSize = true;
@@ -171,16 +165,47 @@
             this.btnIspisi.TabIndex = 14;
             this.btnIspisi.Text = "Ispis";
             this.btnIspisi.UseVisualStyleBackColor = true;
+            this.btnIspisi.Click += new System.EventHandler(this.btnIspisi_Click);
+            // 
+            // dgvListaStavki
+            // 
+            this.dgvListaStavki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaStavki.Location = new System.Drawing.Point(15, 101);
+            this.dgvListaStavki.Name = "dgvListaStavki";
+            this.dgvListaStavki.Size = new System.Drawing.Size(550, 336);
+            this.dgvListaStavki.TabIndex = 15;
+            // 
+            // btnDodajStavku
+            // 
+            this.btnDodajStavku.Location = new System.Drawing.Point(15, 443);
+            this.btnDodajStavku.Name = "btnDodajStavku";
+            this.btnDodajStavku.Size = new System.Drawing.Size(69, 36);
+            this.btnDodajStavku.TabIndex = 16;
+            this.btnDodajStavku.Text = "Dodaj stavku";
+            this.btnDodajStavku.UseVisualStyleBackColor = true;
+            this.btnDodajStavku.Click += new System.EventHandler(this.btnDodajStavku_Click);
+            // 
+            // btnObrisiStavku
+            // 
+            this.btnObrisiStavku.Location = new System.Drawing.Point(90, 443);
+            this.btnObrisiStavku.Name = "btnObrisiStavku";
+            this.btnObrisiStavku.Size = new System.Drawing.Size(67, 36);
+            this.btnObrisiStavku.TabIndex = 17;
+            this.btnObrisiStavku.Text = "Obrisi stavku";
+            this.btnObrisiStavku.UseVisualStyleBackColor = true;
+            this.btnObrisiStavku.Click += new System.EventHandler(this.btnObrisiStavku_Click);
             // 
             // FrmRacun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 509);
+            this.Controls.Add(this.btnObrisiStavku);
+            this.Controls.Add(this.btnDodajStavku);
+            this.Controls.Add(this.dgvListaStavki);
             this.Controls.Add(this.btnIspisi);
             this.Controls.Add(this.txtUkupno);
             this.Controls.Add(this.lblUkupno);
-            this.Controls.Add(this.txtListaStavki);
             this.Controls.Add(this.txtOib);
             this.Controls.Add(this.txtSjediste);
             this.Controls.Add(this.txtNazivTvrtke);
@@ -193,7 +218,8 @@
             this.Controls.Add(this.txtBrojRacuna);
             this.Controls.Add(this.lblBrojRacuna);
             this.Name = "FrmRacun";
-            this.Text = "FrmRacun";
+            this.Text = "Racun";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,9 +238,11 @@
         private System.Windows.Forms.TextBox txtNazivTvrtke;
         private System.Windows.Forms.TextBox txtSjediste;
         private System.Windows.Forms.TextBox txtOib;
-        private System.Windows.Forms.TextBox txtListaStavki;
         private System.Windows.Forms.Label lblUkupno;
         private System.Windows.Forms.TextBox txtUkupno;
         private System.Windows.Forms.Button btnIspisi;
+        private System.Windows.Forms.DataGridView dgvListaStavki;
+        private System.Windows.Forms.Button btnDodajStavku;
+        private System.Windows.Forms.Button btnObrisiStavku;
     }
 }

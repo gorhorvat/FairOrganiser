@@ -19,5 +19,10 @@ namespace ProdajaKarata
         {
             InitializeComponent();
         }
+
+        private void btnIspisi_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
