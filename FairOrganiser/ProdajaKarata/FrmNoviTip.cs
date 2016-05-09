@@ -17,7 +17,7 @@ namespace ProdajaKarata
             InitializeComponent();
         }
 
-        private void btnDodaj_Click(object sender, EventArgs e)
+        private void btnPotvrdi_Click(object sender, EventArgs e)
         {
             Close();
         }
