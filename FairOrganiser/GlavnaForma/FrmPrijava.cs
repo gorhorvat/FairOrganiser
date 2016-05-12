@@ -27,5 +27,11 @@ namespace GlavnaForma
             return false;
             
         }
+
+        private void btnPrijava_Click(object sender, EventArgs e)
+        {
+                FrmMain glavniIzbornik = new FrmMain();
+                glavniIzbornik.ShowDialog();
+        }
     }
 }

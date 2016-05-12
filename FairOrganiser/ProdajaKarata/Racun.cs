@@ -42,11 +42,6 @@ namespace ProdajaKarata
 
         }
 
-        public void izmjeniRacun()
-        {
-
-        }
-
         public void ispisiRacun()
         {
 

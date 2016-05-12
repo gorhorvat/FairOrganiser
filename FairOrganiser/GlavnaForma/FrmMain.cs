@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using ProdajaKarata;
 using GeneriranjeIzvjesca;
 using KreiranjeDogadaja;
-
-
+using EvidencijaOrganizatora;
+using EvidencijaSudionika;
 
 namespace GlavnaForma
 {
@@ -20,18 +20,55 @@ namespace GlavnaForma
         public FrmMain()
         {
             InitializeComponent();
-            /*
-            Application.Run(new FrmPrijava());
-            Application.Run(new FrmKarta());
-            Application.Run(new FrmCjenik());
-            Application.Run(new FrmDogadaj());
-            Application.Run(new FrmRacun());
-            Application.Run(new FrmIzvjesce());
-            */
-
-            //test
+            
         }
 
+        private void btnOrganizatori_Click(object sender, EventArgs e)
+        {
+            FrmOrganizator organizator = new FrmOrganizator();
+            organizator.ShowDialog();
+        }
 
+        private void btnSudionici_Click(object sender, EventArgs e)
+        {
+            FrmSudionik sudionik = new FrmSudionik();
+            sudionik.ShowDialog();
+        }
+
+        private void btnCjenik_Click(object sender, EventArgs e)
+        {
+            FrmCjenik cjenik = new FrmCjenik();
+            cjenik.ShowDialog();
+        }
+
+        private void btnIzvjesce_Click(object sender, EventArgs e)
+        {
+            FrmIzvjesce izvjesce = new FrmIzvjesce();
+            izvjesce.ShowDialog();
+        }
+
+        private void btnRacun_Click(object sender, EventArgs e)
+        {
+            FrmRacun racun = new FrmRacun();
+            racun.ShowDialog();
+        }
+
+        private void btnKarta_Click(object sender, EventArgs e)
+        {
+            FrmKarta karta = new FrmKarta();
+            karta.Show();
+        }
+
+        private void btnDogadaj_Click(object sender, EventArgs e)
+        {
+            FrmDogadaj dogadaj = new FrmDogadaj();
+            dogadaj.ShowDialog();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            FrmPrijava prijava = new FrmPrijava();
+            prijava.ShowDialog();
+        }
     }
 }

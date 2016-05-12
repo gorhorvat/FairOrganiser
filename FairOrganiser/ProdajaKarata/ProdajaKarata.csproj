@@ -59,6 +59,18 @@
     <Compile Include="FrmKarta.Designer.cs">
       <DependentUpon>FrmKarta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNovaStavka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNovaStavka.Designer.cs">
+      <DependentUpon>FrmNovaStavka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNoviTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNoviTip.Designer.cs">
+      <DependentUpon>FrmNoviTip.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRacun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKarta.resx">
       <DependentUpon>FrmKarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNovaStavka.resx">
+      <DependentUpon>FrmNovaStavka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNoviTip.resx">
+      <DependentUpon>FrmNoviTip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRacun.resx">
       <DependentUpon>FrmRacun.cs</DependentUpon>

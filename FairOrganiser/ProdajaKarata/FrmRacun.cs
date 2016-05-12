@@ -19,5 +19,21 @@ namespace ProdajaKarata
         {
             InitializeComponent();
         }
+
+        private void btnIspisi_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnDodajStavku_Click(object sender, EventArgs e)
+        {
+            FrmNovaStavka novaStavka = new FrmNovaStavka();
+            novaStavka.ShowDialog();
+        }
+
+        private void btnObrisiStavku_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

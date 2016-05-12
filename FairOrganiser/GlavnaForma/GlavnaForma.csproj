@@ -89,6 +89,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EvidencijaOrganizatora\EvidencijaOrganizatora.csproj">
+      <Project>{0d380934-b9a9-4fda-a890-d12e18e2b9b8}</Project>
+      <Name>EvidencijaOrganizatora</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EvidencijaSudionika\EvidencijaSudionika.csproj">
+      <Project>{42d40b3a-9862-4c22-9c6d-b582f47fa332}</Project>
+      <Name>EvidencijaSudionika</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
       <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
       <Name>GeneriranjeIzvjesca</Name>

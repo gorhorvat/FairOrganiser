@@ -19,5 +19,16 @@ namespace ProdajaKarata
         {
             InitializeComponent();
         }
+
+        private void btnDodajNovi_Click(object sender, EventArgs e)
+        {
+            FrmNoviTip noviTip = new FrmNoviTip();
+            noviTip.ShowDialog();
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
