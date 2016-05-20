@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cjenik.cs" />
     <Compile Include="FrmCjenik.cs">
       <SubType>Form</SubType>
     </Compile>
