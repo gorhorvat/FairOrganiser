@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +61,7 @@
     <Compile Include="FrmPrijava.Designer.cs">
       <DependentUpon>FrmPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogikaGF.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMain.resx">
@@ -89,29 +93,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EvidencijaOrganizatora\EvidencijaOrganizatora.csproj">
-      <Project>{0d380934-b9a9-4fda-a890-d12e18e2b9b8}</Project>
-      <Name>EvidencijaOrganizatora</Name>
+    <ProjectReference Include="..\Abstracts\Abstracts.csproj">
+      <Project>{dd851f51-e182-440a-93b0-d5ac2deae570}</Project>
+      <Name>Abstracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EvidencijaSudionika\EvidencijaSudionika.csproj">
-      <Project>{42d40b3a-9862-4c22-9c6d-b582f47fa332}</Project>
-      <Name>EvidencijaSudionika</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
-      <Project>{446fd409-daa7-445f-a169-7701bf25830d}</Project>
-      <Name>GeneriranjeIzvjesca</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\KreiranjeDogadaja\KreiranjeDogadaja.csproj">
-      <Project>{26a4328b-e980-4b64-9b88-ac62a0c5d18f}</Project>
-      <Name>KreiranjeDogadaja</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NajamOpreme\NajamOpreme.csproj">
-      <Project>{360c5762-4e1c-4eb3-8e60-1af67ca0f62c}</Project>
-      <Name>NajamOpreme</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProdajaKarata\ProdajaKarata.csproj">
-      <Project>{d971579a-ffea-4d87-b982-3051ac2d3e27}</Project>
-      <Name>ProdajaKarata</Name>
+    <ProjectReference Include="..\Mediator\Mediator.csproj">
+      <Project>{a57ed33a-5d0b-4e42-be05-5f813e79a034}</Project>
+      <Name>Mediator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

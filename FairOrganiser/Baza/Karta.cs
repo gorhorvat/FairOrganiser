@@ -12,7 +12,7 @@ namespace Baza
         private DateTime datum { get; set; }
         private float cijena { get; set; }
         private TipKarte tipKarte { get; set; }
-        //private Dogadaj dogadaj { get; set; }
+        private Dogadaj dogadaj { get; set; }
 
         public Karta(int broj, DateTime datum, float cijena, TipKarte tipKarte) //dodati događaj kad fran kreira događaj
         {

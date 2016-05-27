@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Baza
 {
-    abstract class Organizator
+    public abstract class Organizator
     {
         public string oib { get; set; }
         public string adresa { get; set; }

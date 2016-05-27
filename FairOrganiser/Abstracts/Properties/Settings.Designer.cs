@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VizualniPrikazProstora.Properties
+namespace Abstracts.Properties
 {
 
 

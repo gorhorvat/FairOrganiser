@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Baza
 {
-    class FizickaOsoba : Organizator
+    public class FizickaOsoba : Organizator
     {
         public string ime { get; set; }
         public string prezime { get; set; }
