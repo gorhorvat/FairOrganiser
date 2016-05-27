@@ -49,9 +49,10 @@ namespace KreiranjeDogadaja
             Mediator.Send("DBEXEC",lista, this);
         }
 
-       
+        
         public override void Receive<T>(AbstractUser from, string message, List<T> lista)
         {
+            //dindu nuffin
             throw new NotImplementedException();
         }
     }

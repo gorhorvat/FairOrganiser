@@ -23,16 +23,41 @@ namespace Mediator
         {
             List<Prostor> lista = new List<Prostor>();
 
-            DbDataReader dbReader = Baza.DB.Instance.GetDataReader("Select * from Prostor");
+            DbDataReader dbReader = DB.Instance.GetDataReader("Select * from Prostor");
             while(dbReader.Read())
             {
-                Baza.Prostor prostor = new Baza.Prostor(dbReader);
+                Prostor prostor = new Prostor(dbReader);
                 lista.Add(prostor);
             }
 
             dbReader.Close();
             return lista;
+        }
 
+        public List<Dogadaj> GetDogadaji()
+        {
+            List<Dogadaj> lista = new List<Dogadaj>();
+            DbDataReader dbReader = DB.Instance.GetDataReader("Select * from Dogadaj");
+            while (dbReader.Read())
+            {
+                Dogadaj dogadaj = new Dogadaj(dbReader);
+                lista.Add(dogadaj);
+            }
+            dbReader.Close();
+            return lista;
+        }
+
+        public List<TipKarte> GetTipoviKarte()
+        {
+            List<TipKarte> lista = new List<TipKarte>();
+            DbDataReader dbReader = DB.Instance.GetDataReader("Select * from TipKarte");
+            while (dbReader.Read())
+            {
+                TipKarte tip = new TipKarte(dbReader);
+                lista.Add(tip);
+            }
+            dbReader.Close();
+            return lista;
         }
 
         public override void Receive<T>(AbstractUser from, string message, List<T> lista)
@@ -49,7 +74,7 @@ namespace Mediator
                 {
 
 
-                    int result = DB.Instance.Insert(d.Naziv, d.Pocetak);
+                    int result = DB.Instance.Insert(d.Naziv, d.Pocetak, d.Kraj, d.CijenaKarte);
                     Console.WriteLine(result);
                 }
 
@@ -97,7 +122,7 @@ public List<Organizator> GetOrganizatori ()
                 {
                    
 
-                    int result = DB.Instance.Insert(d.Naziv, d.Pocetak);
+                    int result = DB.Instance.Insert(d.Naziv, d.Pocetak, d.Kraj, d.CijenaKarte);
                     Console.WriteLine(result);
                 }
                 

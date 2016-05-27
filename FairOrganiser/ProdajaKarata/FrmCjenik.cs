@@ -12,8 +12,6 @@ namespace ProdajaKarata
 {
     public partial class FrmCjenik : Form
     {
-       
-        //private Cjenik noviCjenik;
 
         public FrmCjenik()
         {

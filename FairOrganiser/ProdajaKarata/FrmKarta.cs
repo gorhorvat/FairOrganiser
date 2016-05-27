@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baza;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,18 @@ namespace ProdajaKarata
 {
     public partial class FrmKarta : Form
     {
-        
-        //private Karta novaKarta;
+        LogikaPK _logikaPK;
 
-        public FrmKarta()
+        public FrmKarta(LogikaPK logikaPK)
         {
+            _logikaPK = logikaPK;
             InitializeComponent();
+        }
+
+        public void SetDataSource(List<Dogadaj> dogadaj, List<TipKarte> tip)
+        {
+            dgvPopisDogadaja.DataSource = dogadaj.Select(d => new { Naziv = d.Naziv }).ToList();
+            dgvPopisTipova.DataSource = tip.Select(t => new { Naziv = t.Naziv }).ToList();
         }
 
         private void btnIspisi_Click(object sender, EventArgs e)

@@ -97,11 +97,13 @@ namespace Baza
         }
 
         // ovo radi, ono gore nece, samo c/p za drugu tablicu, mozda napravim da radi za vise tablica sa parametrima al dunno
-        public int Insert(string name, DateTime dtm)
+        public int Insert(string name, DateTime dtmOd, DateTime dtmDo, float cijena)
         {
-            SqlCommand command = new SqlCommand("Insert into Dogadaj (naziv,datum) values (@naziv,@datum)",Connection);
+            SqlCommand command = new SqlCommand("Insert into Dogadaj (naziv,datumOd, datumDo, cijenaKarte) values (@naziv,@datumOd, @datumDo, @cijenaKarte)",Connection);
             command.Parameters.AddWithValue("@naziv", name);
-            command.Parameters.AddWithValue("@datum", dtm);
+            command.Parameters.AddWithValue("@datumOd", dtmOd);
+            command.Parameters.AddWithValue("@datumDo", dtmDo);
+            command.Parameters.AddWithValue("@cijenaKarte", cijena);
             return command.ExecuteNonQuery();
         }
 

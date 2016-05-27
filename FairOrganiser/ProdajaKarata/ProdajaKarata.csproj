@@ -79,6 +79,7 @@
     <Compile Include="FrmRacun.Designer.cs">
       <DependentUpon>FrmRacun.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogikaPK.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCjenik.resx">

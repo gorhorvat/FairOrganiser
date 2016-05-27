@@ -30,7 +30,6 @@
         {
             this.btnOrganizatori = new System.Windows.Forms.Button();
             this.btnSudionici = new System.Windows.Forms.Button();
-            this.btnCjenik = new System.Windows.Forms.Button();
             this.btnIzvjesce = new System.Windows.Forms.Button();
             this.btnRacun = new System.Windows.Forms.Button();
             this.btnKarta = new System.Windows.Forms.Button();
@@ -58,19 +57,9 @@
             this.btnSudionici.UseVisualStyleBackColor = true;
             this.btnSudionici.Click += new System.EventHandler(this.btnSudionici_Click);
             // 
-            // btnCjenik
-            // 
-            this.btnCjenik.Location = new System.Drawing.Point(158, 94);
-            this.btnCjenik.Name = "btnCjenik";
-            this.btnCjenik.Size = new System.Drawing.Size(213, 31);
-            this.btnCjenik.TabIndex = 2;
-            this.btnCjenik.Text = "Cjenik";
-            this.btnCjenik.UseVisualStyleBackColor = true;
-            this.btnCjenik.Click += new System.EventHandler(this.btnCjenik_Click);
-            // 
             // btnIzvjesce
             // 
-            this.btnIzvjesce.Location = new System.Drawing.Point(158, 131);
+            this.btnIzvjesce.Location = new System.Drawing.Point(158, 94);
             this.btnIzvjesce.Name = "btnIzvjesce";
             this.btnIzvjesce.Size = new System.Drawing.Size(213, 31);
             this.btnIzvjesce.TabIndex = 3;
@@ -80,7 +69,7 @@
             // 
             // btnRacun
             // 
-            this.btnRacun.Location = new System.Drawing.Point(158, 168);
+            this.btnRacun.Location = new System.Drawing.Point(158, 131);
             this.btnRacun.Name = "btnRacun";
             this.btnRacun.Size = new System.Drawing.Size(213, 31);
             this.btnRacun.TabIndex = 4;
@@ -90,7 +79,7 @@
             // 
             // btnKarta
             // 
-            this.btnKarta.Location = new System.Drawing.Point(158, 205);
+            this.btnKarta.Location = new System.Drawing.Point(158, 168);
             this.btnKarta.Name = "btnKarta";
             this.btnKarta.Size = new System.Drawing.Size(213, 31);
             this.btnKarta.TabIndex = 5;
@@ -100,7 +89,7 @@
             // 
             // btnDogadaj
             // 
-            this.btnDogadaj.Location = new System.Drawing.Point(158, 242);
+            this.btnDogadaj.Location = new System.Drawing.Point(158, 205);
             this.btnDogadaj.Name = "btnDogadaj";
             this.btnDogadaj.Size = new System.Drawing.Size(213, 31);
             this.btnDogadaj.TabIndex = 6;
@@ -110,7 +99,7 @@
             // 
             // btnOdjava
             // 
-            this.btnOdjava.Location = new System.Drawing.Point(158, 279);
+            this.btnOdjava.Location = new System.Drawing.Point(158, 242);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(213, 31);
             this.btnOdjava.TabIndex = 7;
@@ -122,13 +111,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 329);
+            this.ClientSize = new System.Drawing.Size(519, 284);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnDogadaj);
             this.Controls.Add(this.btnKarta);
             this.Controls.Add(this.btnRacun);
             this.Controls.Add(this.btnIzvjesce);
-            this.Controls.Add(this.btnCjenik);
             this.Controls.Add(this.btnSudionici);
             this.Controls.Add(this.btnOrganizatori);
             this.Name = "FrmMain";
@@ -141,7 +129,6 @@
 
         private System.Windows.Forms.Button btnOrganizatori;
         private System.Windows.Forms.Button btnSudionici;
-        private System.Windows.Forms.Button btnCjenik;
         private System.Windows.Forms.Button btnIzvjesce;
         private System.Windows.Forms.Button btnRacun;
         private System.Windows.Forms.Button btnKarta;

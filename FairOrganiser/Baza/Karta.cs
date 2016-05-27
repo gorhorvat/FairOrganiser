@@ -10,15 +10,13 @@ namespace Baza
     {
         private int brojKarte { get; set; }
         private DateTime datum { get; set; }
-        private float cijena { get; set; }
         private TipKarte tipKarte { get; set; }
         private Dogadaj dogadaj { get; set; }
 
-        public Karta(int broj, DateTime datum, float cijena, TipKarte tipKarte, Dogadaj dogadaj)
+        public Karta(int broj, DateTime datum, TipKarte tipKarte, Dogadaj dogadaj)
         {
             this.brojKarte = broj;
             this.datum = datum;
-            this.cijena = cijena;
             this.tipKarte = tipKarte;
             this.dogadaj = dogadaj;
         }

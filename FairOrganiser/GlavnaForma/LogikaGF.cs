@@ -24,5 +24,10 @@ namespace GlavnaForma
             _mediator.GetDataDogadaj();
         }
 
+        public static void StartKarta()
+        {
+            _mediator.GetDataKarta();
+        }
+
     }
 }

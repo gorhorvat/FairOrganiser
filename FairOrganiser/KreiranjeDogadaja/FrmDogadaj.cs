@@ -35,7 +35,7 @@ namespace KreiranjeDogadaja
 
         private void btnDodajDogadaj_Click(object sender, EventArgs e)
         {
-            Dogadaj d = new Dogadaj(tbNaziv.Text, dtpPocetak.Value, dtpZavrsetak.Value);
+            Dogadaj d = new Dogadaj(tbNaziv.Text, float.Parse(txtCijenaKarte.Text), dtpPocetak.Value, dtpZavrsetak.Value);
             _logikaKD.SaveDogadaj(d);
         }
     }

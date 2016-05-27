@@ -32,12 +32,15 @@
             this.txtBrojKarte = new System.Windows.Forms.TextBox();
             this.lblDatum = new System.Windows.Forms.Label();
             this.txtDatum = new System.Windows.Forms.TextBox();
-            this.cmbDogadaj = new System.Windows.Forms.ComboBox();
+            this.lblTipkarte = new System.Windows.Forms.Label();
+            this.btnIspisi = new System.Windows.Forms.Button();
             this.txtCijenaKarte = new System.Windows.Forms.TextBox();
             this.lblCijenaKarte = new System.Windows.Forms.Label();
-            this.lblTipkarte = new System.Windows.Forms.Label();
-            this.cmbTipKarte = new System.Windows.Forms.ComboBox();
-            this.btnIspisi = new System.Windows.Forms.Button();
+            this.dgvPopisDogadaja = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvPopisTipova = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisDogadaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisTipova)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBrKarte
@@ -74,18 +77,28 @@
             this.txtDatum.Size = new System.Drawing.Size(79, 20);
             this.txtDatum.TabIndex = 3;
             // 
-            // cmbDogadaj
+            // lblTipkarte
             // 
-            this.cmbDogadaj.FormattingEnabled = true;
-            this.cmbDogadaj.Location = new System.Drawing.Point(25, 124);
-            this.cmbDogadaj.Name = "cmbDogadaj";
-            this.cmbDogadaj.Size = new System.Drawing.Size(229, 21);
-            this.cmbDogadaj.TabIndex = 4;
-            this.cmbDogadaj.Text = "Odaberite događaj";
+            this.lblTipkarte.AutoSize = true;
+            this.lblTipkarte.Location = new System.Drawing.Point(236, 98);
+            this.lblTipkarte.Name = "lblTipkarte";
+            this.lblTipkarte.Size = new System.Drawing.Size(49, 13);
+            this.lblTipkarte.TabIndex = 7;
+            this.lblTipkarte.Text = "Tip karte";
+            // 
+            // btnIspisi
+            // 
+            this.btnIspisi.Location = new System.Drawing.Point(396, 207);
+            this.btnIspisi.Name = "btnIspisi";
+            this.btnIspisi.Size = new System.Drawing.Size(81, 33);
+            this.btnIspisi.TabIndex = 9;
+            this.btnIspisi.Text = "Ispis";
+            this.btnIspisi.UseVisualStyleBackColor = true;
+            this.btnIspisi.Click += new System.EventHandler(this.btnIspisi_Click);
             // 
             // txtCijenaKarte
             // 
-            this.txtCijenaKarte.Location = new System.Drawing.Point(357, 124);
+            this.txtCijenaKarte.Location = new System.Drawing.Point(309, 25);
             this.txtCijenaKarte.Name = "txtCijenaKarte";
             this.txtCijenaKarte.ReadOnly = true;
             this.txtCijenaKarte.Size = new System.Drawing.Size(95, 20);
@@ -94,56 +107,57 @@
             // lblCijenaKarte
             // 
             this.lblCijenaKarte.AutoSize = true;
-            this.lblCijenaKarte.Location = new System.Drawing.Point(285, 127);
+            this.lblCijenaKarte.Location = new System.Drawing.Point(237, 28);
             this.lblCijenaKarte.Name = "lblCijenaKarte";
             this.lblCijenaKarte.Size = new System.Drawing.Size(66, 13);
             this.lblCijenaKarte.TabIndex = 6;
             this.lblCijenaKarte.Text = "Cijena karte:";
             // 
-            // lblTipkarte
+            // dgvPopisDogadaja
             // 
-            this.lblTipkarte.AutoSize = true;
-            this.lblTipkarte.Location = new System.Drawing.Point(285, 157);
-            this.lblTipkarte.Name = "lblTipkarte";
-            this.lblTipkarte.Size = new System.Drawing.Size(52, 13);
-            this.lblTipkarte.TabIndex = 7;
-            this.lblTipkarte.Text = "Tip karte:";
+            this.dgvPopisDogadaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopisDogadaja.Location = new System.Drawing.Point(25, 114);
+            this.dgvPopisDogadaja.Name = "dgvPopisDogadaja";
+            this.dgvPopisDogadaja.Size = new System.Drawing.Size(164, 126);
+            this.dgvPopisDogadaja.TabIndex = 10;
             // 
-            // cmbTipKarte
+            // label1
             // 
-            this.cmbTipKarte.FormattingEnabled = true;
-            this.cmbTipKarte.Location = new System.Drawing.Point(357, 154);
-            this.cmbTipKarte.Name = "cmbTipKarte";
-            this.cmbTipKarte.Size = new System.Drawing.Size(95, 21);
-            this.cmbTipKarte.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Događaj";
             // 
-            // btnIspisi
+            // dgvPopisTipova
             // 
-            this.btnIspisi.Location = new System.Drawing.Point(470, 185);
-            this.btnIspisi.Name = "btnIspisi";
-            this.btnIspisi.Size = new System.Drawing.Size(81, 33);
-            this.btnIspisi.TabIndex = 9;
-            this.btnIspisi.Text = "Ispis";
-            this.btnIspisi.UseVisualStyleBackColor = true;
-            this.btnIspisi.Click += new System.EventHandler(this.btnIspisi_Click);
+            this.dgvPopisTipova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopisTipova.Location = new System.Drawing.Point(239, 114);
+            this.dgvPopisTipova.Name = "dgvPopisTipova";
+            this.dgvPopisTipova.Size = new System.Drawing.Size(151, 126);
+            this.dgvPopisTipova.TabIndex = 12;
             // 
             // FrmKarta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 230);
+            this.ClientSize = new System.Drawing.Size(489, 254);
+            this.Controls.Add(this.dgvPopisTipova);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvPopisDogadaja);
             this.Controls.Add(this.btnIspisi);
-            this.Controls.Add(this.cmbTipKarte);
             this.Controls.Add(this.lblTipkarte);
             this.Controls.Add(this.lblCijenaKarte);
             this.Controls.Add(this.txtCijenaKarte);
-            this.Controls.Add(this.cmbDogadaj);
             this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.txtBrojKarte);
             this.Controls.Add(this.lblBrKarte);
             this.Name = "FrmKarta";
             this.Text = "Karta";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisDogadaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisTipova)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,11 +169,12 @@
         private System.Windows.Forms.TextBox txtBrojKarte;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.TextBox txtDatum;
-        private System.Windows.Forms.ComboBox cmbDogadaj;
+        private System.Windows.Forms.Label lblTipkarte;
+        private System.Windows.Forms.Button btnIspisi;
         private System.Windows.Forms.TextBox txtCijenaKarte;
         private System.Windows.Forms.Label lblCijenaKarte;
-        private System.Windows.Forms.Label lblTipkarte;
-        private System.Windows.Forms.ComboBox cmbTipKarte;
-        private System.Windows.Forms.Button btnIspisi;
+        private System.Windows.Forms.DataGridView dgvPopisDogadaja;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvPopisTipova;
     }
 }

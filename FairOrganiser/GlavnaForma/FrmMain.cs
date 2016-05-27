@@ -33,12 +33,6 @@ namespace GlavnaForma
             //sudionik.ShowDialog();
         }
 
-        private void btnCjenik_Click(object sender, EventArgs e)
-        {
-            //FrmCjenik cjenik = new FrmCjenik();
-            //cjenik.ShowDialog();
-        }
-
         private void btnIzvjesce_Click(object sender, EventArgs e)
         {
             //FrmIzvjesce izvjesce = new FrmIzvjesce();
@@ -53,8 +47,7 @@ namespace GlavnaForma
 
         private void btnKarta_Click(object sender, EventArgs e)
         {
-           // FrmKarta karta = new FrmKarta();
-          //  karta.Show();
+            LogikaGF.StartKarta();
         }
 
         private void btnDogadaj_Click(object sender, EventArgs e)
