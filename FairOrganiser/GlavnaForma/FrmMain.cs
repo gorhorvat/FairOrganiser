@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProdajaKarata;
-using GeneriranjeIzvjesca;
-using KreiranjeDogadaja;
-using EvidencijaOrganizatora;
-using EvidencijaSudionika;
 
 namespace GlavnaForma
 {
     public partial class FrmMain : Form
     {
+        
+
+
         public FrmMain()
         {
             InitializeComponent();
@@ -25,44 +23,46 @@ namespace GlavnaForma
 
         private void btnOrganizatori_Click(object sender, EventArgs e)
         {
-            FrmOrganizator organizator = new FrmOrganizator();
-            organizator.ShowDialog();
+            //FrmOrganizator organizator = new FrmOrganizator();
+            //organizator.ShowDialog();
         }
 
         private void btnSudionici_Click(object sender, EventArgs e)
         {
-            FrmSudionik sudionik = new FrmSudionik();
-            sudionik.ShowDialog();
+            //FrmSudionik sudionik = new FrmSudionik();
+            //sudionik.ShowDialog();
         }
 
         private void btnCjenik_Click(object sender, EventArgs e)
         {
-            FrmCjenik cjenik = new FrmCjenik();
-            cjenik.ShowDialog();
+            //FrmCjenik cjenik = new FrmCjenik();
+            //cjenik.ShowDialog();
         }
 
         private void btnIzvjesce_Click(object sender, EventArgs e)
         {
-            FrmIzvjesce izvjesce = new FrmIzvjesce();
-            izvjesce.ShowDialog();
+            //FrmIzvjesce izvjesce = new FrmIzvjesce();
+            //izvjesce.ShowDialog();
         }
 
         private void btnRacun_Click(object sender, EventArgs e)
         {
-            FrmRacun racun = new FrmRacun();
-            racun.ShowDialog();
+           // FrmRacun racun = new FrmRacun();
+           // racun.ShowDialog();
         }
 
         private void btnKarta_Click(object sender, EventArgs e)
         {
-            FrmKarta karta = new FrmKarta();
-            karta.Show();
+           // FrmKarta karta = new FrmKarta();
+          //  karta.Show();
         }
 
         private void btnDogadaj_Click(object sender, EventArgs e)
         {
-            FrmDogadaj dogadaj = new FrmDogadaj();
-            dogadaj.ShowDialog();
+            //kreiranje dogadaja logika
+            LogikaGF.StartDogadaj();
+            
+            
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)

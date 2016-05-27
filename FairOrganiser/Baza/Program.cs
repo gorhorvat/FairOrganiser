@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace GlavnaForma
+namespace Baza
 {
     static class Program 
     {
@@ -19,12 +19,8 @@ namespace GlavnaForma
         [STAThread]
         static void Main()
         {
-
-            LogikaGF log = new LogikaGF();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FrmPrijava prijava = new FrmPrijava();
-            Application.Run(prijava);
 
             
 

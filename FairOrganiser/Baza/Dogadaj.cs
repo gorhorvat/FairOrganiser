@@ -9,9 +9,9 @@ namespace Baza
     public class Dogadaj
     {
 
-        string naziv;
-        DateTime pocetak;
-        DateTime kraj;
+        string _naziv;
+        DateTime _pocetak;
+        DateTime _kraj;
         VizualniPrikaz prikaz;
         List<Prostor> prostori;
         List<Organizator> organizatori;
@@ -19,13 +19,29 @@ namespace Baza
         List<Racun> racuni;
 
 
-        public Dogadaj(string naziv, DateTime pocetak, DateTime kraj)
+        public string Naziv
         {
-            this.naziv = naziv;
-            this.pocetak = pocetak;
-            this.kraj = kraj;
+            get { return _naziv; }
+            set { _naziv = value; }
         }
 
+        public DateTime Pocetak
+        {
+            get { return _pocetak; }
+            set { _pocetak = value; }
+        }
+
+        public Dogadaj(string naziv, DateTime pocetak, DateTime kraj)
+        {
+            _naziv = naziv;
+            _pocetak = pocetak;
+            _kraj = kraj;
+        }
+
+        public Dogadaj()
+        {
+
+        }
 
         public bool IzmjeniDogadaj()
         {

@@ -4,40 +4,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProdajaKarata", "ProdajaKarata\ProdajaKarata.csproj", "{D971579A-FFEA-4D87-B982-3051AC2D3E27}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneriranjeIzvjesca", "GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj", "{446FD409-DAA7-445F-A169-7701BF25830D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlavnaForma", "GlavnaForma\GlavnaForma.csproj", "{42C447F6-DA12-476D-8E31-6E3D313B24C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baza", "Baza\Baza.csproj", "{B53D13E6-2F8F-420B-99F9-A9A9CFC86B07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KreiranjeDogadaja", "KreiranjeDogadaja\KreiranjeDogadaja.csproj", "{26A4328B-E980-4B64-9B88-AC62A0C5D18F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvidencijaSudionika", "EvidencijaSudionika\EvidencijaSudionika.csproj", "{42D40B3A-9862-4C22-9C6D-B582F47FA332}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvidencijaOrganizatora", "EvidencijaOrganizatora\EvidencijaOrganizatora.csproj", "{0D380934-B9A9-4FDA-A890-D12E18E2B9B8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NajamOpreme", "NajamOpreme\NajamOpreme.csproj", "{360C5762-4E1C-4EB3-8E60-1AF67CA0F62C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A57ED33A-5D0B-4E42-BE05-5F813E79A034} = {A57ED33A-5D0B-4E42-BE05-5F813E79A034}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{A57ED33A-5D0B-4E42-BE05-5F813E79A034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstracts", "Abstracts\Abstracts.csproj", "{DD851F51-E182-440A-93B0-D5AC2DEAE570}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +65,10 @@ Global
 		{A57ED33A-5D0B-4E42-BE05-5F813E79A034}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A57ED33A-5D0B-4E42-BE05-5F813E79A034}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A57ED33A-5D0B-4E42-BE05-5F813E79A034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD851F51-E182-440A-93B0-D5AC2DEAE570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD851F51-E182-440A-93B0-D5AC2DEAE570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD851F51-E182-440A-93B0-D5AC2DEAE570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD851F51-E182-440A-93B0-D5AC2DEAE570}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
