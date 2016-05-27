@@ -8,10 +8,15 @@ using Baza;
 
 namespace Mediator
 {
-    public class LogikaDB
+    public class LogikaDB : AbstractUser
     {
-
+        
         //dblogic
+
+        public LogikaDB(AbstractMediator mediator) :base(mediator)
+        {
+            Mediator = mediator;
+        }
 
 
         public List<Prostor> GetProstori ()
@@ -29,31 +34,55 @@ namespace Mediator
             return lista;
 
         }
-        /*
-        public List<Organizator> GetOrganizatori ()
+
+        public override void Receive<T>(AbstractUser from, string message, List<T> lista)
         {
-            List<Organizator> lista = new List<Organizator>();
-
-            DbDataReader dbReader = DB.Instance.GetDataReader("Select * from Organizator");
-
-            while(dbReader.Read())
+            if (typeof(Dogadaj) == typeof(T))
             {
-                if(int.Parse(dbReader["TipOrganizaotraid"].ToString()) == 0) //fizicka osoba
+                //kod za dodavanje dogadaja
+
+                var newStuff = new List<Dogadaj>();
+
+                newStuff = (List<Dogadaj>)(object)lista;
+
+                foreach (Dogadaj d in newStuff)
                 {
-                    FizickaOsoba fo = new FizickaOsoba(dbReader);
-                }
-                else
-                {
-                    PravnaOsoba po = new PravnaOsoba(dbReader);
+
+
+                    int result = DB.Instance.Insert(d.Naziv, d.Pocetak);
+                    Console.WriteLine(result);
                 }
 
             }
-
         }
 
-    */
 
-       
+
+        /*
+public List<Organizator> GetOrganizatori ()
+{
+   List<Organizator> lista = new List<Organizator>();
+
+   DbDataReader dbReader = DB.Instance.GetDataReader("Select * from Organizator");
+
+   while(dbReader.Read())
+   {
+       if(int.Parse(dbReader["TipOrganizaotraid"].ToString()) == 0) //fizicka osoba
+       {
+           FizickaOsoba fo = new FizickaOsoba(dbReader);
+       }
+       else
+       {
+           PravnaOsoba po = new PravnaOsoba(dbReader);
+       }
+
+   }
+
+}
+
+*/
+
+
         public void SaveStuff<T> (List<T> stuff)
         {
             if(typeof(Dogadaj) == typeof(T))

@@ -23,7 +23,7 @@ namespace Abstracts
         }
 
 
-        public abstract void Receive(AbstractUser from, string message);
+        public abstract void Receive <T>(AbstractUser from, string message,List<T> lista);
 
     }
 }

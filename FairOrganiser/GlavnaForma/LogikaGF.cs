@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Mediator;
 
+
 namespace GlavnaForma
 {
-    public class LogikaGF
+    public class LogikaGF 
     {
 
         private static FOMediator _mediator;

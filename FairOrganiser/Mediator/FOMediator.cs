@@ -15,7 +15,7 @@ namespace Mediator
         public FOMediator()
         {
 
-            _logikaDB = new LogikaDB();
+            _logikaDB = new LogikaDB(this);
             _logikaKD = new LogikaKD(this);
 
         }
@@ -30,7 +30,7 @@ namespace Mediator
         public override void Send<T>(string message, List<T> values, AbstractUser from)
         {
                 if(message == "DBEXEC")
-                _logikaDB.SaveStuff(values);
+                _logikaDB.Receive(from,"DBEXEC",values);
                     
         }
     }
