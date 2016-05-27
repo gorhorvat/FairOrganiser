@@ -96,6 +96,10 @@
       <Project>{dd851f51-e182-440a-93b0-d5ac2deae570}</Project>
       <Name>Abstracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Baza\Baza.csproj">
+      <Project>{b53d13e6-2f8f-420b-99f9-a9a9cfc86b07}</Project>
+      <Name>Baza</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

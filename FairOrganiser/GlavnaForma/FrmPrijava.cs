@@ -13,7 +13,7 @@ namespace GlavnaForma
     public partial class FrmPrijava : Form
     {
 
-        string korime;
+        string korisnickoIme;
         string lozinka;
 
         public FrmPrijava()
@@ -21,7 +21,7 @@ namespace GlavnaForma
             InitializeComponent();
         }
 
-        public bool Prijava(string korime, string lozinka)
+        public bool Prijava(string korisnickoIme, string lozinka)
         {
             //kod
             return false;

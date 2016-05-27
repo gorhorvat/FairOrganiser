@@ -14,12 +14,13 @@ namespace Baza
         private TipKarte tipKarte { get; set; }
         private Dogadaj dogadaj { get; set; }
 
-        public Karta(int broj, DateTime datum, float cijena, TipKarte tipKarte) //dodati događaj kad fran kreira događaj
+        public Karta(int broj, DateTime datum, float cijena, TipKarte tipKarte, Dogadaj dogadaj)
         {
             this.brojKarte = broj;
             this.datum = datum;
             this.cijena = cijena;
             this.tipKarte = tipKarte;
+            this.dogadaj = dogadaj;
         }
 
         public void prodajKartu()
