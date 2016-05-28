@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -107,5 +108,36 @@ namespace Baza
             return command.ExecuteNonQuery();
         }
 
+        /* ZA IGRANJE
+        public int PozoviFunkcije(string name, DateTime datumOd, DateTime datumDo)
+        {
+            int res;
+
+            SqlCommand command = new SqlCommand("BrojKarte", Connection) { CommandType = CommandType.StoredProcedure};
+            SqlParameter p1 = new SqlParameter("@naziv", SqlDbType.VarChar);
+            SqlParameter p2 = new SqlParameter("@datumOd", SqlDbType.DateTime2);
+            SqlParameter p3 = new SqlParameter("@datumDo", SqlDbType.DateTime2);
+            SqlParameter p4 = new SqlParameter("@broj", SqlDbType.Int);
+            p1.Direction = ParameterDirection.Input;
+            p2.Direction = ParameterDirection.Input;
+            p3.Direction = ParameterDirection.Input;
+            p4.Direction = ParameterDirection.Output;
+
+            p1.Value = name;
+            p2.Value = datumOd;
+            p3.Value = datumDo;
+
+            command.Parameters.Add(p1);
+            command.Parameters.Add(p2);
+            command.Parameters.Add(p3);
+            command.Parameters.Add(p4);
+
+            command.ExecuteNonQuery();
+
+            res = Convert.ToInt32(p4);
+
+            return res;
+        }
+        */
     }
 }

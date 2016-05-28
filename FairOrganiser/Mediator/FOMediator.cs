@@ -30,7 +30,7 @@ namespace Mediator
 
         public void GetDataKarta()
         {
-            _logikaPK.SetDataSource(_logikaDB.GetDogadaji(), _logikaDB.GetTipoviKarte());
+            _logikaPK.SetDataSource(_logikaDB.GetDogadaji(), _logikaDB.GetTipoviKarte(), _logikaDB.GetSifraKarte());
         }
 
         

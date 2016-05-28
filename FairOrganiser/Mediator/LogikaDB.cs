@@ -60,6 +60,11 @@ namespace Mediator
             return lista;
         }
 
+        public string GetSifraKarte()
+        {
+            return ((int) DB.Instance.GetValue("Select count(*) from Karta;")+1).ToString();
+        }
+
         public override void Receive<T>(AbstractUser from, string message, List<T> lista)
         {
             if (typeof(Dogadaj) == typeof(T))

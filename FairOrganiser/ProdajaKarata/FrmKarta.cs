@@ -21,15 +21,27 @@ namespace ProdajaKarata
             InitializeComponent();
         }
 
-        public void SetDataSource(List<Dogadaj> dogadaj, List<TipKarte> tip)
+        public void SetDataSource(List<Dogadaj> dogadaj, List<TipKarte> tip, string sifraKarte)
         {
             dgvPopisDogadaja.DataSource = dogadaj.Select(d => new { Naziv = d.Naziv }).ToList();
             dgvPopisTipova.DataSource = tip.Select(t => new { Naziv = t.Naziv }).ToList();
+            txtSifraKarte.Text = sifraKarte;
+            txtDatum.Text = DateTime.Now.ToString("dd/MM/yyyy   hh:mm:ss");
         }
 
         private void btnIspisi_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvPopisDogadaja_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString();
+        }
+
+        private void dgvPopisTipova_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString();
         }
     }
 }
