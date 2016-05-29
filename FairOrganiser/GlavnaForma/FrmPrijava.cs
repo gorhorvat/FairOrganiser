@@ -30,8 +30,8 @@ namespace GlavnaForma
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
-                FrmMain glavniIzbornik = new FrmMain();
-                glavniIzbornik.ShowDialog();
+            FrmMain glavniIzbornik = new FrmMain();
+            glavniIzbornik.Show();
         }
     }
 }

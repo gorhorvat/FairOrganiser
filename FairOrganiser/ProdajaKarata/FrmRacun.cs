@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baza;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,19 @@ namespace ProdajaKarata
 {
     public partial class FrmRacun : Form
     {
-        
-        //private Usluga novaStavka;
+        LogikaPK _logikaPK;
 
-        public FrmRacun()
+        public FrmRacun(LogikaPK logikaPK)
         {
+            _logikaPK = logikaPK;
             InitializeComponent();
+        }
+
+        public void SetDataSource(List<Racun> racun, string brojRacuna)
+        {
+            dgvListaStavki.DataSource = racun;
+            txtBrojRacuna.Text = brojRacuna;
+            txtVrijeme.Text = DateTime.Now.ToString("dd/MM/yyyy   hh:mm:ss");
         }
 
         private void btnIspisi_Click(object sender, EventArgs e)
@@ -27,8 +35,7 @@ namespace ProdajaKarata
 
         private void btnDodajStavku_Click(object sender, EventArgs e)
         {
-            FrmNovaStavka novaStavka = new FrmNovaStavka();
-            novaStavka.ShowDialog();
+            _logikaPK.StartNovaStavka();
         }
 
         private void btnObrisiStavku_Click(object sender, EventArgs e)

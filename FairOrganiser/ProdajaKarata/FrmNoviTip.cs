@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baza;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace ProdajaKarata
 {
     public partial class FrmNoviTip : Form
     {
-        public FrmNoviTip()
+        LogikaPK _logikaPK;
+
+        public FrmNoviTip(LogikaPK logikaPK)
         {
+            _logikaPK = logikaPK;
             InitializeComponent();
+        }
+
+        public void SetDataSource(List<TipKarte> tip)
+        {
+            
         }
 
         private void btnPotvrdi_Click(object sender, EventArgs e)

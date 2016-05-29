@@ -9,7 +9,13 @@ namespace Baza
 {
     public class Izvjesce
     {
-        private string nazivIzvjesca { get; set; }
+        string _nazivIzvjesca;
+
+        public string NazivIzvjesca
+        {
+            get { return _nazivIzvjesca; }
+            set { _nazivIzvjesca = value; }
+        }
 
         public void brojPosjetitelja()
         {

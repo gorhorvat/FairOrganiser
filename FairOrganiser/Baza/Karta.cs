@@ -8,15 +8,34 @@ namespace Baza
 {
     public class Karta
     {
-        private DateTime datum { get; set; }
-        private TipKarte tipKarte { get; set; }
-        private Dogadaj dogadaj { get; set; }
+        private DateTime _datum;
+        private TipKarte _tipKarte;
+        private Dogadaj _dogadaj;
 
-        public Karta(DateTime datum, TipKarte tipKarte, Dogadaj dogadaj)
+        public DateTime Datum
         {
-            this.datum = datum;
-            this.tipKarte = tipKarte;
-            this.dogadaj = dogadaj;
+            get { return _datum; }
+            set { _datum = value; }
+        }
+
+        public TipKarte TipKarte
+        {
+            get { return _tipKarte; }
+            set { _tipKarte = value; }
+        }
+
+        public Dogadaj Dogadaj
+        {
+            get { return _dogadaj; }
+            set { _dogadaj = value; }
+        }
+
+        //u konstruktor staviti TipKarte tipKarte, Dogadaj dogadaj
+        public Karta(DateTime datum)
+        {
+            _datum = datum;
+            //_tipKarte = tipKarte;
+            //_dogadaj = dogadaj;
         }
 
         public void prodajKartu()

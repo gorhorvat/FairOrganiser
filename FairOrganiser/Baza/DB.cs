@@ -100,11 +100,41 @@ namespace Baza
         // ovo radi, ono gore nece, samo c/p za drugu tablicu, mozda napravim da radi za vise tablica sa parametrima al dunno
         public int Insert(string name, DateTime dtmOd, DateTime dtmDo, float cijena)
         {
-            SqlCommand command = new SqlCommand("Insert into Dogadaj (naziv,datumOd, datumDo, cijenaKarte) values (@naziv,@datumOd, @datumDo, @cijenaKarte)",Connection);
+            SqlCommand command = new SqlCommand("Insert into Dogadaj (naziv, datumOd, datumDo, cijenaKarte) values (@naziv,@datumOd, @datumDo, @cijenaKarte)",Connection);
             command.Parameters.AddWithValue("@naziv", name);
             command.Parameters.AddWithValue("@datumOd", dtmOd);
             command.Parameters.AddWithValue("@datumDo", dtmDo);
             command.Parameters.AddWithValue("@cijenaKarte", cijena);
+            return command.ExecuteNonQuery();
+        }
+
+        public int Insert(DateTime vrijediOd, DateTime vrijediDo)
+        {
+            SqlCommand command = new SqlCommand("Insert into CjenikDogadaja (vrijediOd, vrijediDo) values (@vrijediOd, @vrijediDo)", Connection);
+            command.Parameters.AddWithValue("@vrijediOd", vrijediOd);
+            command.Parameters.AddWithValue("@vrijediDo", vrijediDo);
+            return command.ExecuteNonQuery();
+        }
+
+        // Popraviti insert za Kartu, dodati vanjske ključeve nakon što napravimo upite
+        public int Insert(DateTime datum)
+        {
+            SqlCommand command = new SqlCommand("Insert into Karta (datum) values (@datum)", Connection);
+            command.Parameters.AddWithValue("@datum", datum);
+            return command.ExecuteNonQuery();
+        }
+
+        //Popraviti insert za Racun, dodati vanjske ključeve nakon što napravimo upite
+        public int Insert(string operater, DateTime vrijeme, string nazivTvrtke, string sjediste, string oib, float ukupno, string nazivKupca)
+        {
+            SqlCommand command = new SqlCommand("Insert into Racun (operater, vrijeme, nazivTvrtke, sjediste, oib, ukupno, nazivKupca) values (@operater,@vrijeme, @nazivTvrtke, @sjediste, @oib, @ukupno, @nazivKupca)", Connection);
+            command.Parameters.AddWithValue("@operater", operater);
+            command.Parameters.AddWithValue("@vrijeme", vrijeme);
+            command.Parameters.AddWithValue("@nazivTvrtke", nazivTvrtke);
+            command.Parameters.AddWithValue("@sjediste", sjediste);
+            command.Parameters.AddWithValue("@oib", oib);
+            command.Parameters.AddWithValue("@ukupno", ukupno);
+            command.Parameters.AddWithValue("@nazivKupca", nazivKupca);
             return command.ExecuteNonQuery();
         }
 

@@ -12,8 +12,6 @@ namespace GlavnaForma
 {
     public partial class FrmMain : Form
     {
-        
-
 
         public FrmMain()
         {
@@ -24,25 +22,23 @@ namespace GlavnaForma
         private void btnOrganizatori_Click(object sender, EventArgs e)
         {
             //FrmOrganizator organizator = new FrmOrganizator();
-            //organizator.ShowDialog();
+            //organizator.Show();
         }
 
         private void btnSudionici_Click(object sender, EventArgs e)
         {
             //FrmSudionik sudionik = new FrmSudionik();
-            //sudionik.ShowDialog();
+            //sudionik.Show();
         }
 
         private void btnIzvjesce_Click(object sender, EventArgs e)
         {
-            //FrmIzvjesce izvjesce = new FrmIzvjesce();
-            //izvjesce.ShowDialog();
+            LogikaGF.StartIzvjesce();
         }
 
         private void btnRacun_Click(object sender, EventArgs e)
         {
-           // FrmRacun racun = new FrmRacun();
-           // racun.ShowDialog();
+            LogikaGF.StartRacun();
         }
 
         private void btnKarta_Click(object sender, EventArgs e)
@@ -50,18 +46,27 @@ namespace GlavnaForma
             LogikaGF.StartKarta();
         }
 
+        private void btnPopusti_Click(object sender, EventArgs e)
+        {
+            LogikaGF.StartCjenik();
+        }
+
+        private void btnUsluge_Click(object sender, EventArgs e)
+        {
+            LogikaGF.StartUsluga();
+        }
+
         private void btnDogadaj_Click(object sender, EventArgs e)
         {
             //kreiranje dogadaja logika
             LogikaGF.StartDogadaj();
-            
-            
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             FrmPrijava prijava = new FrmPrijava();
-            prijava.ShowDialog();
+            prijava.Show();
+            Close();
         }
     }
 }

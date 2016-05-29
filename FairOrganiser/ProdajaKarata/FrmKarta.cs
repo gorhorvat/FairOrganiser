@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,17 +32,19 @@ namespace ProdajaKarata
 
         private void btnIspisi_Click(object sender, EventArgs e)
         {
+            Karta k = new Karta(DateTime.Parse(txtDatum.Text));
+            _logikaPK.SaveKarta(k);
             Close();
         }
 
         private void dgvPopisDogadaja_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString();
+            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString("N", CultureInfo.InvariantCulture);
         }
 
         private void dgvPopisTipova_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString();
+            txtCijenaKarte.Text = _logikaPK.GetCijenaKarte(dgvPopisDogadaja.CurrentCell.RowIndex, dgvPopisTipova.CurrentCell.RowIndex).ToString("N", CultureInfo.InvariantCulture);
         }
     }
 }

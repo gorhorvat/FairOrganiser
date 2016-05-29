@@ -31,16 +31,17 @@
             this.lblCjenikKarata = new System.Windows.Forms.Label();
             this.dtpOd = new System.Windows.Forms.DateTimePicker();
             this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            this.btnDodajNovi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.dgvTipoviKarata = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoviKarata)).BeginInit();
+            this.btnDodajCjenik = new System.Windows.Forms.Button();
+            this.btnObrisiCjenik = new System.Windows.Forms.Button();
+            this.dgvPopisCjenika = new System.Windows.Forms.DataGridView();
+            this.btnPregledaj = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCjenikKarata
             // 
             this.lblCjenikKarata.AutoSize = true;
-            this.lblCjenikKarata.Location = new System.Drawing.Point(29, 28);
+            this.lblCjenikKarata.Location = new System.Drawing.Point(29, 36);
             this.lblCjenikKarata.Name = "lblCjenikKarata";
             this.lblCjenikKarata.Size = new System.Drawing.Size(69, 13);
             this.lblCjenikKarata.TabIndex = 0;
@@ -48,60 +49,76 @@
             // 
             // dtpOd
             // 
-            this.dtpOd.Location = new System.Drawing.Point(129, 26);
+            this.dtpOd.CustomFormat = "";
+            this.dtpOd.Location = new System.Drawing.Point(31, 12);
             this.dtpOd.Name = "dtpOd";
             this.dtpOd.Size = new System.Drawing.Size(142, 20);
             this.dtpOd.TabIndex = 1;
             // 
             // dtpDo
             // 
-            this.dtpDo.Location = new System.Drawing.Point(277, 26);
+            this.dtpDo.CustomFormat = "";
+            this.dtpDo.Location = new System.Drawing.Point(179, 12);
             this.dtpDo.Name = "dtpDo";
             this.dtpDo.Size = new System.Drawing.Size(142, 20);
             this.dtpDo.TabIndex = 2;
             // 
-            // btnDodajNovi
+            // btnDodajCjenik
             // 
-            this.btnDodajNovi.Location = new System.Drawing.Point(263, 248);
-            this.btnDodajNovi.Name = "btnDodajNovi";
-            this.btnDodajNovi.Size = new System.Drawing.Size(75, 23);
-            this.btnDodajNovi.TabIndex = 4;
-            this.btnDodajNovi.Text = "Dodaj novi";
-            this.btnDodajNovi.UseVisualStyleBackColor = true;
-            this.btnDodajNovi.Click += new System.EventHandler(this.btnDodajNovi_Click);
+            this.btnDodajCjenik.Location = new System.Drawing.Point(32, 248);
+            this.btnDodajCjenik.Name = "btnDodajCjenik";
+            this.btnDodajCjenik.Size = new System.Drawing.Size(75, 23);
+            this.btnDodajCjenik.TabIndex = 4;
+            this.btnDodajCjenik.Text = "Dodaj cjenik";
+            this.btnDodajCjenik.UseVisualStyleBackColor = true;
+            this.btnDodajCjenik.Click += new System.EventHandler(this.btnDodajCjenik_Click);
             // 
-            // btnObrisi
+            // btnObrisiCjenik
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(344, 248);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
-            this.btnObrisi.TabIndex = 5;
-            this.btnObrisi.Text = "Obrisi";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            this.btnObrisiCjenik.Location = new System.Drawing.Point(113, 248);
+            this.btnObrisiCjenik.Name = "btnObrisiCjenik";
+            this.btnObrisiCjenik.Size = new System.Drawing.Size(75, 23);
+            this.btnObrisiCjenik.TabIndex = 5;
+            this.btnObrisiCjenik.Text = "Obriši cjenik";
+            this.btnObrisiCjenik.UseVisualStyleBackColor = true;
+            this.btnObrisiCjenik.Click += new System.EventHandler(this.btnObrisiCjenik_Click);
             // 
-            // dgvTipoviKarata
+            // dgvPopisCjenika
             // 
-            this.dgvTipoviKarata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoviKarata.Location = new System.Drawing.Point(32, 52);
-            this.dgvTipoviKarata.Name = "dgvTipoviKarata";
-            this.dgvTipoviKarata.Size = new System.Drawing.Size(387, 190);
-            this.dgvTipoviKarata.TabIndex = 6;
+            this.dgvPopisCjenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopisCjenika.ColumnHeadersVisible = false;
+            this.dgvPopisCjenika.Location = new System.Drawing.Point(32, 52);
+            this.dgvPopisCjenika.Name = "dgvPopisCjenika";
+            this.dgvPopisCjenika.ReadOnly = true;
+            this.dgvPopisCjenika.RowHeadersVisible = false;
+            this.dgvPopisCjenika.Size = new System.Drawing.Size(260, 190);
+            this.dgvPopisCjenika.TabIndex = 6;
+            // 
+            // btnPregledaj
+            // 
+            this.btnPregledaj.Location = new System.Drawing.Point(194, 248);
+            this.btnPregledaj.Name = "btnPregledaj";
+            this.btnPregledaj.Size = new System.Drawing.Size(98, 23);
+            this.btnPregledaj.TabIndex = 11;
+            this.btnPregledaj.Text = "Pregledaj cjenik";
+            this.btnPregledaj.UseVisualStyleBackColor = true;
+            this.btnPregledaj.Click += new System.EventHandler(this.btnPregledaj_Click);
             // 
             // FrmCjenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 280);
-            this.Controls.Add(this.dgvTipoviKarata);
-            this.Controls.Add(this.btnObrisi);
-            this.Controls.Add(this.btnDodajNovi);
+            this.ClientSize = new System.Drawing.Size(338, 280);
+            this.Controls.Add(this.btnPregledaj);
+            this.Controls.Add(this.dgvPopisCjenika);
+            this.Controls.Add(this.btnObrisiCjenik);
+            this.Controls.Add(this.btnDodajCjenik);
             this.Controls.Add(this.dtpDo);
             this.Controls.Add(this.dtpOd);
             this.Controls.Add(this.lblCjenikKarata);
             this.Name = "FrmCjenik";
             this.Text = "Cjenik";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoviKarata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +129,9 @@
         private System.Windows.Forms.Label lblCjenikKarata;
         private System.Windows.Forms.DateTimePicker dtpOd;
         private System.Windows.Forms.DateTimePicker dtpDo;
-        private System.Windows.Forms.Button btnDodajNovi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.DataGridView dgvTipoviKarata;
+        private System.Windows.Forms.Button btnDodajCjenik;
+        private System.Windows.Forms.Button btnObrisiCjenik;
+        private System.Windows.Forms.DataGridView dgvPopisCjenika;
+        private System.Windows.Forms.Button btnPregledaj;
     }
 }

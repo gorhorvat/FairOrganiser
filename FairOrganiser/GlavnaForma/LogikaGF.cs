@@ -29,5 +29,24 @@ namespace GlavnaForma
             _mediator.GetDataKarta();
         }
 
+        public static void StartCjenik()
+        {
+            _mediator.GetDataCjenik();
+        }
+
+        public static void StartRacun()
+        {
+            _mediator.GetDataRacun();
+        }
+
+        public static void StartIzvjesce()
+        {
+            _mediator.GetDataIzvjesce();
+        }
+
+        public static void StartUsluga()
+        {
+            
+        }
     }
 }

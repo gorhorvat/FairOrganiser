@@ -73,6 +73,12 @@
     <Compile Include="FrmNoviTip.Designer.cs">
       <DependentUpon>FrmNoviTip.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPregledCjenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPregledCjenika.Designer.cs">
+      <DependentUpon>FrmPregledCjenika.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRacun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNoviTip.resx">
       <DependentUpon>FrmNoviTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPregledCjenika.resx">
+      <DependentUpon>FrmPregledCjenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRacun.resx">
       <DependentUpon>FrmRacun.cs</DependentUpon>

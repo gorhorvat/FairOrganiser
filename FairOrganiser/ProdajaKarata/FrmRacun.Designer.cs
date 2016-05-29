@@ -77,7 +77,7 @@
             // lblOperater
             // 
             this.lblOperater.AutoSize = true;
-            this.lblOperater.Location = new System.Drawing.Point(232, 46);
+            this.lblOperater.Location = new System.Drawing.Point(280, 46);
             this.lblOperater.Name = "lblOperater";
             this.lblOperater.Size = new System.Drawing.Size(51, 13);
             this.lblOperater.TabIndex = 3;
@@ -88,12 +88,12 @@
             this.txtVrijeme.Location = new System.Drawing.Point(100, 43);
             this.txtVrijeme.Name = "txtVrijeme";
             this.txtVrijeme.ReadOnly = true;
-            this.txtVrijeme.Size = new System.Drawing.Size(100, 20);
+            this.txtVrijeme.Size = new System.Drawing.Size(159, 20);
             this.txtVrijeme.TabIndex = 4;
             // 
             // txtOperater
             // 
-            this.txtOperater.Location = new System.Drawing.Point(289, 43);
+            this.txtOperater.Location = new System.Drawing.Point(337, 43);
             this.txtOperater.Name = "txtOperater";
             this.txtOperater.ReadOnly = true;
             this.txtOperater.Size = new System.Drawing.Size(100, 20);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baza;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +13,33 @@ namespace ProdajaKarata
 {
     public partial class FrmCjenik : Form
     {
+        LogikaPK _logikaPK;
 
-        public FrmCjenik()
+        public FrmCjenik(LogikaPK logikaPK)
         {
+            _logikaPK = logikaPK;
             InitializeComponent();
         }
 
-        private void btnDodajNovi_Click(object sender, EventArgs e)
+        public void SetDataSource(List<Cjenik> cjenik)
         {
-            FrmNoviTip noviTip = new FrmNoviTip();
-            noviTip.ShowDialog();
+            dgvPopisCjenika.DataSource = cjenik;
         }
 
-        private void btnObrisi_Click(object sender, EventArgs e)
+        private void btnDodajCjenik_Click(object sender, EventArgs e)
         {
+            Cjenik c = new Cjenik(dtpOd.Value.Date, dtpDo.Value.Date);
+            _logikaPK.SaveCjenik(c);
+        }
 
+        private void btnObrisiCjenik_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnPregledaj_Click(object sender, EventArgs e)
+        {
+            _logikaPK.StartPregledCjenika();
         }
     }
 }

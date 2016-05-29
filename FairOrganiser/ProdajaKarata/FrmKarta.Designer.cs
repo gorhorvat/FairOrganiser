@@ -39,6 +39,7 @@
             this.dgvPopisTipova = new System.Windows.Forms.DataGridView();
             this.txtSifraKarte = new System.Windows.Forms.TextBox();
             this.lblSifra = new System.Windows.Forms.Label();
+            this.lblValuta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisDogadaja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisTipova)).BeginInit();
             this.SuspendLayout();
@@ -144,11 +145,21 @@
             this.lblSifra.TabIndex = 13;
             this.lblSifra.Text = "Šifra";
             // 
+            // lblValuta
+            // 
+            this.lblValuta.AutoSize = true;
+            this.lblValuta.Location = new System.Drawing.Point(408, 32);
+            this.lblValuta.Name = "lblValuta";
+            this.lblValuta.Size = new System.Drawing.Size(22, 13);
+            this.lblValuta.TabIndex = 15;
+            this.lblValuta.Text = "KN";
+            // 
             // FrmKarta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 254);
+            this.Controls.Add(this.lblValuta);
             this.Controls.Add(this.txtSifraKarte);
             this.Controls.Add(this.lblSifra);
             this.Controls.Add(this.dgvPopisTipova);
@@ -181,5 +192,6 @@
         private System.Windows.Forms.DataGridView dgvPopisTipova;
         private System.Windows.Forms.TextBox txtSifraKarte;
         private System.Windows.Forms.Label lblSifra;
+        private System.Windows.Forms.Label lblValuta;
     }
 }

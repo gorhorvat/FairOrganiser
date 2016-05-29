@@ -35,6 +35,8 @@
             this.btnKarta = new System.Windows.Forms.Button();
             this.btnDogadaj = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
+            this.btnPopusti = new System.Windows.Forms.Button();
+            this.btnUsluge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOrganizatori
@@ -89,7 +91,7 @@
             // 
             // btnDogadaj
             // 
-            this.btnDogadaj.Location = new System.Drawing.Point(158, 205);
+            this.btnDogadaj.Location = new System.Drawing.Point(158, 279);
             this.btnDogadaj.Name = "btnDogadaj";
             this.btnDogadaj.Size = new System.Drawing.Size(213, 31);
             this.btnDogadaj.TabIndex = 6;
@@ -99,7 +101,7 @@
             // 
             // btnOdjava
             // 
-            this.btnOdjava.Location = new System.Drawing.Point(158, 242);
+            this.btnOdjava.Location = new System.Drawing.Point(158, 316);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(213, 31);
             this.btnOdjava.TabIndex = 7;
@@ -107,11 +109,33 @@
             this.btnOdjava.UseVisualStyleBackColor = true;
             this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
+            // btnPopusti
+            // 
+            this.btnPopusti.Location = new System.Drawing.Point(158, 205);
+            this.btnPopusti.Name = "btnPopusti";
+            this.btnPopusti.Size = new System.Drawing.Size(213, 31);
+            this.btnPopusti.TabIndex = 8;
+            this.btnPopusti.Text = "Popusti";
+            this.btnPopusti.UseVisualStyleBackColor = true;
+            this.btnPopusti.Click += new System.EventHandler(this.btnPopusti_Click);
+            // 
+            // btnUsluge
+            // 
+            this.btnUsluge.Location = new System.Drawing.Point(158, 242);
+            this.btnUsluge.Name = "btnUsluge";
+            this.btnUsluge.Size = new System.Drawing.Size(213, 31);
+            this.btnUsluge.TabIndex = 9;
+            this.btnUsluge.Text = "Usluge";
+            this.btnUsluge.UseVisualStyleBackColor = true;
+            this.btnUsluge.Click += new System.EventHandler(this.btnUsluge_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 284);
+            this.ClientSize = new System.Drawing.Size(519, 351);
+            this.Controls.Add(this.btnUsluge);
+            this.Controls.Add(this.btnPopusti);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnDogadaj);
             this.Controls.Add(this.btnKarta);
@@ -134,6 +158,8 @@
         private System.Windows.Forms.Button btnKarta;
         private System.Windows.Forms.Button btnDogadaj;
         private System.Windows.Forms.Button btnOdjava;
+        private System.Windows.Forms.Button btnPopusti;
+        private System.Windows.Forms.Button btnUsluge;
     }
 }
 
