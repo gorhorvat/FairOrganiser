@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlavnaForma", "GlavnaForma\GlavnaForma.csproj", "{AAAA4949-F24F-492F-BC3B-9A9265ECE17A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvidencijaOrganizatora", "EvidencijaOrganizatora\EvidencijaOrganizatora.csproj", "{A3E01260-CA67-4278-A156-48D4FA59446F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvidencijaSudionika", "EvidencijaSudionika\EvidencijaSudionika.csproj", "{410BCD5D-715E-43F5-B728-8D08A93D6EAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneriranjeIzvjesca", "GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj", "{8DBDFE37-7CFC-4D51-BEC8-BB6A7FB95EC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KreiranjeDogadaja", "KreiranjeDogadaja\KreiranjeDogadaja.csproj", "{8BD83150-5905-44D3-930F-0949B58A2268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProdajaKarata", "ProdajaKarata\ProdajaKarata.csproj", "{2987557F-7661-411F-AC7C-CA7E83E19A58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAAA4949-F24F-492F-BC3B-9A9265ECE17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAA4949-F24F-492F-BC3B-9A9265ECE17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAA4949-F24F-492F-BC3B-9A9265ECE17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAA4949-F24F-492F-BC3B-9A9265ECE17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E01260-CA67-4278-A156-48D4FA59446F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E01260-CA67-4278-A156-48D4FA59446F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E01260-CA67-4278-A156-48D4FA59446F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E01260-CA67-4278-A156-48D4FA59446F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410BCD5D-715E-43F5-B728-8D08A93D6EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410BCD5D-715E-43F5-B728-8D08A93D6EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410BCD5D-715E-43F5-B728-8D08A93D6EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410BCD5D-715E-43F5-B728-8D08A93D6EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBDFE37-7CFC-4D51-BEC8-BB6A7FB95EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBDFE37-7CFC-4D51-BEC8-BB6A7FB95EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBDFE37-7CFC-4D51-BEC8-BB6A7FB95EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBDFE37-7CFC-4D51-BEC8-BB6A7FB95EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD83150-5905-44D3-930F-0949B58A2268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD83150-5905-44D3-930F-0949B58A2268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD83150-5905-44D3-930F-0949B58A2268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD83150-5905-44D3-930F-0949B58A2268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2987557F-7661-411F-AC7C-CA7E83E19A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2987557F-7661-411F-AC7C-CA7E83E19A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2987557F-7661-411F-AC7C-CA7E83E19A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2987557F-7661-411F-AC7C-CA7E83E19A58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
