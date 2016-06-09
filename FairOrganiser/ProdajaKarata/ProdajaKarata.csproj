@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -55,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CjenikDogadaja.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dogadaj.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="FrmCjenik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +99,35 @@
     <Compile Include="FrmRacun.Designer.cs">
       <DependentUpon>FrmRacun.cs</DependentUpon>
     </Compile>
+    <Compile Include="Karta.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajaKarataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajaKarataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajaKarataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajaKarataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajaKarataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racun.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipKarte.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zaposlenik.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmCjenik.resx">
       <DependentUpon>FrmCjenik.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +158,14 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="ProdajaKarataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProdajaKarataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ProdajaKarataModel.edmx.diagram">
+      <DependentUpon>ProdajaKarataModel.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CjenikDogadaja.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +175,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProdajaKarataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProdajaKarataModel.edmx</DependentUpon>
+      <LastGenOutput>ProdajaKarataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProdajaKarataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProdajaKarataModel.edmx</DependentUpon>
+      <LastGenOutput>ProdajaKarataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
