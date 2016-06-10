@@ -67,6 +67,7 @@
     <Compile Include="FrmOrganizator.Designer.cs">
       <DependentUpon>FrmOrganizator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmNoviOrganizator.resx">
       <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>

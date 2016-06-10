@@ -97,6 +97,28 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvidencijaOrganizatora\EvidencijaOrganizatora.csproj">
+      <Project>{a3e01260-ca67-4278-a156-48d4fa59446f}</Project>
+      <Name>EvidencijaOrganizatora</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EvidencijaSudionika\EvidencijaSudionika.csproj">
+      <Project>{410bcd5d-715e-43f5-b728-8d08a93d6eab}</Project>
+      <Name>EvidencijaSudionika</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneriranjeIzvjesca\GeneriranjeIzvjesca.csproj">
+      <Project>{8dbdfe37-7cfc-4d51-bec8-bb6a7fb95ec9}</Project>
+      <Name>GeneriranjeIzvjesca</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KreiranjeDogadaja\KreiranjeDogadaja.csproj">
+      <Project>{8bd83150-5905-44d3-930f-0949b58a2268}</Project>
+      <Name>KreiranjeDogadaja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProdajaKarata\ProdajaKarata.csproj">
+      <Project>{2987557f-7661-411f-ac7c-ca7e83e19a58}</Project>
+      <Name>ProdajaKarata</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

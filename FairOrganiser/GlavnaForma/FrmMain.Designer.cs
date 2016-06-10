@@ -47,6 +47,7 @@
             this.btnUsluge.TabIndex = 18;
             this.btnUsluge.Text = "Usluge";
             this.btnUsluge.UseVisualStyleBackColor = true;
+            this.btnUsluge.Click += new System.EventHandler(this.btnUsluge_Click);
             // 
             // btnPopusti
             // 
@@ -56,6 +57,7 @@
             this.btnPopusti.TabIndex = 17;
             this.btnPopusti.Text = "Popusti";
             this.btnPopusti.UseVisualStyleBackColor = true;
+            this.btnPopusti.Click += new System.EventHandler(this.btnPopusti_Click);
             // 
             // btnOdjava
             // 
@@ -65,6 +67,7 @@
             this.btnOdjava.TabIndex = 16;
             this.btnOdjava.Text = "Odjava";
             this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnDogadaj
             // 
@@ -74,6 +77,7 @@
             this.btnDogadaj.TabIndex = 15;
             this.btnDogadaj.Text = "Dogadaj";
             this.btnDogadaj.UseVisualStyleBackColor = true;
+            this.btnDogadaj.Click += new System.EventHandler(this.btnDogadaj_Click);
             // 
             // btnKarta
             // 
@@ -83,6 +87,7 @@
             this.btnKarta.TabIndex = 14;
             this.btnKarta.Text = "Karta";
             this.btnKarta.UseVisualStyleBackColor = true;
+            this.btnKarta.Click += new System.EventHandler(this.btnKarta_Click);
             // 
             // btnRacun
             // 
@@ -92,6 +97,7 @@
             this.btnRacun.TabIndex = 13;
             this.btnRacun.Text = "Račun";
             this.btnRacun.UseVisualStyleBackColor = true;
+            this.btnRacun.Click += new System.EventHandler(this.btnRacun_Click);
             // 
             // btnIzvjesce
             // 
@@ -101,6 +107,7 @@
             this.btnIzvjesce.TabIndex = 12;
             this.btnIzvjesce.Text = "Izvješće";
             this.btnIzvjesce.UseVisualStyleBackColor = true;
+            this.btnIzvjesce.Click += new System.EventHandler(this.btnIzvjesce_Click);
             // 
             // btnSudionici
             // 
@@ -110,6 +117,7 @@
             this.btnSudionici.TabIndex = 11;
             this.btnSudionici.Text = "Sudionici";
             this.btnSudionici.UseVisualStyleBackColor = true;
+            this.btnSudionici.Click += new System.EventHandler(this.btnSudionici_Click);
             // 
             // btnOrganizatori
             // 
@@ -119,6 +127,7 @@
             this.btnOrganizatori.TabIndex = 10;
             this.btnOrganizatori.Text = "Organizatori";
             this.btnOrganizatori.UseVisualStyleBackColor = true;
+            this.btnOrganizatori.Click += new System.EventHandler(this.btnOrganizatori_Click);
             // 
             // FrmMain
             // 

@@ -75,6 +75,7 @@
             this.btnPotvrdi.TabIndex = 5;
             this.btnPotvrdi.Text = "Potvrdi";
             this.btnPotvrdi.UseVisualStyleBackColor = true;
+            this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
             // 
             // FrmNoviTip
             // 

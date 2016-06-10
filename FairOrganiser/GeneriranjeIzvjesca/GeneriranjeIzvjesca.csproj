@@ -61,6 +61,7 @@
     <Compile Include="FrmIzvjesce.Designer.cs">
       <DependentUpon>FrmIzvjesce.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmIzvjesce.resx">
       <DependentUpon>FrmIzvjesce.cs</DependentUpon>
