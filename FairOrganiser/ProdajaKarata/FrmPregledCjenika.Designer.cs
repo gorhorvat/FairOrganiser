@@ -48,7 +48,7 @@
             // 
             // btnObrisiTip
             // 
-            this.btnObrisiTip.Location = new System.Drawing.Point(187, 231);
+            this.btnObrisiTip.Location = new System.Drawing.Point(280, 231);
             this.btnObrisiTip.Name = "btnObrisiTip";
             this.btnObrisiTip.Size = new System.Drawing.Size(75, 23);
             this.btnObrisiTip.TabIndex = 13;
@@ -58,7 +58,7 @@
             // 
             // btnDodajTip
             // 
-            this.btnDodajTip.Location = new System.Drawing.Point(106, 231);
+            this.btnDodajTip.Location = new System.Drawing.Point(199, 231);
             this.btnDodajTip.Name = "btnDodajTip";
             this.btnDodajTip.Size = new System.Drawing.Size(75, 23);
             this.btnDodajTip.TabIndex = 12;
@@ -68,7 +68,7 @@
             // 
             // btnPotvrdi
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(268, 231);
+            this.btnPotvrdi.Location = new System.Drawing.Point(361, 231);
             this.btnPotvrdi.Name = "btnPotvrdi";
             this.btnPotvrdi.Size = new System.Drawing.Size(75, 23);
             this.btnPotvrdi.TabIndex = 11;
@@ -103,6 +103,7 @@
             // 
             // dgvOdabraniCjenik
             // 
+            this.dgvOdabraniCjenik.AllowUserToAddRows = false;
             this.dgvOdabraniCjenik.AutoGenerateColumns = false;
             this.dgvOdabraniCjenik.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOdabraniCjenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

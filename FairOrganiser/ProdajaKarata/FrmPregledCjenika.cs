@@ -12,10 +12,12 @@ namespace ProdajaKarata
     public partial class FrmPregledCjenika : Form
     {
         private CjenikDogadaja odabraniCjenik;
+        private int cjenikID;
 
-        public FrmPregledCjenika(CjenikDogadaja OdabraniCjenik)
+        public FrmPregledCjenika(CjenikDogadaja OdabraniCjenik, int CjenikID)
         {
             odabraniCjenik = OdabraniCjenik;
+            cjenikID = CjenikID;
             InitializeComponent();
         }
 
@@ -27,10 +29,11 @@ namespace ProdajaKarata
             txtOd.Text = Od.ToShortDateString();
             txtDo.Text = Do.ToShortDateString();   
         }
+
         /// <summary>
         /// Dohvaća listu svih tipova karata u kontekstu, te ih prikazuje u DataGridView-u.
         /// </summary>
-        private void PrikaziTipove()
+        public void PrikaziTipove()
         {
             BindingList<TipKarte> popisTipova = null;
             using (var db = new ProdajaKarataEntities())
@@ -40,7 +43,7 @@ namespace ProdajaKarata
             tipKarteBindingSource.DataSource = popisTipova;
         }
         /// <summary>
-        /// briše selektirani tip karte iz cjenika.
+        /// Briše selektirani tip karte iz cjenika.
         /// </summary>
         /// <param name="TipID"></param>
         public void ObrisiTip(int TipID)
@@ -64,9 +67,9 @@ namespace ProdajaKarata
         
         private void btnDodajTip_Click(object sender, EventArgs e)
         {
-            //int CjenikID = 
-            FrmNoviTip noviTip = new FrmNoviTip();
-            noviTip.Show();
+            FrmNoviTip noviTip = new FrmNoviTip(cjenikID);
+            noviTip.ShowDialog();
+            PrikaziTipove();
         }
 
         private void btnObrisiTip_Click(object sender, EventArgs e)

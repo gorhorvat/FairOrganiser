@@ -11,31 +11,31 @@ namespace ProdajaKarata
 {
     public partial class FrmNoviTip : Form
     {
-        private int cjenikID;
+        private int CjenikID;
 
-        public FrmNoviTip()
+        public FrmNoviTip(int cjenikID)
         {
-            //cjenikID = CjenikID;
+            CjenikID = cjenikID;
             InitializeComponent();
         }
         /// <summary>
-        /// Ne radi!!!
+        /// Dodaje novi tip karte u listu tipova karata
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
-            /*using (var db = new ProdajaKarataEntities())
+            using (var db = new ProdajaKarataEntities())
             {
                 TipKarte noviTip = new TipKarte
                 {
                     iznosPopusta = int.Parse(txtIznosPopusta.Text),
                     naziv = txtNazivTipa.Text,
-                    //CjenikDogadajaid = 
+                    CjenikDogadajaid = CjenikID
                 };
                 db.TipKartes.Add(noviTip);
                 db.SaveChanges();
-            }*/
+            }
             Close();
         }
     }

@@ -166,6 +166,7 @@
       <DependentUpon>ProdajaKarataModel.edmx</DependentUpon>
     </None>
     <None Include="Properties\DataSources\CjenikDogadaja.datasource" />
+    <None Include="Properties\DataSources\Dogadaj.datasource" />
     <None Include="Properties\DataSources\TipKarte.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -93,8 +93,9 @@ namespace ProdajaKarata
         /// <param name="e"></param>
         private void btnPregledaj_Click(object sender, EventArgs e)
         {
+            int CjenikID = int.Parse(dgvPopisCjenika[0, dgvPopisCjenika.CurrentRow.Index].Value.ToString());
             CjenikDogadaja odabraniCjenik = (CjenikDogadaja)cjenikDogadajaBindingSource.Current;
-            FrmPregledCjenika pregled = new FrmPregledCjenika(odabraniCjenik);
+            FrmPregledCjenika pregled = new FrmPregledCjenika(odabraniCjenik, CjenikID);
             pregled.Show();
         }
     }
