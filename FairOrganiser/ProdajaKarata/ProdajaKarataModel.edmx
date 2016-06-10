@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBModelProdajaKarata.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBModelProdajaKarata.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CjenikDogadaja">
           <Key>
             <PropertyRef Name="id" />
@@ -47,8 +47,6 @@
           <Property Name="Zaposlenikid" Type="int" />
           <Property Name="Dogadajid" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view '16057_DB.dbo.TipKarte' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TipKarte">
           <Key>
             <PropertyRef Name="id" />
@@ -136,15 +134,8 @@ warning 6002: The table/view '16057_DB.dbo.TipKarte' does not have a primary key
           <EntitySet Name="Dogadaj" EntityType="Self.Dogadaj" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Karta" EntityType="Self.Karta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Racun" EntityType="Self.Racun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipKarte" EntityType="Self.TipKarte" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TipKarte" EntityType="Self.TipKarte" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TipKarte].[id] AS [id], 
-    [TipKarte].[iznosPopusta] AS [iznosPopusta], 
-    [TipKarte].[naziv] AS [naziv], 
-    [TipKarte].[CjenikDogadajaid] AS [CjenikDogadajaid]
-    FROM [dbo].[TipKarte] AS [TipKarte]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Karta_CjenikDogadaja" Association="Self.FK_Karta_CjenikDogadaja">
             <End Role="CjenikDogadaja" EntitySet="CjenikDogadaja" />
             <End Role="Karta" EntitySet="Karta" />
@@ -166,8 +157,7 @@ warning 6002: The table/view '16057_DB.dbo.TipKarte' does not have a primary key
             <End Role="TipKarte" EntitySet="TipKarte" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBModelProdajaKarata" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
