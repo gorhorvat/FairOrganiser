@@ -59,8 +59,8 @@ namespace ProdajaKarata
                     }
                 }
             }
-        }
-        */
+        }*/
+        
         private void btnDodajTip_Click(object sender, EventArgs e)
         {
             //int CjenikID = 

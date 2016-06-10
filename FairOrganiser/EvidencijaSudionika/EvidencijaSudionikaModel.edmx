@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EvidencijaSudionikaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dogadaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" />
+          <Property Name="datumOd" Type="datetime" />
+          <Property Name="datumDo" Type="datetime" />
+          <Property Name="cijenaKarte" Type="float" />
+        </EntityType>
+        <EntityType Name="Sudionik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="255" />
+          <Property Name="prezime" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tse_dog_sud">
+          <Key>
+            <PropertyRef Name="Dogadajid" />
+            <PropertyRef Name="Sudionikid" />
+          </Key>
+          <Property Name="Dogadajid" Type="int" Nullable="false" />
+          <Property Name="Sudionikid" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tse_dog_sud_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
+          <End Role="tse_dog_sud" Type="Self.tse_dog_sud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_sud">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_sud_Sudionik">
+          <End Role="Sudionik" Type="Self.Sudionik" Multiplicity="1" />
+          <End Role="tse_dog_sud" Type="Self.tse_dog_sud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sudionik">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_sud">
+              <PropertyRef Name="Sudionikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EvidencijaSudionikaDBModelStoreContainer">
+          <EntitySet Name="Dogadaj" EntityType="Self.Dogadaj" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sudionik" EntityType="Self.Sudionik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tse_dog_sud" EntityType="Self.tse_dog_sud" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tse_dog_sud_Dogadaj" Association="Self.FK_tse_dog_sud_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="tse_dog_sud" EntitySet="tse_dog_sud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_sud_Sudionik" Association="Self.FK_tse_dog_sud_Sudionik">
+            <End Role="Sudionik" EntitySet="Sudionik" />
+            <End Role="tse_dog_sud" EntitySet="tse_dog_sud" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EvidencijaSudionikaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Dogadaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="datumOd" Type="DateTime" Precision="3" />
+          <Property Name="datumDo" Type="DateTime" Precision="3" />
+          <Property Name="cijenaKarte" Type="Double" />
+          <NavigationProperty Name="Sudioniks" Relationship="Self.tse_dog_sud" FromRole="Dogadaj" ToRole="Sudionik" />
+        </EntityType>
+        <EntityType Name="Sudionik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Dogadajs" Relationship="Self.tse_dog_sud" FromRole="Sudionik" ToRole="Dogadaj" />
+        </EntityType>
+        <Association Name="tse_dog_sud">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="*" />
+          <End Role="Sudionik" Type="Self.Sudionik" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="EvidencijaSudionikaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dogadajs" EntityType="Self.Dogadaj" />
+          <EntitySet Name="Sudioniks" EntityType="Self.Sudionik" />
+          <AssociationSet Name="tse_dog_sud" Association="Self.tse_dog_sud">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Sudionik" EntitySet="Sudioniks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EvidencijaSudionikaDBModelStoreContainer" CdmEntityContainer="EvidencijaSudionikaEntities">
+          <EntitySetMapping Name="Dogadajs">
+            <EntityTypeMapping TypeName="EvidencijaSudionikaDBModel.Dogadaj">
+              <MappingFragment StoreEntitySet="Dogadaj">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="datumOd" ColumnName="datumOd" />
+                <ScalarProperty Name="datumDo" ColumnName="datumDo" />
+                <ScalarProperty Name="cijenaKarte" ColumnName="cijenaKarte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sudioniks">
+            <EntityTypeMapping TypeName="EvidencijaSudionikaDBModel.Sudionik">
+              <MappingFragment StoreEntitySet="Sudionik">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="tse_dog_sud" TypeName="EvidencijaSudionikaDBModel.tse_dog_sud" StoreEntitySet="tse_dog_sud">
+            <EndProperty Name="Dogadaj">
+              <ScalarProperty Name="id" ColumnName="Dogadajid" />
+            </EndProperty>
+            <EndProperty Name="Sudionik">
+              <ScalarProperty Name="id" ColumnName="Sudionikid" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
