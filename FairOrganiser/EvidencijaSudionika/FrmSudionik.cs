@@ -67,6 +67,29 @@ namespace EvidencijaSudionika
             ObrisiSudionika(SudionikID);
             PrikaziSudionike();
         }
+        /// <summary>
+        /// Otvaranje forme za dodavanje novog sudionika te ažuriranje popisa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDodajSudionika_Click(object sender, EventArgs e)
+        {
+            FrmNoviSudionik noviSudionik = new FrmNoviSudionik();
+            noviSudionik.ShowDialog();
+            PrikaziSudionike();
+        }
+        /// <summary>
+        /// Otvaranje forme za izdavanje akreditacije sa podacima odabranog sudionika.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIzdajAkreditaciju_Click(object sender, EventArgs e)
+        {
+            int SudionikID = int.Parse(dgvSudionici[0, dgvSudionici.CurrentRow.Index].Value.ToString());
+            Sudionik odabraniSudionik = (Sudionik)sudionikBindingSource.Current;
+            FrmAkreditacija akreditacija = new FrmAkreditacija(odabraniSudionik,SudionikID);
+            akreditacija.ShowDialog();
+        }
     }
 }
 

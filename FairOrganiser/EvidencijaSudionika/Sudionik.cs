@@ -23,6 +23,11 @@ namespace EvidencijaSudionika
         public int id { get; set; }
         public string ime { get; set; }
         public string prezime { get; set; }
+        public string medijskaKuca { get; set; }
+        public string telefon { get; set; }
+        public string email { get; set; }
+        public string dogadaj { get; set; }
+        public string akreditacija { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dogadaj> Dogadajs { get; set; }

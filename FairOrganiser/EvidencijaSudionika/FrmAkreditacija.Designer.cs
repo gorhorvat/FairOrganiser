@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnPotvrdi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTip = new System.Windows.Forms.TextBox();
             this.txtDogadaj = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
@@ -39,14 +39,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtMedKuca = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.cmbAkreditacija = new System.Windows.Forms.ComboBox();
+            this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPotvrdi
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(254, 214);
+            this.btnPotvrdi.Location = new System.Drawing.Point(295, 260);
             this.btnPotvrdi.Name = "btnPotvrdi";
-            this.btnPotvrdi.Size = new System.Drawing.Size(109, 51);
+            this.btnPotvrdi.Size = new System.Drawing.Size(109, 28);
             this.btnPotvrdi.TabIndex = 21;
             this.btnPotvrdi.Text = "Potvrdi";
             this.btnPotvrdi.UseVisualStyleBackColor = true;
@@ -54,61 +63,57 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 182);
+            this.label5.Location = new System.Drawing.Point(292, 193);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "QR kod";
             // 
-            // txtTip
-            // 
-            this.txtTip.Location = new System.Drawing.Point(123, 166);
-            this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(100, 20);
-            this.txtTip.TabIndex = 19;
-            // 
             // txtDogadaj
             // 
-            this.txtDogadaj.Location = new System.Drawing.Point(123, 136);
+            this.txtDogadaj.Location = new System.Drawing.Point(95, 171);
             this.txtDogadaj.Name = "txtDogadaj";
-            this.txtDogadaj.Size = new System.Drawing.Size(100, 20);
+            this.txtDogadaj.ReadOnly = true;
+            this.txtDogadaj.Size = new System.Drawing.Size(119, 20);
             this.txtDogadaj.TabIndex = 18;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(123, 108);
+            this.txtPrezime.Location = new System.Drawing.Point(95, 39);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(100, 20);
+            this.txtPrezime.ReadOnly = true;
+            this.txtPrezime.Size = new System.Drawing.Size(119, 20);
             this.txtPrezime.TabIndex = 17;
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(123, 77);
+            this.txtIme.Location = new System.Drawing.Point(95, 6);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(100, 20);
+            this.txtIme.ReadOnly = true;
+            this.txtIme.Size = new System.Drawing.Size(119, 20);
             this.txtIme.TabIndex = 16;
             // 
             // pbQR
             // 
-            this.pbQR.Location = new System.Drawing.Point(254, 76);
+            this.pbQR.Location = new System.Drawing.Point(231, 15);
             this.pbQR.Name = "pbQR";
-            this.pbQR.Size = new System.Drawing.Size(109, 103);
+            this.pbQR.Size = new System.Drawing.Size(159, 175);
             this.pbQR.TabIndex = 15;
             this.pbQR.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 169);
+            this.label4.Location = new System.Drawing.Point(12, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 13);
+            this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Tip";
+            this.label4.Text = "Vrsta akreditacije";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 139);
+            this.label3.Location = new System.Drawing.Point(12, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 13;
@@ -117,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 111);
+            this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 12;
@@ -126,20 +131,86 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 80);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Ime";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Medijska kuća";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Telefon";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Email";
+            // 
+            // txtMedKuca
+            // 
+            this.txtMedKuca.Location = new System.Drawing.Point(95, 72);
+            this.txtMedKuca.Name = "txtMedKuca";
+            this.txtMedKuca.ReadOnly = true;
+            this.txtMedKuca.Size = new System.Drawing.Size(119, 20);
+            this.txtMedKuca.TabIndex = 25;
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(95, 105);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.ReadOnly = true;
+            this.txtTelefon.Size = new System.Drawing.Size(119, 20);
+            this.txtTelefon.TabIndex = 26;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(95, 138);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(119, 20);
+            this.txtEmail.TabIndex = 27;
+            // 
+            // cmbAkreditacija
+            // 
+            this.cmbAkreditacija.DataSource = this.tipAkreditacijeBindingSource;
+            this.cmbAkreditacija.FormattingEnabled = true;
+            this.cmbAkreditacija.Location = new System.Drawing.Point(106, 217);
+            this.cmbAkreditacija.Name = "cmbAkreditacija";
+            this.cmbAkreditacija.Size = new System.Drawing.Size(121, 21);
+            this.cmbAkreditacija.TabIndex = 28;
+            // 
             // FrmAkreditacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 341);
+            this.ClientSize = new System.Drawing.Size(416, 300);
+            this.Controls.Add(this.cmbAkreditacija);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtTelefon);
+            this.Controls.Add(this.txtMedKuca);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnPotvrdi);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTip);
             this.Controls.Add(this.txtDogadaj);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
@@ -150,7 +221,9 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAkreditacija";
             this.Text = "Akreditacija";
+            this.Load += new System.EventHandler(this.FrmAkreditacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +233,6 @@
 
         private System.Windows.Forms.Button btnPotvrdi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTip;
         private System.Windows.Forms.TextBox txtDogadaj;
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtIme;
@@ -169,5 +241,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtMedKuca;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.ComboBox cmbAkreditacija;
+        private System.Windows.Forms.BindingSource tipAkreditacijeBindingSource;
     }
 }

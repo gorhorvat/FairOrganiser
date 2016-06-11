@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EvidencijaSudionikaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EvidencijaSudionikaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dogadaj">
           <Key>
             <PropertyRef Name="id" />
@@ -22,6 +22,11 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ime" Type="varchar" MaxLength="255" />
           <Property Name="prezime" Type="varchar" MaxLength="255" />
+          <Property Name="medijskaKuca" Type="varchar" MaxLength="255" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="dogadaj" Type="varchar" MaxLength="255" />
+          <Property Name="akreditacija" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="tse_dog_sud">
           <Key>
@@ -68,8 +73,7 @@
             <End Role="tse_dog_sud" EntitySet="tse_dog_sud" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EvidencijaSudionikaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -92,6 +96,11 @@
           <Property Name="ime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="prezime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Dogadajs" Relationship="Self.tse_dog_sud" FromRole="Sudionik" ToRole="Dogadaj" />
+          <Property Name="medijskaKuca" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dogadaj" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="akreditacija" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="tse_dog_sud">
           <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="*" />
@@ -125,6 +134,11 @@
           <EntitySetMapping Name="Sudioniks">
             <EntityTypeMapping TypeName="EvidencijaSudionikaDBModel.Sudionik">
               <MappingFragment StoreEntitySet="Sudionik">
+                <ScalarProperty Name="akreditacija" ColumnName="akreditacija" />
+                <ScalarProperty Name="dogadaj" ColumnName="dogadaj" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="medijskaKuca" ColumnName="medijskaKuca" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="prezime" ColumnName="prezime" />

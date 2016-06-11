@@ -15,5 +15,43 @@ namespace EvidencijaSudionika
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Dodavanje sudionika u bazu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDodajSudionika_Click(object sender, EventArgs e)
+        {
+            using (var db = new EvidencijaSudionikaEntities())
+            {
+                Sudionik noviSudionik = new Sudionik
+                {
+                    ime = txtImeSudionika.Text,
+                    prezime = txtPrezimeSudionika.Text,
+                    medijskaKuca = txtMedKuca.Text,
+                    telefon = txtTelefon.Text,
+                    email = txtTelefon.Text,
+                    dogadaj = cmbDogadaj.Text,                  
+                };
+                db.Sudioniks.Add(noviSudionik);
+                db.SaveChanges();
+            }
+            Close();
+        }
+
+        /// <summary>
+        /// Dohvaća listu svih događaja iz kolekcije događaja u kontekstu, te ih prikazuje u combobox-u.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmNoviSudionik_Load(object sender, EventArgs e)
+        {
+            BindingList<Dogadaj> listaDogadaja = null;
+            using (var db = new EvidencijaSudionikaEntities())
+            {
+                listaDogadaja = new BindingList<Dogadaj>(db.Dogadajs.ToList());
+            }
+            dogadajBindingSource.DataSource = listaDogadaja;
+        }
     }
 }
