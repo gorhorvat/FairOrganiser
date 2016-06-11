@@ -30,7 +30,7 @@ namespace EvidencijaSudionika
                     prezime = txtPrezimeSudionika.Text,
                     medijskaKuca = txtMedKuca.Text,
                     telefon = txtTelefon.Text,
-                    email = txtTelefon.Text,
+                    email = txtEmail.Text,
                     dogadaj = cmbDogadaj.Text,                  
                 };
                 db.Sudioniks.Add(noviSudionik);
