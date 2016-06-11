@@ -14,12 +14,15 @@ namespace ProdajaKarata
     
     public partial class Racun
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Racun()
+        {
+            this.Uslugas = new HashSet<Usluga>();
+        }
+    
         public int id { get; set; }
         public string operater { get; set; }
         public Nullable<System.DateTime> vrijeme { get; set; }
-        public string nazivTvrtke { get; set; }
-        public string sjediste { get; set; }
-        public string oib { get; set; }
         public Nullable<double> ukupno { get; set; }
         public string nazivKupca { get; set; }
         public Nullable<int> Zaposlenikid { get; set; }
@@ -27,5 +30,7 @@ namespace ProdajaKarata
     
         public virtual Dogadaj Dogadaj { get; set; }
         public virtual Zaposlenik Zaposlenik { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usluga> Uslugas { get; set; }
     }
 }

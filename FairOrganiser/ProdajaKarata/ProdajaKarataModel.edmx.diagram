@@ -4,18 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b2f818a61b534df7b12bbd0f21c3f8e1" Name="Diagram1">
-        <EntityTypeShape EntityType="DBModelProdajaKarata.CjenikDogadaja" Width="1.5" PointX="6.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.Dogadaj" Width="1.5" PointX="0.5" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.Karta" Width="1.5" PointX="3.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.Racun" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.Zaposlenik" Width="1.5" PointX="3.625" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.TipKarte" Width="1.5" PointX="6.5" PointY="4.5" IsExpanded="true" />
+      <Diagram DiagramId="b2f818a61b534df7b12bbd0f21c3f8e1" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="DBModelProdajaKarata.CjenikDogadaja" Width="1.5" PointX="10.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Dogadaj" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Karta" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Racun" Width="1.5" PointX="5.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Zaposlenik" Width="1.5" PointX="3.375" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.TipKarte" Width="1.5" PointX="10.5" PointY="4.375" IsExpanded="true" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Karta_CjenikDogadaja" ManuallyRouted="false" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_TipKarte_CjenikDogadaja" ManuallyRouted="false" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Karta_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Racun_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Racun_Zaposlenik" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Organizator" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Usluga" Width="1.5" PointX="7" PointY="7.5" />
+        <AssociationConnector Association="DBModelProdajaKarata.tse_usl_rac" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.TipOrganizatora" Width="1.5" PointX="0.5" PointY="5" />
+        <AssociationConnector Association="DBModelProdajaKarata.FK_Organizator_TipOrganizatora" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.tse_dog_org" Width="1.5" PointX="3.375" PointY="5" />
+        <AssociationConnector Association="DBModelProdajaKarata.FK_tse_dog_org_Dogadaj" />
+        <AssociationConnector Association="DBModelProdajaKarata.FK_tse_dog_org_Organizator" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2" PointY="3.3720914713541665" />
+          <ConnectorPoint PointX="3.40625" PointY="3.3720914713541665" />
+          <ConnectorPoint PointX="3.40625" PointY="5" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,26 +12,19 @@ namespace ProdajaKarata
     using System;
     using System.Collections.Generic;
     
-    public partial class Zaposlenik
+    public partial class TipOrganizatora
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Zaposlenik()
+        public TipOrganizatora()
         {
-            this.Racuns = new HashSet<Racun>();
+            this.Organizators = new HashSet<Organizator>();
         }
     
         public int id { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
-        public string oib { get; set; }
-        public string adresa { get; set; }
-        public string brojTelefona { get; set; }
-        public string email { get; set; }
-        public string tipZaposlenika { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        public string tip { get; set; }
+        public string opis { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Racun> Racuns { get; set; }
+        public virtual ICollection<Organizator> Organizators { get; set; }
     }
 }

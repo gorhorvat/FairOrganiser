@@ -102,6 +102,9 @@
     <Compile Include="Karta.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Organizator.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ProdajaKarataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +126,18 @@
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TipKarte.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipOrganizatora.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tse_dog_org.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tse_dog_sud.cs">
+      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usluga.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Zaposlenik.cs">
@@ -168,6 +183,7 @@
     <None Include="Properties\DataSources\CjenikDogadaja.datasource" />
     <None Include="Properties\DataSources\Dogadaj.datasource" />
     <None Include="Properties\DataSources\TipKarte.datasource" />
+    <None Include="Properties\DataSources\Usluga.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
