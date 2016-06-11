@@ -47,9 +47,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
-    <Reference Include="QRCode">
-      <HintPath>F:\QRCode.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
