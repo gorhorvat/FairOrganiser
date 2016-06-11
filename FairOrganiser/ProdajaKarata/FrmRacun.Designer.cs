@@ -34,9 +34,7 @@
             this.btnIspisi = new System.Windows.Forms.Button();
             this.txtUkupno = new System.Windows.Forms.TextBox();
             this.lblUkupno = new System.Windows.Forms.Label();
-            this.txtOib = new System.Windows.Forms.TextBox();
-            this.txtSjediste = new System.Windows.Forms.TextBox();
-            this.txtNazivTvrtke = new System.Windows.Forms.TextBox();
+            this.txtOTvrtci = new System.Windows.Forms.TextBox();
             this.txtNazivKupca = new System.Windows.Forms.TextBox();
             this.lblNazivKupca = new System.Windows.Forms.Label();
             this.txtOperater = new System.Windows.Forms.TextBox();
@@ -50,42 +48,45 @@
             // 
             // btnObrisiStavku
             // 
-            this.btnObrisiStavku.Location = new System.Drawing.Point(141, 452);
+            this.btnObrisiStavku.Location = new System.Drawing.Point(87, 452);
             this.btnObrisiStavku.Name = "btnObrisiStavku";
             this.btnObrisiStavku.Size = new System.Drawing.Size(67, 36);
             this.btnObrisiStavku.TabIndex = 34;
             this.btnObrisiStavku.Text = "Obrisi stavku";
             this.btnObrisiStavku.UseVisualStyleBackColor = true;
+            this.btnObrisiStavku.Click += new System.EventHandler(this.btnObrisiStavku_Click);
             // 
             // btnDodajStavku
             // 
-            this.btnDodajStavku.Location = new System.Drawing.Point(66, 452);
+            this.btnDodajStavku.Location = new System.Drawing.Point(12, 452);
             this.btnDodajStavku.Name = "btnDodajStavku";
             this.btnDodajStavku.Size = new System.Drawing.Size(69, 36);
             this.btnDodajStavku.TabIndex = 33;
             this.btnDodajStavku.Text = "Dodaj stavku";
             this.btnDodajStavku.UseVisualStyleBackColor = true;
+            this.btnDodajStavku.Click += new System.EventHandler(this.btnDodajStavku_Click);
             // 
             // dgvListaStavki
             // 
             this.dgvListaStavki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaStavki.Location = new System.Drawing.Point(66, 110);
+            this.dgvListaStavki.Location = new System.Drawing.Point(12, 110);
             this.dgvListaStavki.Name = "dgvListaStavki";
-            this.dgvListaStavki.Size = new System.Drawing.Size(550, 336);
+            this.dgvListaStavki.Size = new System.Drawing.Size(736, 336);
             this.dgvListaStavki.TabIndex = 32;
             // 
             // btnIspisi
             // 
-            this.btnIspisi.Location = new System.Drawing.Point(541, 483);
+            this.btnIspisi.Location = new System.Drawing.Point(673, 479);
             this.btnIspisi.Name = "btnIspisi";
             this.btnIspisi.Size = new System.Drawing.Size(75, 23);
             this.btnIspisi.TabIndex = 31;
             this.btnIspisi.Text = "Ispis";
             this.btnIspisi.UseVisualStyleBackColor = true;
+            this.btnIspisi.Click += new System.EventHandler(this.btnIspisi_Click);
             // 
             // txtUkupno
             // 
-            this.txtUkupno.Location = new System.Drawing.Point(516, 452);
+            this.txtUkupno.Location = new System.Drawing.Point(648, 453);
             this.txtUkupno.Name = "txtUkupno";
             this.txtUkupno.ReadOnly = true;
             this.txtUkupno.Size = new System.Drawing.Size(100, 20);
@@ -94,35 +95,20 @@
             // lblUkupno
             // 
             this.lblUkupno.AutoSize = true;
-            this.lblUkupno.Location = new System.Drawing.Point(462, 455);
+            this.lblUkupno.Location = new System.Drawing.Point(594, 456);
             this.lblUkupno.Name = "lblUkupno";
             this.lblUkupno.Size = new System.Drawing.Size(48, 13);
             this.lblUkupno.TabIndex = 29;
             this.lblUkupno.Text = "Ukupno:";
             // 
-            // txtOib
+            // txtOTvrtci
             // 
-            this.txtOib.Location = new System.Drawing.Point(516, 84);
-            this.txtOib.Name = "txtOib";
-            this.txtOib.ReadOnly = true;
-            this.txtOib.Size = new System.Drawing.Size(100, 20);
-            this.txtOib.TabIndex = 28;
-            // 
-            // txtSjediste
-            // 
-            this.txtSjediste.Location = new System.Drawing.Point(516, 52);
-            this.txtSjediste.Name = "txtSjediste";
-            this.txtSjediste.ReadOnly = true;
-            this.txtSjediste.Size = new System.Drawing.Size(100, 20);
-            this.txtSjediste.TabIndex = 27;
-            // 
-            // txtNazivTvrtke
-            // 
-            this.txtNazivTvrtke.Location = new System.Drawing.Point(516, 22);
-            this.txtNazivTvrtke.Name = "txtNazivTvrtke";
-            this.txtNazivTvrtke.ReadOnly = true;
-            this.txtNazivTvrtke.Size = new System.Drawing.Size(100, 20);
-            this.txtNazivTvrtke.TabIndex = 26;
+            this.txtOTvrtci.Location = new System.Drawing.Point(516, 24);
+            this.txtOTvrtci.Multiline = true;
+            this.txtOTvrtci.Name = "txtOTvrtci";
+            this.txtOTvrtci.ReadOnly = true;
+            this.txtOTvrtci.Size = new System.Drawing.Size(232, 80);
+            this.txtOTvrtci.TabIndex = 26;
             // 
             // txtNazivKupca
             // 
@@ -196,16 +182,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 527);
+            this.ClientSize = new System.Drawing.Size(760, 527);
             this.Controls.Add(this.btnObrisiStavku);
             this.Controls.Add(this.btnDodajStavku);
             this.Controls.Add(this.dgvListaStavki);
             this.Controls.Add(this.btnIspisi);
             this.Controls.Add(this.txtUkupno);
             this.Controls.Add(this.lblUkupno);
-            this.Controls.Add(this.txtOib);
-            this.Controls.Add(this.txtSjediste);
-            this.Controls.Add(this.txtNazivTvrtke);
+            this.Controls.Add(this.txtOTvrtci);
             this.Controls.Add(this.txtNazivKupca);
             this.Controls.Add(this.lblNazivKupca);
             this.Controls.Add(this.txtOperater);
@@ -216,6 +200,7 @@
             this.Controls.Add(this.lblBrojRacuna);
             this.Name = "FrmRacun";
             this.Text = "Račun";
+            this.Load += new System.EventHandler(this.FrmRacun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,9 +215,7 @@
         private System.Windows.Forms.Button btnIspisi;
         private System.Windows.Forms.TextBox txtUkupno;
         private System.Windows.Forms.Label lblUkupno;
-        private System.Windows.Forms.TextBox txtOib;
-        private System.Windows.Forms.TextBox txtSjediste;
-        private System.Windows.Forms.TextBox txtNazivTvrtke;
+        private System.Windows.Forms.TextBox txtOTvrtci;
         private System.Windows.Forms.TextBox txtNazivKupca;
         private System.Windows.Forms.Label lblNazivKupca;
         private System.Windows.Forms.TextBox txtOperater;

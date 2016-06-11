@@ -31,5 +31,10 @@ namespace ProdajaKarata
         public virtual DbSet<Racun> Racuns { get; set; }
         public virtual DbSet<Zaposlenik> Zaposleniks { get; set; }
         public virtual DbSet<TipKarte> TipKartes { get; set; }
+        public virtual DbSet<Organizator> Organizators { get; set; }
+        public virtual DbSet<Usluga> Uslugas { get; set; }
+        public virtual DbSet<TipOrganizatora> TipOrganizatoras { get; set; }
+        public virtual DbSet<tse_dog_sud> tse_dog_sud { get; set; }
+        public virtual DbSet<tse_dog_org> tse_dog_org { get; set; }
     }
 }
