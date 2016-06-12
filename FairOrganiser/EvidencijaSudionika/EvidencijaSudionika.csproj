@@ -47,9 +47,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
-    <Reference Include="QRCode">
-      <HintPath>F:\QRCode.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -88,6 +85,12 @@
     <Compile Include="FrmAkreditacija.Designer.cs">
       <DependentUpon>FrmAkreditacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIzdanaAkreditacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzdanaAkreditacija.Designer.cs">
+      <DependentUpon>FrmIzdanaAkreditacija.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNoviSudionik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="FrmAkreditacija.resx">
       <DependentUpon>FrmAkreditacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzdanaAkreditacija.resx">
+      <DependentUpon>FrmIzdanaAkreditacija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNoviSudionik.resx">
       <DependentUpon>FrmNoviSudionik.cs</DependentUpon>
@@ -156,6 +162,8 @@
       <DependentUpon>EvidencijaSudionikaModel.edmx</DependentUpon>
       <LastGenOutput>EvidencijaSudionikaModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\zv_logo_mali_hr.png" />
+    <None Include="Resources\logo_holding %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

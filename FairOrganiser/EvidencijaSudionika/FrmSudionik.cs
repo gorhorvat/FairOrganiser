@@ -29,7 +29,7 @@ namespace EvidencijaSudionika
             BindingList<Sudionik> listaSudionika = null;
             using (var db = new EvidencijaSudionikaEntities())
             {
-                listaSudionika = new BindingList<Sudionik>(db.Sudioniks.ToList());
+                listaSudionika = new BindingList<Sudionik>(db.Sudioniks.ToList());        
             }
             sudionikBindingSource.DataSource = listaSudionika;
         }
@@ -89,6 +89,7 @@ namespace EvidencijaSudionika
             Sudionik odabraniSudionik = (Sudionik)sudionikBindingSource.Current;
             FrmAkreditacija akreditacija = new FrmAkreditacija(odabraniSudionik,SudionikID);
             akreditacija.ShowDialog();
+            PrikaziSudionike();
         }
     }
 }

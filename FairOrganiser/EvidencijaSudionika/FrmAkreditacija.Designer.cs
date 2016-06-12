@@ -47,7 +47,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cmbAkreditacija = new System.Windows.Forms.ComboBox();
             this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +99,7 @@
             this.pbQR.Location = new System.Drawing.Point(231, 15);
             this.pbQR.Name = "pbQR";
             this.pbQR.Size = new System.Drawing.Size(159, 175);
+            this.pbQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbQR.TabIndex = 15;
             this.pbQR.TabStop = false;
             // 
@@ -144,9 +144,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Medijska kuća";
+            this.label6.Text = "Tvrtka";
             // 
             // label7
             // 
@@ -198,23 +198,13 @@
             this.cmbAkreditacija.Name = "cmbAkreditacija";
             this.cmbAkreditacija.Size = new System.Drawing.Size(121, 21);
             this.cmbAkreditacija.TabIndex = 28;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(214, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmbAkreditacija.SelectedValueChanged += new System.EventHandler(this.cmbAkreditacija_SelectedValueChanged);
             // 
             // FrmAkreditacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 300);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbAkreditacija);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefon);
@@ -262,6 +252,5 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cmbAkreditacija;
         private System.Windows.Forms.BindingSource tipAkreditacijeBindingSource;
-        private System.Windows.Forms.Button button1;
     }
 }
