@@ -15,7 +15,7 @@ namespace ProdajaKarata
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmRacun());
+            Application.Run(new FrmCjenik());
         }
     }
 }

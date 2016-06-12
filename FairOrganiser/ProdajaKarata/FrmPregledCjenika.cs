@@ -23,7 +23,7 @@ namespace ProdajaKarata
 
         private void FrmPregledCjenika_Load(object sender, EventArgs e)
         {
-            PrikaziTipove();
+            PrikaziTipove(cjenikID);
             DateTime Od = (DateTime)odabraniCjenik.vrijediOd;
             DateTime Do = (DateTime)odabraniCjenik.vrijediDo;
             txtOd.Text = Od.ToShortDateString();
@@ -33,14 +33,16 @@ namespace ProdajaKarata
         /// <summary>
         /// Dohvaća listu svih tipova karata u kontekstu, te ih prikazuje u DataGridView-u.
         /// </summary>
-        public void PrikaziTipove()
+        public void PrikaziTipove(int CjenikID)
         {
-            BindingList<TipKarte> popisTipova = null;
             using (var db = new ProdajaKarataEntities())
             {
-                popisTipova = new BindingList<TipKarte>(db.TipKartes.ToList());
+                CjenikDogadaja cjenici = (from c in db.CjenikDogadajas
+                                     where c.id == CjenikID
+                                     select c).First<CjenikDogadaja>();
+                BindingList<TipKarte> popisTipova = new BindingList<TipKarte>(cjenici.TipKartes.ToList<TipKarte>());
+                tipKarteBindingSource.DataSource = popisTipova;
             }
-            tipKarteBindingSource.DataSource = popisTipova;
         }
         /// <summary>
         /// Briše selektirani tip karte iz cjenika.
@@ -69,14 +71,14 @@ namespace ProdajaKarata
         {
             FrmNoviTip noviTip = new FrmNoviTip(cjenikID);
             noviTip.ShowDialog();
-            PrikaziTipove();
+            PrikaziTipove(cjenikID);
         }
 
         private void btnObrisiTip_Click(object sender, EventArgs e)
         {
             int TipID = int.Parse(dgvOdabraniCjenik[0, dgvOdabraniCjenik.CurrentRow.Index].Value.ToString());
             ObrisiTip(TipID);
-            PrikaziTipove();
+            PrikaziTipove(cjenikID);
         }
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
