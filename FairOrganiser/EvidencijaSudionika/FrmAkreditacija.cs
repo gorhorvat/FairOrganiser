@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MessagingToolkit.QRCode.Codec;
 using MessagingToolkit.QRCode.Codec.Data;
+using System.IO;
 
 namespace EvidencijaSudionika
 {
@@ -45,19 +46,40 @@ namespace EvidencijaSudionika
             List<string> tipoviAkreditacije = new List<string>() { "Novinar", "Izvođač", "Fotograf", "Tehničar", "VIP", "Organizator" };
             tipAkreditacijeBindingSource.DataSource = tipoviAkreditacije;
         }
-
+        /// <summary>
+        /// Proslijeđivanje svih podataka formi za prikaz izdane akreditacije.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
-
+            FrmIzdanaAkreditacija izdanaAkredicatija = new FrmIzdanaAkreditacija(pbQR.Image, odabranisudionik, cmbAkreditacija.SelectedValue.ToString());
+            izdanaAkredicatija.ShowDialog();
+            dodajAkreditaciju();
+            
+        }
+        /// <summary>
+        /// Generiranje QR koda za prikazane podatke te odabrane vrste akreditacije.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmbAkreditacija_SelectedValueChanged(object sender, EventArgs e)
+        {
             QRCodeEncoder encoder = new QRCodeEncoder();
-            Bitmap qrcode = encoder.Encode(odabranisudionik.ime + odabranisudionik.prezime + odabranisudionik.dogadaj);
+            Bitmap qrcode = encoder.Encode(odabranisudionik.ime + odabranisudionik.prezime + odabranisudionik.dogadaj + cmbAkreditacija.SelectedItem);
             pbQR.Image = qrcode as Image;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dodajAkreditaciju()
         {
-            QRCodeDecoder decoder = new QRCodeDecoder();
-            MessageBox.Show(decoder.decode(new QRCodeBitmapImage(pbQR.Image as Bitmap)));
+            using(var db = new EvidencijaSudionikaEntities())
+            {
+                Sudionik azuriraniSudionik = (from s in db.Sudioniks
+                                              where s.id == sudionikID
+                                              select s).First();
+                azuriraniSudionik.akreditacija = cmbAkreditacija.SelectedValue.ToString() ;
+                db.SaveChanges();
+            }
         }
     }
 }

@@ -164,6 +164,7 @@
             this.akreditacija.HeaderText = "akreditacija";
             this.akreditacija.Name = "akreditacija";
             this.akreditacija.ReadOnly = true;
+            this.akreditacija.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dogadajsDataGridViewTextBoxColumn
             // 

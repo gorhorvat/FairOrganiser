@@ -100,7 +100,7 @@
           <Property Name="telefon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="dogadaj" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="akreditacija" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="akreditacija" Type="String" />
         </EntityType>
         <Association Name="tse_dog_sud">
           <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="*" />
