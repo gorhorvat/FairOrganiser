@@ -75,7 +75,7 @@
             this.btnDogadaj.Name = "btnDogadaj";
             this.btnDogadaj.Size = new System.Drawing.Size(213, 31);
             this.btnDogadaj.TabIndex = 15;
-            this.btnDogadaj.Text = "Dogadaj";
+            this.btnDogadaj.Text = "Događaji";
             this.btnDogadaj.UseVisualStyleBackColor = true;
             this.btnDogadaj.Click += new System.EventHandler(this.btnDogadaj_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnIzvjesce.Name = "btnIzvjesce";
             this.btnIzvjesce.Size = new System.Drawing.Size(213, 31);
             this.btnIzvjesce.TabIndex = 12;
-            this.btnIzvjesce.Text = "Izvješće";
+            this.btnIzvjesce.Text = "Izvješća";
             this.btnIzvjesce.UseVisualStyleBackColor = true;
             this.btnIzvjesce.Click += new System.EventHandler(this.btnIzvjesce_Click);
             // 

@@ -41,8 +41,8 @@ namespace GlavnaForma
 
         private void btnIzvjesce_Click(object sender, EventArgs e)
         {
-            FrmIzvjesce izvjesce = new FrmIzvjesce();
-            izvjesce.Show();
+            FrmIzvjesca izvjesca = new FrmIzvjesca();
+            izvjesca.Show();
         }
 
         private void btnRacun_Click(object sender, EventArgs e)
@@ -59,7 +59,8 @@ namespace GlavnaForma
 
         private void btnUsluge_Click(object sender, EventArgs e)
         {
-            
+            FrmUsluga usluga = new FrmUsluga();
+            usluga.Show();
         }
 
         private void btnDogadaj_Click(object sender, EventArgs e)

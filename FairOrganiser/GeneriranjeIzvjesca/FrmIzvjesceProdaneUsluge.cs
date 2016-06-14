@@ -5,15 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GeneriranjeIzvjesca
 {
-    public partial class FrmIzvjesce : Form
+    public partial class FrmIzvjesceProdaneUsluge : Form
     {
-        public FrmIzvjesce()
+        public FrmIzvjesceProdaneUsluge()
         {
             InitializeComponent();
+        }
+
+        private void btnIspis_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
