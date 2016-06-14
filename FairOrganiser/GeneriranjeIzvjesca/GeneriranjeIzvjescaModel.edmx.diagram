@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3edfd7c9ce8f45479b162f5a9a7ae841" Name="Diagram1">
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.CjenikDogadaja" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Dogadaj" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Karta" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Organizator" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Prostor" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Racun" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Sudionik" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.TipKarte" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.TipOrganizatora" Width="1.5" PointX="1.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.tse_dog_org" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Usluga" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneriranjeIzvjescaDBModel.Zaposlenik" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Karta_CjenikDogadaja" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_TipKarte_CjenikDogadaja" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Karta_Dogadaj" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Prostor_Dogadaj" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Racun_Dogadaj" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_tse_dog_org_Dogadaj" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Organizator_TipOrganizatora" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_tse_dog_org_Organizator" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.FK_Racun_Zaposlenik" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.tse_dog_sud" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneriranjeIzvjescaDBModel.tse_usl_rac" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

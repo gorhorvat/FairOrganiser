@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GeneriranjeIzvjescaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CjenikDogadaja">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vrijediOd" Type="datetime" />
+          <Property Name="vrijediDo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Dogadaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" />
+          <Property Name="datumOd" Type="datetime" />
+          <Property Name="datumDo" Type="datetime" />
+          <Property Name="cijenaKarte" Type="float" />
+        </EntityType>
+        <EntityType Name="Karta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum" Type="datetime" />
+          <Property Name="Dogadajid" Type="int" />
+          <Property Name="Cjenikid" Type="int" />
+        </EntityType>
+        <EntityType Name="Organizator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" />
+          <Property Name="oib" Type="varchar" MaxLength="255" />
+          <Property Name="adresa" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="brojTelefona" Type="varchar" MaxLength="255" />
+          <Property Name="TipOrganizatoraid" Type="int" />
+        </EntityType>
+        <EntityType Name="Prostor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sirina" Type="float" />
+          <Property Name="visina" Type="float" />
+          <Property Name="duzina" Type="float" />
+          <Property Name="Dogadajid" Type="int" />
+        </EntityType>
+        <EntityType Name="Racun">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="operater" Type="varchar" MaxLength="255" />
+          <Property Name="vrijeme" Type="datetime" />
+          <Property Name="ukupno" Type="float" />
+          <Property Name="nazivKupca" Type="varchar" MaxLength="255" />
+          <Property Name="Zaposlenikid" Type="int" />
+          <Property Name="Dogadajid" Type="int" />
+        </EntityType>
+        <EntityType Name="Sudionik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="255" />
+          <Property Name="prezime" Type="varchar" MaxLength="255" />
+          <Property Name="medijskaKuca" Type="varchar" MaxLength="255" />
+          <Property Name="telefon" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="dogadaj" Type="varchar" MaxLength="255" />
+          <Property Name="akreditacija" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TipKarte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iznosPopusta" Type="int" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" />
+          <Property Name="CjenikDogadajaid" Type="int" />
+        </EntityType>
+        <EntityType Name="TipOrganizatora">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tip" Type="varchar" MaxLength="255" />
+          <Property Name="opis" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tse_dog_org">
+          <Key>
+            <PropertyRef Name="Dogadajid" />
+            <PropertyRef Name="Organizatorid" />
+          </Key>
+          <Property Name="Dogadajid" Type="int" Nullable="false" />
+          <Property Name="Organizatorid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tse_dog_sud">
+          <Key>
+            <PropertyRef Name="Dogadajid" />
+            <PropertyRef Name="Sudionikid" />
+          </Key>
+          <Property Name="Dogadajid" Type="int" Nullable="false" />
+          <Property Name="Sudionikid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tse_usl_rac">
+          <Key>
+            <PropertyRef Name="Uslugaid" />
+            <PropertyRef Name="Racunid" />
+          </Key>
+          <Property Name="Uslugaid" Type="int" Nullable="false" />
+          <Property Name="Racunid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usluga">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" />
+          <Property Name="tip" Type="varchar" MaxLength="255" />
+          <Property Name="napomena" Type="varchar" MaxLength="255" />
+          <Property Name="cijenaUsluge" Type="float" />
+        </EntityType>
+        <EntityType Name="Zaposlenik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="255" />
+          <Property Name="prezime" Type="varchar" MaxLength="255" />
+          <Property Name="oib" Type="varchar" MaxLength="255" />
+          <Property Name="adresa" Type="varchar" MaxLength="255" />
+          <Property Name="brojTelefona" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="tipZaposlenika" Type="varchar" MaxLength="255" />
+          <Property Name="username" Type="varchar" MaxLength="255" />
+          <Property Name="password" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_Karta_CjenikDogadaja">
+          <End Role="CjenikDogadaja" Type="Self.CjenikDogadaja" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Karta" Type="Self.Karta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CjenikDogadaja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Karta">
+              <PropertyRef Name="Cjenikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Karta_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Karta" Type="Self.Karta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Karta">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organizator_TipOrganizatora">
+          <End Role="TipOrganizatora" Type="Self.TipOrganizatora" Multiplicity="0..1" />
+          <End Role="Organizator" Type="Self.Organizator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipOrganizatora">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Organizator">
+              <PropertyRef Name="TipOrganizatoraid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prostor_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Prostor" Type="Self.Prostor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prostor">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Racun_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Racun">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Racun_Zaposlenik">
+          <End Role="Zaposlenik" Type="Self.Zaposlenik" Multiplicity="0..1" />
+          <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zaposlenik">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Racun">
+              <PropertyRef Name="Zaposlenikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipKarte_CjenikDogadaja">
+          <End Role="CjenikDogadaja" Type="Self.CjenikDogadaja" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TipKarte" Type="Self.TipKarte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CjenikDogadaja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TipKarte">
+              <PropertyRef Name="CjenikDogadajaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_org_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
+          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_org">
+              <PropertyRef Name="Organizatorid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_org_Organizator">
+          <End Role="Organizator" Type="Self.Organizator" Multiplicity="1" />
+          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizator">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_org">
+              <PropertyRef Name="Organizatorid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_sud_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
+          <End Role="tse_dog_sud" Type="Self.tse_dog_sud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_sud">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_sud_Sudionik">
+          <End Role="Sudionik" Type="Self.Sudionik" Multiplicity="1" />
+          <End Role="tse_dog_sud" Type="Self.tse_dog_sud" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sudionik">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_sud">
+              <PropertyRef Name="Sudionikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_usl_rac_Racun">
+          <End Role="Racun" Type="Self.Racun" Multiplicity="1" />
+          <End Role="tse_usl_rac" Type="Self.tse_usl_rac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Racun">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_usl_rac">
+              <PropertyRef Name="Racunid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_usl_rac_Usluga">
+          <End Role="Usluga" Type="Self.Usluga" Multiplicity="1" />
+          <End Role="tse_usl_rac" Type="Self.tse_usl_rac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usluga">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_usl_rac">
+              <PropertyRef Name="Uslugaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GeneriranjeIzvjescaDBModelStoreContainer">
+          <EntitySet Name="CjenikDogadaja" EntityType="Self.CjenikDogadaja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dogadaj" EntityType="Self.Dogadaj" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Karta" EntityType="Self.Karta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Organizator" EntityType="Self.Organizator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prostor" EntityType="Self.Prostor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Racun" EntityType="Self.Racun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sudionik" EntityType="Self.Sudionik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipKarte" EntityType="Self.TipKarte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipOrganizatora" EntityType="Self.TipOrganizatora" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tse_dog_org" EntityType="Self.tse_dog_org" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tse_dog_sud" EntityType="Self.tse_dog_sud" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tse_usl_rac" EntityType="Self.tse_usl_rac" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usluga" EntityType="Self.Usluga" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Karta_CjenikDogadaja" Association="Self.FK_Karta_CjenikDogadaja">
+            <End Role="CjenikDogadaja" EntitySet="CjenikDogadaja" />
+            <End Role="Karta" EntitySet="Karta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Karta_Dogadaj" Association="Self.FK_Karta_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="Karta" EntitySet="Karta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organizator_TipOrganizatora" Association="Self.FK_Organizator_TipOrganizatora">
+            <End Role="TipOrganizatora" EntitySet="TipOrganizatora" />
+            <End Role="Organizator" EntitySet="Organizator" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prostor_Dogadaj" Association="Self.FK_Prostor_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="Prostor" EntitySet="Prostor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Racun_Dogadaj" Association="Self.FK_Racun_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="Racun" EntitySet="Racun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Racun_Zaposlenik" Association="Self.FK_Racun_Zaposlenik">
+            <End Role="Zaposlenik" EntitySet="Zaposlenik" />
+            <End Role="Racun" EntitySet="Racun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipKarte_CjenikDogadaja" Association="Self.FK_TipKarte_CjenikDogadaja">
+            <End Role="CjenikDogadaja" EntitySet="CjenikDogadaja" />
+            <End Role="TipKarte" EntitySet="TipKarte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_org_Dogadaj" Association="Self.FK_tse_dog_org_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_org_Organizator" Association="Self.FK_tse_dog_org_Organizator">
+            <End Role="Organizator" EntitySet="Organizator" />
+            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_sud_Dogadaj" Association="Self.FK_tse_dog_sud_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadaj" />
+            <End Role="tse_dog_sud" EntitySet="tse_dog_sud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_sud_Sudionik" Association="Self.FK_tse_dog_sud_Sudionik">
+            <End Role="Sudionik" EntitySet="Sudionik" />
+            <End Role="tse_dog_sud" EntitySet="tse_dog_sud" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_usl_rac_Racun" Association="Self.FK_tse_usl_rac_Racun">
+            <End Role="Racun" EntitySet="Racun" />
+            <End Role="tse_usl_rac" EntitySet="tse_usl_rac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_usl_rac_Usluga" Association="Self.FK_tse_usl_rac_Usluga">
+            <End Role="Usluga" EntitySet="Usluga" />
+            <End Role="tse_usl_rac" EntitySet="tse_usl_rac" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeneriranjeIzvjescaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CjenikDogadaja">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vrijediOd" Type="DateTime" Precision="3" />
+          <Property Name="vrijediDo" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Kartas" Relationship="Self.FK_Karta_CjenikDogadaja" FromRole="CjenikDogadaja" ToRole="Karta" />
+          <NavigationProperty Name="TipKartes" Relationship="Self.FK_TipKarte_CjenikDogadaja" FromRole="CjenikDogadaja" ToRole="TipKarte" />
+        </EntityType>
+        <EntityType Name="Dogadaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="datumOd" Type="DateTime" Precision="3" />
+          <Property Name="datumDo" Type="DateTime" Precision="3" />
+          <Property Name="cijenaKarte" Type="Double" />
+          <NavigationProperty Name="Kartas" Relationship="Self.FK_Karta_Dogadaj" FromRole="Dogadaj" ToRole="Karta" />
+          <NavigationProperty Name="Prostors" Relationship="Self.FK_Prostor_Dogadaj" FromRole="Dogadaj" ToRole="Prostor" />
+          <NavigationProperty Name="Racuns" Relationship="Self.FK_Racun_Dogadaj" FromRole="Dogadaj" ToRole="Racun" />
+          <NavigationProperty Name="tse_dog_org" Relationship="Self.FK_tse_dog_org_Dogadaj" FromRole="Dogadaj" ToRole="tse_dog_org" />
+          <NavigationProperty Name="Sudioniks" Relationship="Self.tse_dog_sud" FromRole="Dogadaj" ToRole="Sudionik" />
+        </EntityType>
+        <EntityType Name="Karta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum" Type="DateTime" Precision="3" />
+          <Property Name="Dogadajid" Type="Int32" />
+          <Property Name="Cjenikid" Type="Int32" />
+          <NavigationProperty Name="CjenikDogadaja" Relationship="Self.FK_Karta_CjenikDogadaja" FromRole="Karta" ToRole="CjenikDogadaja" />
+          <NavigationProperty Name="Dogadaj" Relationship="Self.FK_Karta_Dogadaj" FromRole="Karta" ToRole="Dogadaj" />
+        </EntityType>
+        <EntityType Name="Organizator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="oib" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="adresa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="brojTelefona" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TipOrganizatoraid" Type="Int32" />
+          <NavigationProperty Name="TipOrganizatora" Relationship="Self.FK_Organizator_TipOrganizatora" FromRole="Organizator" ToRole="TipOrganizatora" />
+          <NavigationProperty Name="tse_dog_org" Relationship="Self.FK_tse_dog_org_Organizator" FromRole="Organizator" ToRole="tse_dog_org" />
+        </EntityType>
+        <EntityType Name="Prostor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sirina" Type="Double" />
+          <Property Name="visina" Type="Double" />
+          <Property Name="duzina" Type="Double" />
+          <Property Name="Dogadajid" Type="Int32" />
+          <NavigationProperty Name="Dogadaj" Relationship="Self.FK_Prostor_Dogadaj" FromRole="Prostor" ToRole="Dogadaj" />
+        </EntityType>
+        <EntityType Name="Racun">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="operater" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="vrijeme" Type="DateTime" Precision="3" />
+          <Property Name="ukupno" Type="Double" />
+          <Property Name="nazivKupca" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Zaposlenikid" Type="Int32" />
+          <Property Name="Dogadajid" Type="Int32" />
+          <NavigationProperty Name="Dogadaj" Relationship="Self.FK_Racun_Dogadaj" FromRole="Racun" ToRole="Dogadaj" />
+          <NavigationProperty Name="Zaposlenik" Relationship="Self.FK_Racun_Zaposlenik" FromRole="Racun" ToRole="Zaposlenik" />
+          <NavigationProperty Name="Uslugas" Relationship="Self.tse_usl_rac" FromRole="Racun" ToRole="Usluga" />
+        </EntityType>
+        <EntityType Name="Sudionik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="medijskaKuca" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dogadaj" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="akreditacija" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Dogadajs" Relationship="Self.tse_dog_sud" FromRole="Sudionik" ToRole="Dogadaj" />
+        </EntityType>
+        <EntityType Name="TipKarte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iznosPopusta" Type="Int32" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CjenikDogadajaid" Type="Int32" />
+          <NavigationProperty Name="CjenikDogadaja" Relationship="Self.FK_TipKarte_CjenikDogadaja" FromRole="TipKarte" ToRole="CjenikDogadaja" />
+        </EntityType>
+        <EntityType Name="TipOrganizatora">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Organizators" Relationship="Self.FK_Organizator_TipOrganizatora" FromRole="TipOrganizatora" ToRole="Organizator" />
+        </EntityType>
+        <EntityType Name="tse_dog_org">
+          <Key>
+            <PropertyRef Name="Dogadajid" />
+            <PropertyRef Name="Organizatorid" />
+          </Key>
+          <Property Name="Dogadajid" Type="Int32" Nullable="false" />
+          <Property Name="Organizatorid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Dogadaj" Relationship="Self.FK_tse_dog_org_Dogadaj" FromRole="tse_dog_org" ToRole="Dogadaj" />
+          <NavigationProperty Name="Organizator" Relationship="Self.FK_tse_dog_org_Organizator" FromRole="tse_dog_org" ToRole="Organizator" />
+        </EntityType>
+        <EntityType Name="Usluga">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="napomena" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cijenaUsluge" Type="Double" />
+          <NavigationProperty Name="Racuns" Relationship="Self.tse_usl_rac" FromRole="Usluga" ToRole="Racun" />
+        </EntityType>
+        <EntityType Name="Zaposlenik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="oib" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="adresa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="brojTelefona" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tipZaposlenika" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Racuns" Relationship="Self.FK_Racun_Zaposlenik" FromRole="Zaposlenik" ToRole="Racun" />
+        </EntityType>
+        <Association Name="FK_Karta_CjenikDogadaja">
+          <End Role="CjenikDogadaja" Type="Self.CjenikDogadaja" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Karta" Type="Self.Karta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CjenikDogadaja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Karta">
+              <PropertyRef Name="Cjenikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipKarte_CjenikDogadaja">
+          <End Role="CjenikDogadaja" Type="Self.CjenikDogadaja" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TipKarte" Type="Self.TipKarte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CjenikDogadaja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TipKarte">
+              <PropertyRef Name="CjenikDogadajaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Karta_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Karta" Type="Self.Karta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Karta">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prostor_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Prostor" Type="Self.Prostor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prostor">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Racun_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="0..1" />
+          <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Racun">
+              <PropertyRef Name="Dogadajid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_org_Dogadaj">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
+          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dogadaj">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_org">
+              <PropertyRef Name="Organizatorid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organizator_TipOrganizatora">
+          <End Role="TipOrganizatora" Type="Self.TipOrganizatora" Multiplicity="0..1" />
+          <End Role="Organizator" Type="Self.Organizator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipOrganizatora">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Organizator">
+              <PropertyRef Name="TipOrganizatoraid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tse_dog_org_Organizator">
+          <End Role="Organizator" Type="Self.Organizator" Multiplicity="1" />
+          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizator">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tse_dog_org">
+              <PropertyRef Name="Organizatorid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Racun_Zaposlenik">
+          <End Role="Zaposlenik" Type="Self.Zaposlenik" Multiplicity="0..1" />
+          <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zaposlenik">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Racun">
+              <PropertyRef Name="Zaposlenikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tse_dog_sud">
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="*" />
+          <End Role="Sudionik" Type="Self.Sudionik" Multiplicity="*" />
+        </Association>
+        <Association Name="tse_usl_rac">
+          <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+          <End Role="Usluga" Type="Self.Usluga" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="GeneriranjeIzvjescaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CjenikDogadajas" EntityType="Self.CjenikDogadaja" />
+          <EntitySet Name="Dogadajs" EntityType="Self.Dogadaj" />
+          <EntitySet Name="Kartas" EntityType="Self.Karta" />
+          <EntitySet Name="Organizators" EntityType="Self.Organizator" />
+          <EntitySet Name="Prostors" EntityType="Self.Prostor" />
+          <EntitySet Name="Racuns" EntityType="Self.Racun" />
+          <EntitySet Name="Sudioniks" EntityType="Self.Sudionik" />
+          <EntitySet Name="TipKartes" EntityType="Self.TipKarte" />
+          <EntitySet Name="TipOrganizatoras" EntityType="Self.TipOrganizatora" />
+          <EntitySet Name="tse_dog_org" EntityType="Self.tse_dog_org" />
+          <EntitySet Name="Uslugas" EntityType="Self.Usluga" />
+          <EntitySet Name="Zaposleniks" EntityType="Self.Zaposlenik" />
+          <AssociationSet Name="FK_Karta_CjenikDogadaja" Association="Self.FK_Karta_CjenikDogadaja">
+            <End Role="CjenikDogadaja" EntitySet="CjenikDogadajas" />
+            <End Role="Karta" EntitySet="Kartas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipKarte_CjenikDogadaja" Association="Self.FK_TipKarte_CjenikDogadaja">
+            <End Role="CjenikDogadaja" EntitySet="CjenikDogadajas" />
+            <End Role="TipKarte" EntitySet="TipKartes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Karta_Dogadaj" Association="Self.FK_Karta_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Karta" EntitySet="Kartas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prostor_Dogadaj" Association="Self.FK_Prostor_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Prostor" EntitySet="Prostors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Racun_Dogadaj" Association="Self.FK_Racun_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Racun" EntitySet="Racuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_org_Dogadaj" Association="Self.FK_tse_dog_org_Dogadaj">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organizator_TipOrganizatora" Association="Self.FK_Organizator_TipOrganizatora">
+            <End Role="TipOrganizatora" EntitySet="TipOrganizatoras" />
+            <End Role="Organizator" EntitySet="Organizators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tse_dog_org_Organizator" Association="Self.FK_tse_dog_org_Organizator">
+            <End Role="Organizator" EntitySet="Organizators" />
+            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Racun_Zaposlenik" Association="Self.FK_Racun_Zaposlenik">
+            <End Role="Zaposlenik" EntitySet="Zaposleniks" />
+            <End Role="Racun" EntitySet="Racuns" />
+          </AssociationSet>
+          <AssociationSet Name="tse_dog_sud" Association="Self.tse_dog_sud">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Sudionik" EntitySet="Sudioniks" />
+          </AssociationSet>
+          <AssociationSet Name="tse_usl_rac" Association="Self.tse_usl_rac">
+            <End Role="Racun" EntitySet="Racuns" />
+            <End Role="Usluga" EntitySet="Uslugas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeneriranjeIzvjescaDBModelStoreContainer" CdmEntityContainer="GeneriranjeIzvjescaEntities">
+          <EntitySetMapping Name="CjenikDogadajas">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.CjenikDogadaja">
+              <MappingFragment StoreEntitySet="CjenikDogadaja">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="vrijediOd" ColumnName="vrijediOd" />
+                <ScalarProperty Name="vrijediDo" ColumnName="vrijediDo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dogadajs">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Dogadaj">
+              <MappingFragment StoreEntitySet="Dogadaj">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="datumOd" ColumnName="datumOd" />
+                <ScalarProperty Name="datumDo" ColumnName="datumDo" />
+                <ScalarProperty Name="cijenaKarte" ColumnName="cijenaKarte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kartas">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Karta">
+              <MappingFragment StoreEntitySet="Karta">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="Dogadajid" ColumnName="Dogadajid" />
+                <ScalarProperty Name="Cjenikid" ColumnName="Cjenikid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizators">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Organizator">
+              <MappingFragment StoreEntitySet="Organizator">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="oib" ColumnName="oib" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="brojTelefona" ColumnName="brojTelefona" />
+                <ScalarProperty Name="TipOrganizatoraid" ColumnName="TipOrganizatoraid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prostors">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Prostor">
+              <MappingFragment StoreEntitySet="Prostor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sirina" ColumnName="sirina" />
+                <ScalarProperty Name="visina" ColumnName="visina" />
+                <ScalarProperty Name="duzina" ColumnName="duzina" />
+                <ScalarProperty Name="Dogadajid" ColumnName="Dogadajid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Racuns">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Racun">
+              <MappingFragment StoreEntitySet="Racun">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="operater" ColumnName="operater" />
+                <ScalarProperty Name="vrijeme" ColumnName="vrijeme" />
+                <ScalarProperty Name="ukupno" ColumnName="ukupno" />
+                <ScalarProperty Name="nazivKupca" ColumnName="nazivKupca" />
+                <ScalarProperty Name="Zaposlenikid" ColumnName="Zaposlenikid" />
+                <ScalarProperty Name="Dogadajid" ColumnName="Dogadajid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sudioniks">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Sudionik">
+              <MappingFragment StoreEntitySet="Sudionik">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="medijskaKuca" ColumnName="medijskaKuca" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dogadaj" ColumnName="dogadaj" />
+                <ScalarProperty Name="akreditacija" ColumnName="akreditacija" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipKartes">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.TipKarte">
+              <MappingFragment StoreEntitySet="TipKarte">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="iznosPopusta" ColumnName="iznosPopusta" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="CjenikDogadajaid" ColumnName="CjenikDogadajaid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipOrganizatoras">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.TipOrganizatora">
+              <MappingFragment StoreEntitySet="TipOrganizatora">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tse_dog_org">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.tse_dog_org">
+              <MappingFragment StoreEntitySet="tse_dog_org">
+                <ScalarProperty Name="Dogadajid" ColumnName="Dogadajid" />
+                <ScalarProperty Name="Organizatorid" ColumnName="Organizatorid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uslugas">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Usluga">
+              <MappingFragment StoreEntitySet="Usluga">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="napomena" ColumnName="napomena" />
+                <ScalarProperty Name="cijenaUsluge" ColumnName="cijenaUsluge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zaposleniks">
+            <EntityTypeMapping TypeName="GeneriranjeIzvjescaDBModel.Zaposlenik">
+              <MappingFragment StoreEntitySet="Zaposlenik">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="oib" ColumnName="oib" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="brojTelefona" ColumnName="brojTelefona" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="tipZaposlenika" ColumnName="tipZaposlenika" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="tse_dog_sud" TypeName="GeneriranjeIzvjescaDBModel.tse_dog_sud" StoreEntitySet="tse_dog_sud">
+            <EndProperty Name="Dogadaj">
+              <ScalarProperty Name="id" ColumnName="Dogadajid" />
+            </EndProperty>
+            <EndProperty Name="Sudionik">
+              <ScalarProperty Name="id" ColumnName="Sudionikid" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="tse_usl_rac" TypeName="GeneriranjeIzvjescaDBModel.tse_usl_rac" StoreEntitySet="tse_usl_rac">
+            <EndProperty Name="Racun">
+              <ScalarProperty Name="id" ColumnName="Racunid" />
+            </EndProperty>
+            <EndProperty Name="Usluga">
+              <ScalarProperty Name="id" ColumnName="Uslugaid" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
