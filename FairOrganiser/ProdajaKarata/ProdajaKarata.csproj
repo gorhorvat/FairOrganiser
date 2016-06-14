@@ -85,6 +85,12 @@
     <Compile Include="FrmNovaStavka.Designer.cs">
       <DependentUpon>FrmNovaStavka.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNovaUsluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNovaUsluga.Designer.cs">
+      <DependentUpon>FrmNovaUsluga.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNoviTip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="FrmRacun.Designer.cs">
       <DependentUpon>FrmRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsluga.Designer.cs">
+      <DependentUpon>FrmUsluga.cs</DependentUpon>
     </Compile>
     <Compile Include="Karta.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
@@ -156,6 +168,9 @@
     <EmbeddedResource Include="FrmNovaStavka.resx">
       <DependentUpon>FrmNovaStavka.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNovaUsluga.resx">
+      <DependentUpon>FrmNovaUsluga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNoviTip.resx">
       <DependentUpon>FrmNoviTip.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRacun.resx">
       <DependentUpon>FrmRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsluga.resx">
+      <DependentUpon>FrmUsluga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

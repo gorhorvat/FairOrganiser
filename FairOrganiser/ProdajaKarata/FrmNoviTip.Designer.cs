@@ -88,7 +88,7 @@
             this.Controls.Add(this.txtNazivTipa);
             this.Controls.Add(this.btnPotvrdi);
             this.Name = "FrmNoviTip";
-            this.Text = "FrmNoviTip";
+            this.Text = "Novi tip";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace GeneriranjeIzvjesca
 {
-    public partial class FrmIzvjesce : Form
+    public partial class FrmIzvjesceBrojPosjetitelja : Form
     {
-        public FrmIzvjesce()
+        public FrmIzvjesceBrojPosjetitelja()
         {
             InitializeComponent();
         }
 
         private void FrmIzvjesce_Load(object sender, EventArgs e)
         {
-            List<string> popisIzvjesca = new List<string>() { "Izvješće o broju posjetitelja", "Izvješće o prodanim uslugama", "Izvješće o popunjenosti kapaciteta", "Izvješće o organiziranim događajima" };
-            cmbNazivIzvjesca.DataSource = popisIzvjesca;
+            // TODO: This line of code loads data into the '_16057_IzvjescaDBDataSet.IzvjesceBrojPosjetitelja' table. You can move, or remove it, as needed.
+            this.IzvjesceBrojPosjetiteljaTableAdapter.BrojPosjetitelja(this._16057_IzvjescaDBDataSet.IzvjesceBrojPosjetitelja);
+            this.rvPodaci.RefreshReport();
         }
 
         private void btnIspis_Click(object sender, EventArgs e)
