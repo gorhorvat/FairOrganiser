@@ -118,6 +118,7 @@
     <Compile Include="Karta.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LogikaPK.cs" />
     <Compile Include="Organizator.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>

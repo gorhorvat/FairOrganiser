@@ -11,6 +11,8 @@ namespace ProdajaKarata
 {
     public partial class FrmNoviTip : Form
     {
+        LogikaPK logika = new LogikaPK();
+
         private int CjenikID;
 
         public FrmNoviTip(int cjenikID)

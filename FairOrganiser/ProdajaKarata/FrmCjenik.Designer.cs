@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnPregledaj = new System.Windows.Forms.Button();
             this.dgvPopisCjenika = new System.Windows.Forms.DataGridView();
+            this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnObrisiCjenik = new System.Windows.Forms.Button();
             this.btnDodajCjenik = new System.Windows.Forms.Button();
             this.dtpDo = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +42,6 @@
             this.vrijediDoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kartasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKartesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +62,6 @@
             this.dgvPopisCjenika.AutoGenerateColumns = false;
             this.dgvPopisCjenika.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisCjenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPopisCjenika.ColumnHeadersVisible = false;
             this.dgvPopisCjenika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.vrijediOdDataGridViewTextBoxColumn,
@@ -76,6 +75,10 @@
             this.dgvPopisCjenika.RowHeadersVisible = false;
             this.dgvPopisCjenika.Size = new System.Drawing.Size(503, 190);
             this.dgvPopisCjenika.TabIndex = 17;
+            // 
+            // cjenikDogadajaBindingSource
+            // 
+            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
             // 
             // btnObrisiCjenik
             // 
@@ -125,21 +128,21 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vrijediOdDataGridViewTextBoxColumn
             // 
             this.vrijediOdDataGridViewTextBoxColumn.DataPropertyName = "vrijediOd";
-            this.vrijediOdDataGridViewTextBoxColumn.HeaderText = "vrijediOd";
+            this.vrijediOdDataGridViewTextBoxColumn.HeaderText = "Vrijedi od";
             this.vrijediOdDataGridViewTextBoxColumn.Name = "vrijediOdDataGridViewTextBoxColumn";
             this.vrijediOdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vrijediDoDataGridViewTextBoxColumn
             // 
             this.vrijediDoDataGridViewTextBoxColumn.DataPropertyName = "vrijediDo";
-            this.vrijediDoDataGridViewTextBoxColumn.HeaderText = "vrijediDo";
+            this.vrijediDoDataGridViewTextBoxColumn.HeaderText = "Vrijedi do";
             this.vrijediDoDataGridViewTextBoxColumn.Name = "vrijediDoDataGridViewTextBoxColumn";
             this.vrijediDoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -158,10 +161,6 @@
             this.tipKartesDataGridViewTextBoxColumn.Name = "tipKartesDataGridViewTextBoxColumn";
             this.tipKartesDataGridViewTextBoxColumn.ReadOnly = true;
             this.tipKartesDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cjenikDogadajaBindingSource
-            // 
-            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
             // 
             // FrmCjenik
             // 

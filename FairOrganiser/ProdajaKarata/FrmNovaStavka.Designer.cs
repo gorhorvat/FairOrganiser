@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOdaberi = new System.Windows.Forms.Button();
-            this.btnPotvrdi = new System.Windows.Forms.Button();
+            this.btnIzlaz = new System.Windows.Forms.Button();
             this.dgvUsluge = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,15 +100,15 @@
             this.btnOdaberi.UseVisualStyleBackColor = true;
             this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
-            // btnPotvrdi
+            // btnIzlaz
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(164, 236);
-            this.btnPotvrdi.Name = "btnPotvrdi";
-            this.btnPotvrdi.Size = new System.Drawing.Size(75, 23);
-            this.btnPotvrdi.TabIndex = 7;
-            this.btnPotvrdi.Text = "Potvrdi";
-            this.btnPotvrdi.UseVisualStyleBackColor = true;
-            this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
+            this.btnIzlaz.Location = new System.Drawing.Point(164, 236);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
+            this.btnIzlaz.TabIndex = 7;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // dgvUsluge
             // 
@@ -190,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 346);
             this.Controls.Add(this.dgvUsluge);
-            this.Controls.Add(this.btnPotvrdi);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnOdaberi;
-        private System.Windows.Forms.Button btnPotvrdi;
+        private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.DataGridView dgvUsluge;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;

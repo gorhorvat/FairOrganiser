@@ -13,6 +13,8 @@ namespace ProdajaKarata
 {
     public partial class FrmKarta : Form
     {
+        LogikaPK logika = new LogikaPK();
+
         public FrmKarta()
         {
             InitializeComponent();
@@ -20,88 +22,35 @@ namespace ProdajaKarata
 
         private void FrmKarta_Load(object sender, EventArgs e)
         {
-            txtSifraKarte.Text = GetSifra().ToString();
+            txtSifraKarte.Text = logika.GetSifraKarte().ToString();
             txtDatum.Text = DateTime.Now.ToString("dd/MM/yyyy   hh:mm:ss");
-            PrikaziDogadaje();
-            PrikaziTipove();
+            SetSourceDogadaji();
+            SetSourceTipovi();
         }
 
-        /// <summary>
-        /// Dohvaća broj karata u bazi uvećan za 1
-        /// </summary>
-        public int GetSifra()
+        private void SetSourceDogadaji()
         {
-            using (var db = new ProdajaKarataEntities())
-            {
-                int sifra = (from s in db.Kartas select s).Count()+1;
-                return sifra;
-            }
+            dogadajBindingSource.DataSource = logika.PrikaziDogadaje();
         }
 
-        /// <summary>
-        /// Dohvaća listu svih događaja u kontekstu, te ih prikazuje u DataGridView-u.
-        /// </summary>
-        private void PrikaziDogadaje()
+        private void SetSourceTipovi()
         {
-            BindingList<Dogadaj> popisDogadaja = null;
-            using (var db = new ProdajaKarataEntities())
-            {
-                popisDogadaja = new BindingList<Dogadaj>(db.Dogadajs.ToList());
-            }
-            dogadajBindingSource.DataSource = popisDogadaja;
+            tipKarteBindingSource.DataSource = logika.PrikaziTipove();
         }
 
-        /// <summary>
-        /// Dohvaća listu svih tipova karata u kontekstu, te ih prikazuje u DataGridView-u.
-        /// </summary>
-        private void PrikaziTipove()
+        private void dgvPopisDogadaja_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BindingList<TipKarte> popisTipova = null;
-            using (var db = new ProdajaKarataEntities())
-            {
-                popisTipova = new BindingList<TipKarte>(db.TipKartes.ToList());
-            }
-            tipKarteBindingSource.DataSource = popisTipova;
-        }
-        /// <summary>
-        /// Dohvaća cijenu jedne karte sa uračunatim popustom.
-        /// </summary>
-        /// <param name="cijena"></param>
-        /// <param name="popust"></param>
-        /// <returns></returns>
-        public float GetCijenaKarte(float cijena, float popust)
-        {
-            float cijenaKarte = (float)cijena - ((float)cijena * ((float)popust / 100));
-            return cijenaKarte;
+            txtCijenaKarte.Text = logika.GetCijenaKarte(float.Parse(dgvPopisDogadaja[4, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()), float.Parse(dgvPopisTipova[1, dgvPopisTipova.CurrentRow.Index].Value.ToString())).ToString("N", CultureInfo.InvariantCulture);
         }
 
-        public void dgvPopisDogadaja_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPopisTipova_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCijenaKarte.Text = GetCijenaKarte(float.Parse(dgvPopisDogadaja[4, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()), float.Parse(dgvPopisTipova[1, dgvPopisTipova.CurrentRow.Index].Value.ToString())).ToString("N", CultureInfo.InvariantCulture);
+            txtCijenaKarte.Text = logika.GetCijenaKarte(float.Parse(dgvPopisDogadaja[4, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()), float.Parse(dgvPopisTipova[1, dgvPopisTipova.CurrentRow.Index].Value.ToString())).ToString("N", CultureInfo.InvariantCulture);
         }
 
-        public void dgvPopisTipova_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtCijenaKarte.Text = GetCijenaKarte(float.Parse(dgvPopisDogadaja[4, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()), float.Parse(dgvPopisTipova[1, dgvPopisTipova.CurrentRow.Index].Value.ToString())).ToString("N", CultureInfo.InvariantCulture);
-        }
-        /// <summary>
-        /// Sprema instancu karte u bazu zajedno sa vanjskim ključevima.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnIspisi_Click(object sender, EventArgs e)
         {
-            using (var db = new ProdajaKarataEntities())
-            {
-                Karta novaKarta = new Karta
-                {
-                    datum = DateTime.Parse(txtDatum.Text),
-                    Dogadajid = int.Parse(dgvPopisDogadaja[0, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()),
-                    Cjenikid = int.Parse(dgvPopisTipova[3, dgvPopisTipova.CurrentRow.Index].Value.ToString())
-                };
-                db.Kartas.Add(novaKarta);
-                db.SaveChanges();
-            }
+            logika.SpremiKartu(DateTime.Parse(txtDatum.Text), int.Parse(dgvPopisDogadaja[0, dgvPopisDogadaja.CurrentRow.Index].Value.ToString()), int.Parse(dgvPopisTipova[3, dgvPopisTipova.CurrentRow.Index].Value.ToString()));
             Close();
         }
     }

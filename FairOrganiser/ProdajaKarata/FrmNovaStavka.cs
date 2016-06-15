@@ -12,6 +12,8 @@ namespace ProdajaKarata
 {
     public partial class FrmNovaStavka : Form
     {
+        LogikaPK logika = new LogikaPK();
+
         public FrmNovaStavka()
         {
             InitializeComponent();
@@ -19,20 +21,12 @@ namespace ProdajaKarata
 
         private void FrmNovaStavka_Load(object sender, EventArgs e)
         {
-            PrikaziUsluge();
+            SetSourceUsluge();
         }
 
-        /// <summary>
-        /// Dohvaća listu svih usluga u kontekstu, te ih prikazuje u ComboBox-u.
-        /// </summary>
-        private void PrikaziUsluge()
+        private void SetSourceUsluge()
         {
-            BindingList<Usluga> popisUsluga = null;
-            using (var db = new ProdajaKarataEntities())
-            {
-                popisUsluga = new BindingList<Usluga>(db.Uslugas.ToList());
-            }
-            uslugaBindingSource.DataSource = popisUsluga;
+            uslugaBindingSource.DataSource = logika.PrikaziUsluge();
         }
 
         private void dgvUsluge_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -45,7 +39,7 @@ namespace ProdajaKarata
 
         }
 
-        private void btnPotvrdi_Click(object sender, EventArgs e)
+        private void btnIzlaz_Click(object sender, EventArgs e)
         {
             Close();
         }
