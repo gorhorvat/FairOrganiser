@@ -27,18 +27,27 @@ namespace ProdajaKarata
         /// <param name="e"></param>
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
-            using (var db = new ProdajaKarataEntities())
+            if (txtIznosPopusta.Text == "" || txtNazivTipa.Text == "")
             {
-                TipKarte noviTip = new TipKarte
-                {
-                    iznosPopusta = int.Parse(txtIznosPopusta.Text),
-                    naziv = txtNazivTipa.Text,
-                    CjenikDogadajaid = CjenikID
-                };
-                db.TipKartes.Add(noviTip);
-                db.SaveChanges();
+                MessageBox.Show("Niste popunili sva polja!");
+                Close();
             }
-            Close();
+
+            else
+            {
+                using (var db = new ProdajaKarataEntities())
+                {
+                    TipKarte noviTip = new TipKarte
+                    {
+                        iznosPopusta = int.Parse(txtIznosPopusta.Text),
+                        naziv = txtNazivTipa.Text,
+                        CjenikDogadajaid = CjenikID
+                    };
+                    db.TipKartes.Add(noviTip);
+                    db.SaveChanges();
+                }
+                Close();
+            }
         }
     }
 }

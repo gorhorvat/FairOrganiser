@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rbBrojPosjetitelja = new System.Windows.Forms.RadioButton();
-            this.rbProdaneUsluge = new System.Windows.Forms.RadioButton();
-            this.rbKapaciteti = new System.Windows.Forms.RadioButton();
             this.rbOrganizatori = new System.Windows.Forms.RadioButton();
+            this.rbKapaciteti = new System.Windows.Forms.RadioButton();
+            this.rbProdaneUsluge = new System.Windows.Forms.RadioButton();
+            this.rbBrojPosjetitelja = new System.Windows.Forms.RadioButton();
             this.btnOdaberi = new System.Windows.Forms.Button();
+            this.btnIzlaz = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,27 +49,16 @@
             this.panel1.Size = new System.Drawing.Size(202, 98);
             this.panel1.TabIndex = 0;
             // 
-            // rbBrojPosjetitelja
+            // rbOrganizatori
             // 
-            this.rbBrojPosjetitelja.AutoSize = true;
-            this.rbBrojPosjetitelja.Location = new System.Drawing.Point(3, 3);
-            this.rbBrojPosjetitelja.Name = "rbBrojPosjetitelja";
-            this.rbBrojPosjetitelja.Size = new System.Drawing.Size(151, 17);
-            this.rbBrojPosjetitelja.TabIndex = 0;
-            this.rbBrojPosjetitelja.TabStop = true;
-            this.rbBrojPosjetitelja.Text = "Izvješće o broju posjetitelja";
-            this.rbBrojPosjetitelja.UseVisualStyleBackColor = true;
-            // 
-            // rbProdaneUsluge
-            // 
-            this.rbProdaneUsluge.AutoSize = true;
-            this.rbProdaneUsluge.Location = new System.Drawing.Point(3, 26);
-            this.rbProdaneUsluge.Name = "rbProdaneUsluge";
-            this.rbProdaneUsluge.Size = new System.Drawing.Size(167, 17);
-            this.rbProdaneUsluge.TabIndex = 1;
-            this.rbProdaneUsluge.TabStop = true;
-            this.rbProdaneUsluge.Text = "Izvješće o prodanim uslugama";
-            this.rbProdaneUsluge.UseVisualStyleBackColor = true;
+            this.rbOrganizatori.AutoSize = true;
+            this.rbOrganizatori.Location = new System.Drawing.Point(3, 72);
+            this.rbOrganizatori.Name = "rbOrganizatori";
+            this.rbOrganizatori.Size = new System.Drawing.Size(195, 17);
+            this.rbOrganizatori.TabIndex = 3;
+            this.rbOrganizatori.TabStop = true;
+            this.rbOrganizatori.Text = "Izvješće o organiziranim događajima";
+            this.rbOrganizatori.UseVisualStyleBackColor = true;
             // 
             // rbKapaciteti
             // 
@@ -81,20 +71,31 @@
             this.rbKapaciteti.Text = "Izvješće o popunjenosti kapaciteta";
             this.rbKapaciteti.UseVisualStyleBackColor = true;
             // 
-            // rbOrganizatori
+            // rbProdaneUsluge
             // 
-            this.rbOrganizatori.AutoSize = true;
-            this.rbOrganizatori.Location = new System.Drawing.Point(3, 72);
-            this.rbOrganizatori.Name = "rbOrganizatori";
-            this.rbOrganizatori.Size = new System.Drawing.Size(195, 17);
-            this.rbOrganizatori.TabIndex = 3;
-            this.rbOrganizatori.TabStop = true;
-            this.rbOrganizatori.Text = "Izvješće o organiziranim događajima";
-            this.rbOrganizatori.UseVisualStyleBackColor = true;
+            this.rbProdaneUsluge.AutoSize = true;
+            this.rbProdaneUsluge.Location = new System.Drawing.Point(3, 26);
+            this.rbProdaneUsluge.Name = "rbProdaneUsluge";
+            this.rbProdaneUsluge.Size = new System.Drawing.Size(167, 17);
+            this.rbProdaneUsluge.TabIndex = 1;
+            this.rbProdaneUsluge.TabStop = true;
+            this.rbProdaneUsluge.Text = "Izvješće o prodanim uslugama";
+            this.rbProdaneUsluge.UseVisualStyleBackColor = true;
+            // 
+            // rbBrojPosjetitelja
+            // 
+            this.rbBrojPosjetitelja.AutoSize = true;
+            this.rbBrojPosjetitelja.Location = new System.Drawing.Point(3, 3);
+            this.rbBrojPosjetitelja.Name = "rbBrojPosjetitelja";
+            this.rbBrojPosjetitelja.Size = new System.Drawing.Size(151, 17);
+            this.rbBrojPosjetitelja.TabIndex = 0;
+            this.rbBrojPosjetitelja.TabStop = true;
+            this.rbBrojPosjetitelja.Text = "Izvješće o broju posjetitelja";
+            this.rbBrojPosjetitelja.UseVisualStyleBackColor = true;
             // 
             // btnOdaberi
             // 
-            this.btnOdaberi.Location = new System.Drawing.Point(139, 116);
+            this.btnOdaberi.Location = new System.Drawing.Point(58, 116);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(75, 23);
             this.btnOdaberi.TabIndex = 1;
@@ -102,11 +103,22 @@
             this.btnOdaberi.UseVisualStyleBackColor = true;
             this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Location = new System.Drawing.Point(139, 116);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
+            this.btnIzlaz.TabIndex = 2;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
             // FrmIzvjesca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(225, 147);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.panel1);
             this.Name = "FrmIzvjesca";
@@ -125,5 +137,6 @@
         private System.Windows.Forms.RadioButton rbProdaneUsluge;
         private System.Windows.Forms.RadioButton rbBrojPosjetitelja;
         private System.Windows.Forms.Button btnOdaberi;
+        private System.Windows.Forms.Button btnIzlaz;
     }
 }

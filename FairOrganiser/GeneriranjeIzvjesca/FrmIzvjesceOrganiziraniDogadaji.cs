@@ -22,10 +22,5 @@ namespace GeneriranjeIzvjesca
             this.IzvjesceOrganizatoriTableAdapter.OrganiziraniDogadaji(this._16057_IzvjescaDBDataSet.IzvjesceOrganizatori);
             this.rvPodaci.RefreshReport();
         }
-
-        private void btnIspis_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }
