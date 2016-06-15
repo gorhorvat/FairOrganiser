@@ -19,7 +19,6 @@ namespace GeneriranjeIzvjesca
 
         private void FrmIzvjesce_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_16057_IzvjescaDBDataSet.IzvjesceBrojPosjetitelja' table. You can move, or remove it, as needed.
             this.IzvjesceBrojPosjetiteljaTableAdapter.BrojPosjetitelja(this._16057_IzvjescaDBDataSet.IzvjesceBrojPosjetitelja);
             this.rvPodaci.RefreshReport();
         }

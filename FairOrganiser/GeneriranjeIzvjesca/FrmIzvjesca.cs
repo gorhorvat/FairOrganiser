@@ -22,25 +22,25 @@ namespace GeneriranjeIzvjesca
             if (rbBrojPosjetitelja.Checked == true)
             {
                 FrmIzvjesceBrojPosjetitelja brojPosjetitelja = new FrmIzvjesceBrojPosjetitelja();
-                brojPosjetitelja.Show();
+                brojPosjetitelja.ShowDialog();
             }
 
             if (rbProdaneUsluge.Checked == true)
             {
                 FrmIzvjesceProdaneUsluge prodaneUsluge = new FrmIzvjesceProdaneUsluge();
-                prodaneUsluge.Show();
+                prodaneUsluge.ShowDialog();
             }
 
             if (rbKapaciteti.Checked == true)
             {
                 FrmIzvjescePopunjenostKapaciteta kapaciteti = new FrmIzvjescePopunjenostKapaciteta();
-                kapaciteti.Show();
+                kapaciteti.ShowDialog();
             }
 
             if (rbOrganizatori.Checked == true)
             {
                 FrmIzvjesceOrganiziraniDogadaji dogadaji = new FrmIzvjesceOrganiziraniDogadaji();
-                dogadaji.Show();
+                dogadaji.ShowDialog();
             }
         }
     }

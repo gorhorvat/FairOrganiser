@@ -11,10 +11,13 @@ namespace ProdajaKarata
 {
     public partial class FrmRacun : Form
     {
+        LogikaPK logika = new LogikaPK();
+
         public FrmRacun()
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Dakle, forma Račun sadržava operatera - zaposlenik, naziv kupca - organizator, dgvStavkeRačuna - lista usluga (samo one označene kod odabira prostora i svih usluga za događaj)
         /// </summary>
@@ -22,28 +25,17 @@ namespace ProdajaKarata
         /// <param name="e"></param>
         private void FrmRacun_Load(object sender, EventArgs e)
         {
-            txtBrojRacuna.Text = DateTime.Now.Date.ToString("yyyyMMdd") + "/" + GetSifraRacuna().ToString();
+            txtBrojRacuna.Text = DateTime.Now.Date.ToString("yyyyMMdd") + "/" + logika.GetSifraRacuna().ToString();
             txtVrijeme.Text = DateTime.Now.ToString();
             txtOTvrtci.Text = "Naziv: ZAGREBAČKI HOLDING d.o.o." + Environment.NewLine + Environment.NewLine + "Sjedište: Avenija Dubrovnik 15, 10020 Zagreb" + Environment.NewLine + Environment.NewLine + "OIB: 85584865987-024";
         }
-        /// <summary>
-        /// Dohvaća broj računa u bazi te vraća taj broj uvećan za 1
-        /// </summary>
-        /// <returns></returns>
-        public int GetSifraRacuna()
-        {
-            using (var db = new ProdajaKarataEntities())
-            {
-                int sifra = (from s in db.Racuns select s).Count() + 1;
-                return sifra;
-            }
-        }
+        
         /// <summary>
         /// Funkcija kojom se račun pretvara u pdf i sprema gdje korisnik odredi.
         /// </summary>
         public void FormToPdf()
         {
-            string nazivDatoteke = DateTime.Now.Date.ToString("yyyyMMdd") + "_" + GetSifraRacuna().ToString();
+            string nazivDatoteke = DateTime.Now.Date.ToString("yyyyMMdd") + "_" + logika.GetSifraRacuna().ToString();
 
             SaveFileDialog sf = new SaveFileDialog();
             sf.FileName = nazivDatoteke;
@@ -85,13 +77,19 @@ namespace ProdajaKarata
         private void btnDodajStavku_Click(object sender, EventArgs e)
         {
             FrmNovaStavka novaStavka = new FrmNovaStavka();
-            novaStavka.Show();
+            novaStavka.ShowDialog();
         }
 
+        /// <summary>
+        /// Klikom na tipku "Obriši" stavka računa se briše iz baze.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnObrisiStavku_Click(object sender, EventArgs e)
         {
 
         }
+
         /// <summary>
         /// Klikom na tipku "Ispisi" račun se sprema u bazu te se sprema gdje korisnik odredi.
         /// </summary>

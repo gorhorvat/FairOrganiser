@@ -11,6 +11,8 @@ namespace ProdajaKarata
 {
     public partial class FrmPregledCjenika : Form
     {
+        LogikaPK logika = new LogikaPK();
+
         private CjenikDogadaja odabraniCjenik;
         private int cjenikID;
 
@@ -44,28 +46,6 @@ namespace ProdajaKarata
                 tipKarteBindingSource.DataSource = popisTipova;
             }
         }
-        /// <summary>
-        /// Briše selektirani tip karte iz cjenika.
-        /// </summary>
-        /// <param name="TipID"></param>
-        public void ObrisiTip(int TipID)
-        {
-            using (var db = new ProdajaKarataEntities())
-            {
-                TipKarte brisiTip = (from t in db.TipKartes
-                                     where t.id == TipID
-                                     select t).First();
-
-                if (brisiTip != null)
-                {
-                    if (MessageBox.Show("Da li ste sigurni?", "Upozorenje!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        db.TipKartes.Remove(brisiTip);
-                        db.SaveChanges();
-                    }
-                }
-            }
-        }
         
         private void btnDodajTip_Click(object sender, EventArgs e)
         {
@@ -77,7 +57,7 @@ namespace ProdajaKarata
         private void btnObrisiTip_Click(object sender, EventArgs e)
         {
             int TipID = int.Parse(dgvOdabraniCjenik[0, dgvOdabraniCjenik.CurrentRow.Index].Value.ToString());
-            ObrisiTip(TipID);
+            logika.ObrisiTip(TipID);
             PrikaziTipove(cjenikID);
         }
 

@@ -36,12 +36,12 @@
             this.txtOd = new System.Windows.Forms.TextBox();
             this.lblCjenik = new System.Windows.Forms.Label();
             this.dgvOdabraniCjenik = new System.Windows.Forms.DataGridView();
+            this.tipKarteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iznosPopustaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipKarteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdabraniCjenik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +107,6 @@
             this.dgvOdabraniCjenik.AutoGenerateColumns = false;
             this.dgvOdabraniCjenik.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOdabraniCjenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdabraniCjenik.ColumnHeadersVisible = false;
             this.dgvOdabraniCjenik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.iznosPopustaDataGridViewTextBoxColumn,
@@ -121,22 +120,27 @@
             this.dgvOdabraniCjenik.Size = new System.Drawing.Size(429, 189);
             this.dgvOdabraniCjenik.TabIndex = 7;
             // 
+            // tipKarteBindingSource
+            // 
+            this.tipKarteBindingSource.DataSource = typeof(ProdajaKarata.TipKarte);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // iznosPopustaDataGridViewTextBoxColumn
             // 
             this.iznosPopustaDataGridViewTextBoxColumn.DataPropertyName = "iznosPopusta";
-            this.iznosPopustaDataGridViewTextBoxColumn.HeaderText = "iznosPopusta";
+            this.iznosPopustaDataGridViewTextBoxColumn.HeaderText = "Iznos popusta";
             this.iznosPopustaDataGridViewTextBoxColumn.Name = "iznosPopustaDataGridViewTextBoxColumn";
             // 
             // nazivDataGridViewTextBoxColumn
             // 
             this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
             // 
             // cjenikDogadajaidDataGridViewTextBoxColumn
@@ -152,10 +156,6 @@
             this.cjenikDogadajaDataGridViewTextBoxColumn.HeaderText = "CjenikDogadaja";
             this.cjenikDogadajaDataGridViewTextBoxColumn.Name = "cjenikDogadajaDataGridViewTextBoxColumn";
             this.cjenikDogadajaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipKarteBindingSource
-            // 
-            this.tipKarteBindingSource.DataSource = typeof(ProdajaKarata.TipKarte);
             // 
             // FrmPregledCjenika
             // 
@@ -188,11 +188,11 @@
         private System.Windows.Forms.TextBox txtOd;
         private System.Windows.Forms.Label lblCjenik;
         private System.Windows.Forms.DataGridView dgvOdabraniCjenik;
+        private System.Windows.Forms.BindingSource tipKarteBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iznosPopustaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cjenikDogadajaidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cjenikDogadajaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tipKarteBindingSource;
     }
 }
