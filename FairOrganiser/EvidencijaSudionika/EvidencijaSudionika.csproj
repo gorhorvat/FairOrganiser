@@ -45,7 +45,7 @@
     </Reference>
     <Reference Include="MessagingToolkit.QRCode, Version=1.0.3541.23206, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
+      <HintPath>Resources\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -162,6 +162,9 @@
       <DependentUpon>EvidencijaSudionikaModel.edmx</DependentUpon>
       <LastGenOutput>EvidencijaSudionikaModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\MessagingToolkit.QRCode.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="Resources\zv_logo_mali_hr.png" />
     <None Include="Resources\logo_holding %281%29.png" />
   </ItemGroup>
