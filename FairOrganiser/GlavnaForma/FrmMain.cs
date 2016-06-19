@@ -29,13 +29,13 @@ namespace GlavnaForma
 
         private void btnOrganizatori_Click(object sender, EventArgs e)
         {
-            FrmOrganizator organizator = new FrmOrganizator();
+            EvidencijaOrganizatora.FrmEvidencija organizator = new EvidencijaOrganizatora.FrmEvidencija();
             organizator.Show();
         }
 
         private void btnSudionici_Click(object sender, EventArgs e)
         {
-            FrmEvidencija sudionik = new FrmEvidencija();
+            EvidencijaSudionika.FrmEvidencija sudionik = new EvidencijaSudionika.FrmEvidencija();
             sudionik.Show();
         }
 
