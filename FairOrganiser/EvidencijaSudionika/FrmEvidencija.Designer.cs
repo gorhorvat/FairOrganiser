@@ -1,6 +1,6 @@
 ﻿namespace EvidencijaSudionika
 {
-    partial class FrmSudionik
+    partial class FrmEvidencija
     {
         /// <summary>
         /// Required designer variable.
@@ -33,25 +33,26 @@
             this.btnIzbrisiSudionika = new System.Windows.Forms.Button();
             this.btnDodajSudionika = new System.Windows.Forms.Button();
             this.dgvSudionici = new System.Windows.Forms.DataGridView();
-            this.sudionikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medijskaKuca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dogadaj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditacija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dogadajsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sudionikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSudionici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sudionikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIzdajAkreditaciju
             // 
-            this.btnIzdajAkreditaciju.Location = new System.Drawing.Point(545, 295);
+            this.btnIzdajAkreditaciju.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzdajAkreditaciju.Location = new System.Drawing.Point(529, 295);
             this.btnIzdajAkreditaciju.Name = "btnIzdajAkreditaciju";
-            this.btnIzdajAkreditaciju.Size = new System.Drawing.Size(79, 35);
+            this.btnIzdajAkreditaciju.Size = new System.Drawing.Size(95, 35);
             this.btnIzdajAkreditaciju.TabIndex = 10;
             this.btnIzdajAkreditaciju.Text = "Izdaj akreditaciju";
             this.btnIzdajAkreditaciju.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@
             // 
             // btnIzbrisiSudionika
             // 
-            this.btnIzbrisiSudionika.Location = new System.Drawing.Point(469, 295);
+            this.btnIzbrisiSudionika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzbrisiSudionika.Location = new System.Drawing.Point(431, 295);
             this.btnIzbrisiSudionika.Name = "btnIzbrisiSudionika";
-            this.btnIzbrisiSudionika.Size = new System.Drawing.Size(70, 35);
+            this.btnIzbrisiSudionika.Size = new System.Drawing.Size(92, 35);
             this.btnIzbrisiSudionika.TabIndex = 9;
             this.btnIzbrisiSudionika.Text = "Izbriši sudionika";
             this.btnIzbrisiSudionika.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@
             // 
             // btnDodajSudionika
             // 
-            this.btnDodajSudionika.Location = new System.Drawing.Point(394, 295);
+            this.btnDodajSudionika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDodajSudionika.Location = new System.Drawing.Point(332, 295);
             this.btnDodajSudionika.Name = "btnDodajSudionika";
-            this.btnDodajSudionika.Size = new System.Drawing.Size(69, 35);
+            this.btnDodajSudionika.Size = new System.Drawing.Size(93, 35);
             this.btnDodajSudionika.TabIndex = 8;
             this.btnDodajSudionika.Text = "Dodaj sudionika";
             this.btnDodajSudionika.UseVisualStyleBackColor = true;
@@ -80,6 +83,7 @@
             // dgvSudionici
             // 
             this.dgvSudionici.AllowUserToAddRows = false;
+            this.dgvSudionici.AllowUserToDeleteRows = false;
             this.dgvSudionici.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -88,25 +92,73 @@
             this.dgvSudionici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSudionici.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.imeDataGridViewTextBoxColumn,
-            this.prezimeDataGridViewTextBoxColumn,
-            this.medijskaKuca,
+            this.ime,
+            this.prezime,
             this.telefon,
             this.email,
             this.dogadaj,
             this.akreditacija,
             this.dogadajsDataGridViewTextBoxColumn});
             this.dgvSudionici.DataSource = this.sudionikBindingSource;
-            this.dgvSudionici.Location = new System.Drawing.Point(18, 12);
+            this.dgvSudionici.Location = new System.Drawing.Point(12, 38);
             this.dgvSudionici.Name = "dgvSudionici";
             this.dgvSudionici.ReadOnly = true;
             this.dgvSudionici.RowHeadersVisible = false;
-            this.dgvSudionici.Size = new System.Drawing.Size(606, 277);
+            this.dgvSudionici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSudionici.Size = new System.Drawing.Size(612, 251);
             this.dgvSudionici.TabIndex = 7;
             // 
-            // sudionikBindingSource
+            // ime
             // 
-            this.sudionikBindingSource.DataSource = typeof(EvidencijaSudionika.Sudionik);
+            this.ime.DataPropertyName = "ime";
+            this.ime.HeaderText = "Ime";
+            this.ime.Name = "ime";
+            this.ime.ReadOnly = true;
+            // 
+            // prezime
+            // 
+            this.prezime.DataPropertyName = "prezime";
+            this.prezime.HeaderText = "Prezime";
+            this.prezime.Name = "prezime";
+            this.prezime.ReadOnly = true;
+            // 
+            // telefon
+            // 
+            this.telefon.DataPropertyName = "telefon";
+            this.telefon.HeaderText = "Telefon";
+            this.telefon.Name = "telefon";
+            this.telefon.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // dogadaj
+            // 
+            this.dogadaj.DataPropertyName = "dogadaj";
+            this.dogadaj.HeaderText = "Događaj";
+            this.dogadaj.Name = "dogadaj";
+            this.dogadaj.ReadOnly = true;
+            // 
+            // akreditacija
+            // 
+            this.akreditacija.DataPropertyName = "akreditacija";
+            this.akreditacija.HeaderText = "Akreditacija";
+            this.akreditacija.Name = "akreditacija";
+            this.akreditacija.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Popis sudionika";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -116,56 +168,6 @@
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // medijskaKuca
-            // 
-            this.medijskaKuca.DataPropertyName = "medijskaKuca";
-            this.medijskaKuca.HeaderText = "medijskaKuca";
-            this.medijskaKuca.Name = "medijskaKuca";
-            this.medijskaKuca.ReadOnly = true;
-            // 
-            // telefon
-            // 
-            this.telefon.DataPropertyName = "telefon";
-            this.telefon.HeaderText = "telefon";
-            this.telefon.Name = "telefon";
-            this.telefon.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // dogadaj
-            // 
-            this.dogadaj.DataPropertyName = "dogadaj";
-            this.dogadaj.HeaderText = "dogadaj";
-            this.dogadaj.Name = "dogadaj";
-            this.dogadaj.ReadOnly = true;
-            // 
-            // akreditacija
-            // 
-            this.akreditacija.DataPropertyName = "akreditacija";
-            this.akreditacija.HeaderText = "akreditacija";
-            this.akreditacija.Name = "akreditacija";
-            this.akreditacija.ReadOnly = true;
-            this.akreditacija.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // dogadajsDataGridViewTextBoxColumn
             // 
             this.dogadajsDataGridViewTextBoxColumn.DataPropertyName = "Dogadajs";
@@ -174,21 +176,27 @@
             this.dogadajsDataGridViewTextBoxColumn.ReadOnly = true;
             this.dogadajsDataGridViewTextBoxColumn.Visible = false;
             // 
-            // FrmSudionik
+            // sudionikBindingSource
+            // 
+            this.sudionikBindingSource.DataSource = typeof(EvidencijaSudionika.Sudionik);
+            // 
+            // FrmEvidencija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 342);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIzdajAkreditaciju);
             this.Controls.Add(this.btnIzbrisiSudionika);
             this.Controls.Add(this.btnDodajSudionika);
             this.Controls.Add(this.dgvSudionici);
-            this.Name = "FrmSudionik";
+            this.Name = "FrmEvidencija";
             this.Text = "Sudionici";
             this.Load += new System.EventHandler(this.FrmSudionik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSudionici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sudionikBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,14 +208,14 @@
         private System.Windows.Forms.DataGridView dgvSudionici;
         private System.Windows.Forms.BindingSource sudionikBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medijskaKuca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn dogadaj;
         private System.Windows.Forms.DataGridViewTextBoxColumn akreditacija;
         private System.Windows.Forms.DataGridViewTextBoxColumn dogadajsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }
 

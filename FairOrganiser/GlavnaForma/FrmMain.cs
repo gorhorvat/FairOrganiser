@@ -35,7 +35,7 @@ namespace GlavnaForma
 
         private void btnSudionici_Click(object sender, EventArgs e)
         {
-            FrmSudionik sudionik = new FrmSudionik();
+            FrmEvidencija sudionik = new FrmEvidencija();
             sudionik.Show();
         }
 

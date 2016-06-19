@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace EvidencijaSudionika
 {
-    public partial class FrmSudionik : Form
+    public partial class FrmEvidencija : Form
     {
-        public FrmSudionik()
+        public FrmEvidencija()
         {
             InitializeComponent();
         }

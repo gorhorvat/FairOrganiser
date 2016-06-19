@@ -97,11 +97,11 @@
     <Compile Include="FrmNoviSudionik.Designer.cs">
       <DependentUpon>FrmNoviSudionik.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSudionik.cs">
+    <Compile Include="FrmEvidencija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSudionik.Designer.cs">
-      <DependentUpon>FrmSudionik.cs</DependentUpon>
+    <Compile Include="FrmEvidencija.Designer.cs">
+      <DependentUpon>FrmEvidencija.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="FrmNoviSudionik.resx">
       <DependentUpon>FrmNoviSudionik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSudionik.resx">
-      <DependentUpon>FrmSudionik.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEvidencija.resx">
+      <DependentUpon>FrmEvidencija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

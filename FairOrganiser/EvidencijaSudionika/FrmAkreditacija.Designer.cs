@@ -47,13 +47,16 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cmbAkreditacija = new System.Windows.Forms.ComboBox();
             this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPotvrdi
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(295, 260);
+            this.btnPotvrdi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPotvrdi.Location = new System.Drawing.Point(338, 233);
             this.btnPotvrdi.Name = "btnPotvrdi";
             this.btnPotvrdi.Size = new System.Drawing.Size(109, 28);
             this.btnPotvrdi.TabIndex = 21;
@@ -64,7 +67,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 193);
+            this.label5.Location = new System.Drawing.Point(69, 162);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 20;
@@ -72,41 +75,51 @@
             // 
             // txtDogadaj
             // 
-            this.txtDogadaj.Location = new System.Drawing.Point(95, 171);
+            this.txtDogadaj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDogadaj.Location = new System.Drawing.Point(83, 190);
             this.txtDogadaj.Name = "txtDogadaj";
             this.txtDogadaj.ReadOnly = true;
-            this.txtDogadaj.Size = new System.Drawing.Size(119, 20);
+            this.txtDogadaj.Size = new System.Drawing.Size(146, 20);
             this.txtDogadaj.TabIndex = 18;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(95, 39);
+            this.txtPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrezime.Location = new System.Drawing.Point(83, 58);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.ReadOnly = true;
-            this.txtPrezime.Size = new System.Drawing.Size(119, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(146, 20);
             this.txtPrezime.TabIndex = 17;
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(95, 6);
+            this.txtIme.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIme.Location = new System.Drawing.Point(83, 25);
             this.txtIme.Name = "txtIme";
             this.txtIme.ReadOnly = true;
-            this.txtIme.Size = new System.Drawing.Size(119, 20);
+            this.txtIme.Size = new System.Drawing.Size(146, 20);
             this.txtIme.TabIndex = 16;
             // 
             // pbQR
             // 
-            this.pbQR.Location = new System.Drawing.Point(231, 15);
+            this.pbQR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQR.Location = new System.Drawing.Point(13, 20);
             this.pbQR.Name = "pbQR";
-            this.pbQR.Size = new System.Drawing.Size(159, 175);
+            this.pbQR.Size = new System.Drawing.Size(156, 139);
             this.pbQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbQR.TabIndex = 15;
             this.pbQR.TabStop = false;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 220);
+            this.label4.Location = new System.Drawing.Point(25, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 14;
@@ -114,8 +127,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 174);
+            this.label3.Location = new System.Drawing.Point(29, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 13;
@@ -123,8 +138,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
+            this.label2.Location = new System.Drawing.Point(29, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 12;
@@ -132,8 +149,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(29, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 11;
@@ -141,8 +160,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 75);
+            this.label6.Location = new System.Drawing.Point(29, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 22;
@@ -150,8 +171,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 108);
+            this.label7.Location = new System.Drawing.Point(30, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 23;
@@ -159,8 +182,10 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 141);
+            this.label8.Location = new System.Drawing.Point(30, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 24;
@@ -168,43 +193,63 @@
             // 
             // txtMedKuca
             // 
-            this.txtMedKuca.Location = new System.Drawing.Point(95, 72);
+            this.txtMedKuca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMedKuca.Location = new System.Drawing.Point(83, 91);
             this.txtMedKuca.Name = "txtMedKuca";
             this.txtMedKuca.ReadOnly = true;
-            this.txtMedKuca.Size = new System.Drawing.Size(119, 20);
+            this.txtMedKuca.Size = new System.Drawing.Size(146, 20);
             this.txtMedKuca.TabIndex = 25;
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(95, 105);
+            this.txtTelefon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefon.Location = new System.Drawing.Point(83, 124);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.ReadOnly = true;
-            this.txtTelefon.Size = new System.Drawing.Size(119, 20);
+            this.txtTelefon.Size = new System.Drawing.Size(146, 20);
             this.txtTelefon.TabIndex = 26;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(95, 138);
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(83, 157);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(119, 20);
+            this.txtEmail.Size = new System.Drawing.Size(146, 20);
             this.txtEmail.TabIndex = 27;
             // 
             // cmbAkreditacija
             // 
+            this.cmbAkreditacija.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAkreditacija.DataSource = this.tipAkreditacijeBindingSource;
             this.cmbAkreditacija.FormattingEnabled = true;
-            this.cmbAkreditacija.Location = new System.Drawing.Point(106, 217);
+            this.cmbAkreditacija.Location = new System.Drawing.Point(119, 238);
             this.cmbAkreditacija.Name = "cmbAkreditacija";
-            this.cmbAkreditacija.Size = new System.Drawing.Size(121, 21);
+            this.cmbAkreditacija.Size = new System.Drawing.Size(183, 21);
             this.cmbAkreditacija.TabIndex = 28;
             this.cmbAkreditacija.SelectedValueChanged += new System.EventHandler(this.cmbAkreditacija_SelectedValueChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel1.Controls.Add(this.pbQR);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(264, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(181, 185);
+            this.panel1.TabIndex = 29;
             // 
             // FrmAkreditacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 300);
+            this.ClientSize = new System.Drawing.Size(459, 273);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbAkreditacija);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefon);
@@ -213,11 +258,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnPotvrdi);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDogadaj);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
-            this.Controls.Add(this.pbQR);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -227,6 +270,8 @@
             this.Load += new System.EventHandler(this.FrmAkreditacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +297,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cmbAkreditacija;
         private System.Windows.Forms.BindingSource tipAkreditacijeBindingSource;
+        private System.Windows.Forms.Panel panel1;
     }
 }
