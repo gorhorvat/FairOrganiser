@@ -11,9 +11,17 @@ namespace KreiranjeDogadaja
 {
     public partial class FrmDogadaj : Form
     {
-        public FrmDogadaj()
+
+        private LogikaDogadaj logic;
+
+        public FrmDogadaj(LogikaDogadaj log)
         {
+
+            logic = log;
+
             InitializeComponent();
         }
+
+                
     }
 }
