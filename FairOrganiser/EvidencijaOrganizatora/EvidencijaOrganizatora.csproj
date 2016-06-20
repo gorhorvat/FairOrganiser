@@ -124,6 +124,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Organizator.datasource" />
+    <None Include="Properties\DataSources\TipOrganizatora.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

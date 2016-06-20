@@ -33,7 +33,6 @@
             this.btnObrisiOrganizatora = new System.Windows.Forms.Button();
             this.btnNoviOrganizator = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.organizatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oib = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.TipOrganizatoraid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipOrganizatoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsedogorgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.organizatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrganizatori)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.organizatorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,9 @@
             // 
             this.dgvOrganizatori.AllowUserToAddRows = false;
             this.dgvOrganizatori.AllowUserToDeleteRows = false;
+            this.dgvOrganizatori.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrganizatori.AutoGenerateColumns = false;
             this.dgvOrganizatori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrganizatori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -70,13 +73,13 @@
             this.dgvOrganizatori.ReadOnly = true;
             this.dgvOrganizatori.RowHeadersVisible = false;
             this.dgvOrganizatori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrganizatori.Size = new System.Drawing.Size(537, 231);
+            this.dgvOrganizatori.Size = new System.Drawing.Size(476, 179);
             this.dgvOrganizatori.TabIndex = 6;
             // 
             // btnObrisiOrganizatora
             // 
             this.btnObrisiOrganizatora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnObrisiOrganizatora.Location = new System.Drawing.Point(333, 271);
+            this.btnObrisiOrganizatora.Location = new System.Drawing.Point(275, 219);
             this.btnObrisiOrganizatora.Name = "btnObrisiOrganizatora";
             this.btnObrisiOrganizatora.Size = new System.Drawing.Size(106, 27);
             this.btnObrisiOrganizatora.TabIndex = 5;
@@ -87,12 +90,13 @@
             // btnNoviOrganizator
             // 
             this.btnNoviOrganizator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNoviOrganizator.Location = new System.Drawing.Point(443, 271);
+            this.btnNoviOrganizator.Location = new System.Drawing.Point(385, 219);
             this.btnNoviOrganizator.Name = "btnNoviOrganizator";
             this.btnNoviOrganizator.Size = new System.Drawing.Size(106, 27);
             this.btnNoviOrganizator.TabIndex = 4;
             this.btnNoviOrganizator.Text = "Novi organizator";
             this.btnNoviOrganizator.UseVisualStyleBackColor = true;
+            this.btnNoviOrganizator.Click += new System.EventHandler(this.btnNoviOrganizator_Click);
             // 
             // label1
             // 
@@ -103,10 +107,6 @@
             this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Popis organizatora";
-            // 
-            // organizatorBindingSource
-            // 
-            this.organizatorBindingSource.DataSource = typeof(EvidencijaOrganizatora.Organizator);
             // 
             // id
             // 
@@ -174,11 +174,15 @@
             this.tsedogorgDataGridViewTextBoxColumn.ReadOnly = true;
             this.tsedogorgDataGridViewTextBoxColumn.Visible = false;
             // 
+            // organizatorBindingSource
+            // 
+            this.organizatorBindingSource.DataSource = typeof(EvidencijaOrganizatora.Organizator);
+            // 
             // FrmEvidencija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 310);
+            this.ClientSize = new System.Drawing.Size(503, 258);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrganizatori);
             this.Controls.Add(this.btnObrisiOrganizatora);

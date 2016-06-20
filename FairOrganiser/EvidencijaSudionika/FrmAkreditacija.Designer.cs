@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnPotvrdi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDogadaj = new System.Windows.Forms.TextBox();
@@ -46,7 +45,7 @@
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cmbAkreditacija = new System.Windows.Forms.ComboBox();
-            this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).BeginInit();
@@ -227,6 +226,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAkreditacija.DataSource = this.tipAkreditacijeBindingSource;
+            this.cmbAkreditacija.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAkreditacija.FormattingEnabled = true;
             this.cmbAkreditacija.Location = new System.Drawing.Point(119, 238);
             this.cmbAkreditacija.Name = "cmbAkreditacija";

@@ -66,6 +66,17 @@ namespace EvidencijaOrganizatora
             ObrisiOrganizatora(OrganizatorID);
             PrikaziOrganizatore();
         }
+        /// <summary>
+        /// Otvaranje forme za dodavanje novog organizatora te ažuriranje popisa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNoviOrganizator_Click(object sender, EventArgs e)
+        {
+            FrmNoviOrganizator noviOrganizator = new FrmNoviOrganizator();
+            noviOrganizator.ShowDialog();
+            PrikaziOrganizatore();
+        }
     }
 
 }
