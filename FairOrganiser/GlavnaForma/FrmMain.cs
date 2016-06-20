@@ -70,7 +70,9 @@ namespace GlavnaForma
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            FrmPrijava novaPrijava = new FrmPrijava();
+            novaPrijava.Show();
         }
     }
 }
