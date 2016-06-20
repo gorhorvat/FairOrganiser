@@ -11,23 +11,63 @@ namespace EvidencijaOrganizatora
 {
     public partial class FrmNoviOrganizator : Form
     {
+        private Organizator organizatorZaIzmjenu;
+        /// <summary>
+        /// Konstruktor forme za izmjenu postojećeg organizatora.
+        /// </summary>
+        /// <param name="organizator"></param>
+        public FrmNoviOrganizator(Organizator organizator)
+        {
+            InitializeComponent();
+            organizatorZaIzmjenu = organizator;
+        }
         public FrmNoviOrganizator()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// Promjena kontrola za unos ovisno o odabranom tipu organizatora.
+        /// </summary>
+        private void promjeniFormu()
+        {
+            if (cmbTip.Text == "Fizicka osoba")
+            {
+                label1.Text = "Ime i prezime: ";
+                txtPrezime.Show();
+                txtIme.Width = 100;
+            }
+            else
+            {
+                label1.Text = "Naziv: ";
+                txtPrezime.Hide();
+                txtIme.Width = 207;
+            }
         }
 
         private void FrmNoviOrganizator_Load(object sender, EventArgs e)
         {
             PrikaziTipove();
-            if (cmbTip.Text == "Fizicka osoba")
+            promjeniFormu();
+            if (organizatorZaIzmjenu != null)
             {
-                panelFizicka.Show();
-                panelPravna.Hide();
-            }
-            else
-            {
-                panelPravna.Show();
-                panelFizicka.Hide();
+                if(organizatorZaIzmjenu.TipOrganizatoraid == 1)
+                {
+                    cmbTip.Text = "Fizicka osoba";
+                    promjeniFormu();
+                    string[] polje = organizatorZaIzmjenu.naziv.Split(' ');
+                    txtIme.Text = polje[0].ToString();
+                    txtPrezime.Text = polje[1].ToString();
+                }
+                else
+                {
+                    cmbTip.Text = "Pravna osoba";
+                    promjeniFormu();
+                    txtIme.Text = organizatorZaIzmjenu.naziv;
+                }
+                mtxtOIB.Text = organizatorZaIzmjenu.oib;
+                txtAdresa.Text = organizatorZaIzmjenu.adresa;
+                txtEmail.Text = organizatorZaIzmjenu.email;
+                mtxtTelefon.Text = organizatorZaIzmjenu.brojTelefona;
             }
         }
         /// <summary>
@@ -49,16 +89,67 @@ namespace EvidencijaOrganizatora
         /// <param name="e"></param>
         private void cmbTip_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbTip.Text == "Fizicka osoba")
+            promjeniFormu();
+        }
+        /// <summary>
+        /// Dodavanje organizatora u bazu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDodajOrg_Click(object sender, EventArgs e)
+        {
+            using (var db = new evidencijaOrganizatoraEntities())
             {
-                panelFizicka.Show();
-                panelPravna.Hide();
+                if (organizatorZaIzmjenu == null)
+                {
+                    Organizator noviOrganizator = new Organizator();
+                    {
+
+                        if (cmbTip.Text == "Fizicka osoba")
+                        {
+                            noviOrganizator.naziv = txtIme.Text + " " + txtPrezime.Text;
+                            noviOrganizator.TipOrganizatoraid = 1;
+                        }
+                        else
+                        {
+                            noviOrganizator.naziv = txtIme.Text;
+                            noviOrganizator.TipOrganizatoraid = 2;
+                        }
+                        noviOrganizator.oib = mtxtOIB.Text;
+                        noviOrganizator.adresa = txtAdresa.Text;
+                        noviOrganizator.email = txtEmail.Text;
+                        noviOrganizator.brojTelefona = mtxtTelefon.Text;
+                    };
+                    db.Organizators.Add(noviOrganizator);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    Organizator azuriraniOrganizator = (from s in db.Organizators
+                                                  where s.id == organizatorZaIzmjenu.id
+                                                  select s).First();
+                    if(azuriraniOrganizator.TipOrganizatoraid == 1)
+                    {
+                        azuriraniOrganizator.naziv = txtIme.Text + " " + txtPrezime.Text;
+                    }
+                    else
+                    {
+                        azuriraniOrganizator.naziv = txtIme.Text;
+                    }
+                    azuriraniOrganizator.oib = mtxtOIB.Text;
+                    azuriraniOrganizator.adresa = txtAdresa.Text;
+                    azuriraniOrganizator.email = txtEmail.Text;
+                    azuriraniOrganizator.brojTelefona = mtxtTelefon.Text;
+
+                    db.SaveChanges();
+                }
             }
-            else
-            {
-                panelPravna.Show();
-                panelFizicka.Hide();
-            }
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

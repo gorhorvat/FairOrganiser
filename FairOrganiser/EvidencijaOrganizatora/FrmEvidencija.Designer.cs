@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvOrganizatori = new System.Windows.Forms.DataGridView();
-            this.btnObrisiOrganizatora = new System.Windows.Forms.Button();
-            this.btnNoviOrganizator = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oib = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +37,10 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brojTelefona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipOrganizatoraid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnObrisiOrganizatora = new System.Windows.Forms.Button();
+            this.btnNoviOrganizator = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIzmjeniOrganizatora = new System.Windows.Forms.Button();
             this.tipOrganizatoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsedogorgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.organizatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -73,40 +74,8 @@
             this.dgvOrganizatori.ReadOnly = true;
             this.dgvOrganizatori.RowHeadersVisible = false;
             this.dgvOrganizatori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrganizatori.Size = new System.Drawing.Size(476, 179);
+            this.dgvOrganizatori.Size = new System.Drawing.Size(656, 199);
             this.dgvOrganizatori.TabIndex = 6;
-            // 
-            // btnObrisiOrganizatora
-            // 
-            this.btnObrisiOrganizatora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnObrisiOrganizatora.Location = new System.Drawing.Point(275, 219);
-            this.btnObrisiOrganizatora.Name = "btnObrisiOrganizatora";
-            this.btnObrisiOrganizatora.Size = new System.Drawing.Size(106, 27);
-            this.btnObrisiOrganizatora.TabIndex = 5;
-            this.btnObrisiOrganizatora.Text = "Obriši organizatora";
-            this.btnObrisiOrganizatora.UseVisualStyleBackColor = true;
-            this.btnObrisiOrganizatora.Click += new System.EventHandler(this.btnObrisiOrganizatora_Click);
-            // 
-            // btnNoviOrganizator
-            // 
-            this.btnNoviOrganizator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNoviOrganizator.Location = new System.Drawing.Point(385, 219);
-            this.btnNoviOrganizator.Name = "btnNoviOrganizator";
-            this.btnNoviOrganizator.Size = new System.Drawing.Size(106, 27);
-            this.btnNoviOrganizator.TabIndex = 4;
-            this.btnNoviOrganizator.Text = "Novi organizator";
-            this.btnNoviOrganizator.UseVisualStyleBackColor = true;
-            this.btnNoviOrganizator.Click += new System.EventHandler(this.btnNoviOrganizator_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(13, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Popis organizatora";
             // 
             // id
             // 
@@ -157,6 +126,50 @@
             this.TipOrganizatoraid.HeaderText = "Tip organizatora";
             this.TipOrganizatoraid.Name = "TipOrganizatoraid";
             this.TipOrganizatoraid.ReadOnly = true;
+            this.TipOrganizatoraid.Visible = false;
+            // 
+            // btnObrisiOrganizatora
+            // 
+            this.btnObrisiOrganizatora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnObrisiOrganizatora.Location = new System.Drawing.Point(454, 239);
+            this.btnObrisiOrganizatora.Name = "btnObrisiOrganizatora";
+            this.btnObrisiOrganizatora.Size = new System.Drawing.Size(106, 27);
+            this.btnObrisiOrganizatora.TabIndex = 5;
+            this.btnObrisiOrganizatora.Text = "Obriši organizatora";
+            this.btnObrisiOrganizatora.UseVisualStyleBackColor = true;
+            this.btnObrisiOrganizatora.Click += new System.EventHandler(this.btnObrisiOrganizatora_Click);
+            // 
+            // btnNoviOrganizator
+            // 
+            this.btnNoviOrganizator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNoviOrganizator.Location = new System.Drawing.Point(565, 239);
+            this.btnNoviOrganizator.Name = "btnNoviOrganizator";
+            this.btnNoviOrganizator.Size = new System.Drawing.Size(106, 27);
+            this.btnNoviOrganizator.TabIndex = 4;
+            this.btnNoviOrganizator.Text = "Novi organizator";
+            this.btnNoviOrganizator.UseVisualStyleBackColor = true;
+            this.btnNoviOrganizator.Click += new System.EventHandler(this.btnNoviOrganizator_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Popis organizatora";
+            // 
+            // btnIzmjeniOrganizatora
+            // 
+            this.btnIzmjeniOrganizatora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzmjeniOrganizatora.Location = new System.Drawing.Point(337, 239);
+            this.btnIzmjeniOrganizatora.Name = "btnIzmjeniOrganizatora";
+            this.btnIzmjeniOrganizatora.Size = new System.Drawing.Size(111, 27);
+            this.btnIzmjeniOrganizatora.TabIndex = 8;
+            this.btnIzmjeniOrganizatora.Text = "Ažuriraj organizatora";
+            this.btnIzmjeniOrganizatora.UseVisualStyleBackColor = true;
+            this.btnIzmjeniOrganizatora.Click += new System.EventHandler(this.btnIzmjeniOrganizatora_Click);
             // 
             // tipOrganizatoraDataGridViewTextBoxColumn
             // 
@@ -182,7 +195,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 258);
+            this.ClientSize = new System.Drawing.Size(683, 278);
+            this.Controls.Add(this.btnIzmjeniOrganizatora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrganizatori);
             this.Controls.Add(this.btnObrisiOrganizatora);
@@ -214,6 +228,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipOrganizatoraid;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipOrganizatoraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tsedogorgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnIzmjeniOrganizatora;
     }
 }
 

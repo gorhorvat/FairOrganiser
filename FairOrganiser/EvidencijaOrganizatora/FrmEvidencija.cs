@@ -77,6 +77,21 @@ namespace EvidencijaOrganizatora
             noviOrganizator.ShowDialog();
             PrikaziOrganizatore();
         }
+        /// <summary>
+        /// Proslijeđuje selektiranog organizatora formi za unos, te omogućuje izmjene.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIzmjeniOrganizatora_Click(object sender, EventArgs e)
+        {
+            Organizator selektiraniOrganizator = organizatorBindingSource.Current as Organizator;
+            if(selektiraniOrganizator != null)
+            {
+                FrmNoviOrganizator forma = new FrmNoviOrganizator(selektiraniOrganizator);
+                forma.ShowDialog();
+                PrikaziOrganizatore();
+            }
+        }
     }
 
 }
