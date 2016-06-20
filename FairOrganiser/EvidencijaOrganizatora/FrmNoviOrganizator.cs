@@ -53,6 +53,7 @@ namespace EvidencijaOrganizatora
                 if(organizatorZaIzmjenu.TipOrganizatoraid == 1)
                 {
                     cmbTip.Text = "Fizicka osoba";
+                    cmbTip.Enabled = false;
                     promjeniFormu();
                     string[] polje = organizatorZaIzmjenu.naziv.Split(' ');
                     txtIme.Text = polje[0].ToString();
@@ -61,6 +62,7 @@ namespace EvidencijaOrganizatora
                 else
                 {
                     cmbTip.Text = "Pravna osoba";
+                    cmbTip.Enabled = false;
                     promjeniFormu();
                     txtIme.Text = organizatorZaIzmjenu.naziv;
                 }
