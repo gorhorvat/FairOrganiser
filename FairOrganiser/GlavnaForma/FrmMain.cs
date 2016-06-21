@@ -75,7 +75,13 @@ namespace GlavnaForma
 
         private void dodajDogađajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LogikaDogadaj logikaD = new LogikaDogadaj();
+            LogikaDogadaj log = new LogikaDogadaj();
+            FrmDogadaj dogadaj = new FrmDogadaj(log);
+            log.AddForm(dogadaj);
+            dogadaj.MdiParent = this;
+            dogadaj.WindowState = FormWindowState.Maximized;
+            dogadaj.Show();
+            
         }
 
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)

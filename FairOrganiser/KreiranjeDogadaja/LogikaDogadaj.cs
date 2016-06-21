@@ -18,9 +18,7 @@ namespace KreiranjeDogadaja
         public LogikaDogadaj()
         {
             selectedID = new List<int>();
-            form = new FrmDogadaj(this);
-                               
-            form.ShowDialog();
+            
 
             
 
@@ -123,6 +121,11 @@ namespace KreiranjeDogadaja
                 
 
             }
+        }
+
+        public void AddForm(FrmDogadaj dogadaj)
+        {
+            form = dogadaj;
         }
 
         internal static void AddToList(object sender)
