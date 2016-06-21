@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnPregledaj = new System.Windows.Forms.Button();
             this.dgvPopisCjenika = new System.Windows.Forms.DataGridView();
-            this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnObrisiCjenik = new System.Windows.Forms.Button();
             this.btnDodajCjenik = new System.Windows.Forms.Button();
             this.dtpDo = new System.Windows.Forms.DateTimePicker();
@@ -42,13 +41,14 @@
             this.vrijediDoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kartasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKartesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPregledaj
             // 
-            this.btnPregledaj.Location = new System.Drawing.Point(203, 250);
+            this.btnPregledaj.Location = new System.Drawing.Point(417, 250);
             this.btnPregledaj.Name = "btnPregledaj";
             this.btnPregledaj.Size = new System.Drawing.Size(98, 23);
             this.btnPregledaj.TabIndex = 18;
@@ -59,6 +59,7 @@
             // dgvPopisCjenika
             // 
             this.dgvPopisCjenika.AllowUserToAddRows = false;
+            this.dgvPopisCjenika.AllowUserToDeleteRows = false;
             this.dgvPopisCjenika.AutoGenerateColumns = false;
             this.dgvPopisCjenika.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisCjenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -70,19 +71,17 @@
             this.tipKartesDataGridViewTextBoxColumn});
             this.dgvPopisCjenika.DataSource = this.cjenikDogadajaBindingSource;
             this.dgvPopisCjenika.Location = new System.Drawing.Point(12, 54);
+            this.dgvPopisCjenika.MultiSelect = false;
             this.dgvPopisCjenika.Name = "dgvPopisCjenika";
             this.dgvPopisCjenika.ReadOnly = true;
             this.dgvPopisCjenika.RowHeadersVisible = false;
+            this.dgvPopisCjenika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPopisCjenika.Size = new System.Drawing.Size(503, 190);
             this.dgvPopisCjenika.TabIndex = 17;
             // 
-            // cjenikDogadajaBindingSource
-            // 
-            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
-            // 
             // btnObrisiCjenik
             // 
-            this.btnObrisiCjenik.Location = new System.Drawing.Point(107, 250);
+            this.btnObrisiCjenik.Location = new System.Drawing.Point(336, 250);
             this.btnObrisiCjenik.Name = "btnObrisiCjenik";
             this.btnObrisiCjenik.Size = new System.Drawing.Size(75, 23);
             this.btnObrisiCjenik.TabIndex = 16;
@@ -92,7 +91,7 @@
             // 
             // btnDodajCjenik
             // 
-            this.btnDodajCjenik.Location = new System.Drawing.Point(12, 250);
+            this.btnDodajCjenik.Location = new System.Drawing.Point(255, 250);
             this.btnDodajCjenik.Name = "btnDodajCjenik";
             this.btnDodajCjenik.Size = new System.Drawing.Size(75, 23);
             this.btnDodajCjenik.TabIndex = 15;
@@ -162,11 +161,15 @@
             this.tipKartesDataGridViewTextBoxColumn.ReadOnly = true;
             this.tipKartesDataGridViewTextBoxColumn.Visible = false;
             // 
+            // cjenikDogadajaBindingSource
+            // 
+            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
+            // 
             // FrmCjenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 293);
+            this.ClientSize = new System.Drawing.Size(536, 293);
             this.Controls.Add(this.btnPregledaj);
             this.Controls.Add(this.dgvPopisCjenika);
             this.Controls.Add(this.btnObrisiCjenik);

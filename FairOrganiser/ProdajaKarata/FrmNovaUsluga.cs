@@ -21,8 +21,17 @@ namespace ProdajaKarata
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
-            logika.DodajNovuUslugu(txtNazivUsluge.Text, txtTipUsluge.Text, txtNapomena.Text, float.Parse(txtCijenaUsluge.Text));
-            Close();
+            if (txtNazivUsluge.Text == "" || txtTipUsluge.Text == "" || txtNapomena.Text == "" || txtCijenaUsluge.Text == "")
+            {
+                MessageBox.Show("Niste popunili sva polja!");
+                Close();
+            }
+
+            else
+            {
+                logika.DodajNovuUslugu(txtNazivUsluge.Text, txtTipUsluge.Text, txtNapomena.Text, float.Parse(txtCijenaUsluge.Text));
+                Close();
+            }
         }
     }
 }
