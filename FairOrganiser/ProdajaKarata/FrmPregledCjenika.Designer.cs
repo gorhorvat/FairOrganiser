@@ -36,13 +36,13 @@
             this.txtOd = new System.Windows.Forms.TextBox();
             this.lblCjenik = new System.Windows.Forms.Label();
             this.dgvOdabraniCjenik = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iznosPopustaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKarteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdabraniCjenik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -126,15 +126,6 @@
             this.dgvOdabraniCjenik.Size = new System.Drawing.Size(429, 189);
             this.dgvOdabraniCjenik.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "do";
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -172,6 +163,15 @@
             // 
             this.tipKarteBindingSource.DataSource = typeof(ProdajaKarata.TipKarte);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(136, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "do";
+            // 
             // FrmPregledCjenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +187,7 @@
             this.Controls.Add(this.dgvOdabraniCjenik);
             this.Name = "FrmPregledCjenika";
             this.Text = "Pregled cjenika";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPregledCjenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdabraniCjenik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).EndInit();

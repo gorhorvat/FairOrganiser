@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.btnPregledaj = new System.Windows.Forms.Button();
             this.dgvPopisCjenika = new System.Windows.Forms.DataGridView();
-            this.btnObrisiCjenik = new System.Windows.Forms.Button();
-            this.btnDodajCjenik = new System.Windows.Forms.Button();
-            this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            this.dtpOd = new System.Windows.Forms.DateTimePicker();
-            this.lblCjenikKarata = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijediOdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijediDoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kartasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKartesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnObrisiCjenik = new System.Windows.Forms.Button();
+            this.btnDodajCjenik = new System.Windows.Forms.Button();
+            this.dtpDo = new System.Windows.Forms.DateTimePicker();
+            this.dtpOd = new System.Windows.Forms.DateTimePicker();
+            this.lblCjenikKarata = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,48 @@
             this.dgvPopisCjenika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPopisCjenika.Size = new System.Drawing.Size(503, 190);
             this.dgvPopisCjenika.TabIndex = 17;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // vrijediOdDataGridViewTextBoxColumn
+            // 
+            this.vrijediOdDataGridViewTextBoxColumn.DataPropertyName = "vrijediOd";
+            this.vrijediOdDataGridViewTextBoxColumn.HeaderText = "Vrijedi od";
+            this.vrijediOdDataGridViewTextBoxColumn.Name = "vrijediOdDataGridViewTextBoxColumn";
+            this.vrijediOdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vrijediDoDataGridViewTextBoxColumn
+            // 
+            this.vrijediDoDataGridViewTextBoxColumn.DataPropertyName = "vrijediDo";
+            this.vrijediDoDataGridViewTextBoxColumn.HeaderText = "Vrijedi do";
+            this.vrijediDoDataGridViewTextBoxColumn.Name = "vrijediDoDataGridViewTextBoxColumn";
+            this.vrijediDoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kartasDataGridViewTextBoxColumn
+            // 
+            this.kartasDataGridViewTextBoxColumn.DataPropertyName = "Kartas";
+            this.kartasDataGridViewTextBoxColumn.HeaderText = "Kartas";
+            this.kartasDataGridViewTextBoxColumn.Name = "kartasDataGridViewTextBoxColumn";
+            this.kartasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kartasDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipKartesDataGridViewTextBoxColumn
+            // 
+            this.tipKartesDataGridViewTextBoxColumn.DataPropertyName = "TipKartes";
+            this.tipKartesDataGridViewTextBoxColumn.HeaderText = "TipKartes";
+            this.tipKartesDataGridViewTextBoxColumn.Name = "tipKartesDataGridViewTextBoxColumn";
+            this.tipKartesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipKartesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cjenikDogadajaBindingSource
+            // 
+            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
             // 
             // btnObrisiCjenik
             // 
@@ -124,47 +166,6 @@
             this.lblCjenikKarata.TabIndex = 12;
             this.lblCjenikKarata.Text = "Cjenik karata";
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vrijediOdDataGridViewTextBoxColumn
-            // 
-            this.vrijediOdDataGridViewTextBoxColumn.DataPropertyName = "vrijediOd";
-            this.vrijediOdDataGridViewTextBoxColumn.HeaderText = "Vrijedi od";
-            this.vrijediOdDataGridViewTextBoxColumn.Name = "vrijediOdDataGridViewTextBoxColumn";
-            this.vrijediOdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vrijediDoDataGridViewTextBoxColumn
-            // 
-            this.vrijediDoDataGridViewTextBoxColumn.DataPropertyName = "vrijediDo";
-            this.vrijediDoDataGridViewTextBoxColumn.HeaderText = "Vrijedi do";
-            this.vrijediDoDataGridViewTextBoxColumn.Name = "vrijediDoDataGridViewTextBoxColumn";
-            this.vrijediDoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kartasDataGridViewTextBoxColumn
-            // 
-            this.kartasDataGridViewTextBoxColumn.DataPropertyName = "Kartas";
-            this.kartasDataGridViewTextBoxColumn.HeaderText = "Kartas";
-            this.kartasDataGridViewTextBoxColumn.Name = "kartasDataGridViewTextBoxColumn";
-            this.kartasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kartasDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipKartesDataGridViewTextBoxColumn
-            // 
-            this.tipKartesDataGridViewTextBoxColumn.DataPropertyName = "TipKartes";
-            this.tipKartesDataGridViewTextBoxColumn.HeaderText = "TipKartes";
-            this.tipKartesDataGridViewTextBoxColumn.Name = "tipKartesDataGridViewTextBoxColumn";
-            this.tipKartesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipKartesDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cjenikDogadajaBindingSource
-            // 
-            this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
-            // 
             // FrmCjenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +180,7 @@
             this.Controls.Add(this.lblCjenikKarata);
             this.Name = "FrmCjenik";
             this.Text = "Cjenici";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCjenik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).EndInit();

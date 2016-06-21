@@ -199,6 +199,7 @@
             this.Controls.Add(this.lblUsluga);
             this.Name = "FrmNovaStavka";
             this.Text = "Nova stavka";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmNovaStavka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).EndInit();

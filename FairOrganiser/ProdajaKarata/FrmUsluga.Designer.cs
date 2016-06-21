@@ -74,6 +74,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -156,6 +157,7 @@
             this.Controls.Add(this.dgvUsluge);
             this.Name = "FrmUsluga";
             this.Text = "Usluge";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmUsluga_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).EndInit();
@@ -169,12 +171,12 @@
         private System.Windows.Forms.Button btnObrisiUslugu;
         private System.Windows.Forms.Button btnDodajUslugu;
         private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.BindingSource uslugaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaUslugeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn racunsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource uslugaBindingSource;
     }
 }

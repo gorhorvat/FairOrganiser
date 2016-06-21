@@ -207,6 +207,7 @@
             this.Controls.Add(this.lblBrojRacuna);
             this.Name = "FrmRacun";
             this.Text = "Račun";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRacun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).EndInit();
             this.ResumeLayout(false);
