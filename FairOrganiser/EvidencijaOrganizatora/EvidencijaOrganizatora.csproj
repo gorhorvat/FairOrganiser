@@ -81,11 +81,11 @@
     <Compile Include="FrmNoviOrganizator.Designer.cs">
       <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEvidencija.cs">
+    <Compile Include="FrmEvidencijaOrg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEvidencija.Designer.cs">
-      <DependentUpon>FrmEvidencija.cs</DependentUpon>
+    <Compile Include="FrmEvidencijaOrg.Designer.cs">
+      <DependentUpon>FrmEvidencijaOrg.cs</DependentUpon>
     </Compile>
     <Compile Include="Organizator.cs">
       <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
@@ -101,8 +101,8 @@
     <EmbeddedResource Include="FrmNoviOrganizator.resx">
       <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEvidencija.resx">
-      <DependentUpon>FrmEvidencija.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEvidencijaOrg.resx">
+      <DependentUpon>FrmEvidencijaOrg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
