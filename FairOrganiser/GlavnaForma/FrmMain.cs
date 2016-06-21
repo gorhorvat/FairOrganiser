@@ -19,9 +19,19 @@ namespace GlavnaForma
         public FrmMain()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+        }
+        /// <summary>
+        /// Zatvara formu djete ukoliko postoji.
+        /// </summary>
+        private void closeChildForm()
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
         }
         private void popisOrganizatoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmEvidencijaOrg formaDjete = new FrmEvidencijaOrg();
             formaDjete.MdiParent = this;
             formaDjete.WindowState = FormWindowState.Maximized;
@@ -42,6 +52,7 @@ namespace GlavnaForma
 
         private void popisSudionikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmEvidencija popisSudionika = new FrmEvidencija();
             popisSudionika.MdiParent = this;
             popisSudionika.WindowState = FormWindowState.Maximized;
@@ -92,6 +103,7 @@ namespace GlavnaForma
 
         private void popustiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmCjenik cjenik = new FrmCjenik();
             cjenik.MdiParent = this;
             cjenik.WindowState = FormWindowState.Maximized;
@@ -100,6 +112,7 @@ namespace GlavnaForma
 
         private void prikazUslugaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmUsluga usluga = new FrmUsluga();
             usluga.MdiParent = this;
             usluga.WindowState = FormWindowState.Maximized;
