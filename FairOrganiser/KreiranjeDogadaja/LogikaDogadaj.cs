@@ -18,9 +18,7 @@ namespace KreiranjeDogadaja
         public LogikaDogadaj()
         {
             selectedID = new List<int>();
-            form = new FrmDogadaj(this);
-                               
-            form.ShowDialog();
+            
 
             
 
@@ -65,21 +63,20 @@ namespace KreiranjeDogadaja
 
                 
                 ImprovedPanel ipAvail = improvedPanels.Where(e => e.ID == p.id).FirstOrDefault();
-                if (ipAvail.Selected == true)
-                {
-                    ipAvail.BackColor = Color.Blue;
-                    ipAvail.Available = true;
-                }
-                else
-                {
-                    ipAvail.BackColor = Color.Green;
-                    ipAvail.Available = true;
-                }
+               
+                ipAvail.BackColor = Color.Green;
+                ipAvail.Available = true;
+                
                 form.Refresh();
             }
 
 
             
+        }
+
+        internal static void RefreshForm()
+        {
+            form.Refresh();
         }
 
         internal static void CreateDogadaj(string naziv, float cijena, DateTime datumOd, DateTime datumDo)
@@ -105,12 +102,30 @@ namespace KreiranjeDogadaja
                     newDogadaj.id = context.Dogadajs.Count() + 1;
                     context.Dogadajs.Add(newDogadaj);
                     context.SaveChanges();
+
+                    var update = context.Prostors.Where(p => selectedID.Contains(p.id)).ToList();
+
+                    foreach(Prostor p in update)
+                    {
+                        p.Dogadajid = newDogadaj.id;
+                    }
+
+                    context.SaveChanges();
+
                 }
 
+                
 
-                    form.Close();
+                MessageBox.Show("Događaj je dodan.");
+                        
+                
 
             }
+        }
+
+        public void AddForm(FrmDogadaj dogadaj)
+        {
+            form = dogadaj;
         }
 
         internal static void AddToList(object sender)

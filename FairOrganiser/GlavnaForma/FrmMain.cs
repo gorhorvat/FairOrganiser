@@ -19,58 +19,122 @@ namespace GlavnaForma
         public FrmMain()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
-
-        private void btnPopusti_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Zatvara formu djete ukoliko postoji.
+        /// </summary>
+        private void closeChildForm()
         {
-            FrmCjenik cjenik = new FrmCjenik();
-            cjenik.Show();
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
         }
-
-        private void btnOrganizatori_Click(object sender, EventArgs e)
+        private void popisOrganizatoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EvidencijaOrganizatora.FrmEvidencija organizator = new EvidencijaOrganizatora.FrmEvidencija();
-            organizator.Show();
+            closeChildForm();
+            FrmEvidencijaOrg formaDjete = new FrmEvidencijaOrg();
+            formaDjete.MdiParent = this;
+            formaDjete.WindowState = FormWindowState.Maximized;
+            formaDjete.Show();
         }
 
-        private void btnSudionici_Click(object sender, EventArgs e)
+        private void dodajOrganizatoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EvidencijaSudionika.FrmEvidencija sudionik = new EvidencijaSudionika.FrmEvidencija();
-            sudionik.Show();
+            FrmNoviOrganizator noviOrganizator = new FrmNoviOrganizator();
+            noviOrganizator.ShowDialog();
         }
 
-        private void btnIzvjesce_Click(object sender, EventArgs e)
+        private void dodajSudionikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmIzvjesca izvjesca = new FrmIzvjesca();
-            izvjesca.Show();
+            FrmNoviSudionik noviSudionik = new FrmNoviSudionik();
+            noviSudionik.ShowDialog();
         }
 
-        private void btnRacun_Click(object sender, EventArgs e)
+        private void popisSudionikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            FrmEvidencija popisSudionika = new FrmEvidencija();
+            popisSudionika.MdiParent = this;
+            popisSudionika.WindowState = FormWindowState.Maximized;
+            popisSudionika.Show();
+            
+        }
+
+        private void brojPosjetiteljaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIzvjesceBrojPosjetitelja brojPosjetitelja = new FrmIzvjesceBrojPosjetitelja();
+            brojPosjetitelja.ShowDialog();
+        }
+
+        private void prodaneUslugeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIzvjesceProdaneUsluge prodaneUsluge = new FrmIzvjesceProdaneUsluge();
+            prodaneUsluge.ShowDialog();
+        }
+
+        private void popunjenostKapacitetaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIzvjescePopunjenostKapaciteta kapaciteti = new FrmIzvjescePopunjenostKapaciteta();
+            kapaciteti.ShowDialog();
+        }
+
+        private void organiziraniDogađajiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIzvjesceOrganiziraniDogadaji dogadaji = new FrmIzvjesceOrganiziraniDogadaji();
+            dogadaji.ShowDialog();
+        }
+
+        private void dodajDogađajToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            LogikaDogadaj log = new LogikaDogadaj();
+            FrmDogadaj dogadaj = new FrmDogadaj(log);
+            log.AddForm(dogadaj);
+            dogadaj.MdiParent = this;
+            dogadaj.WindowState = FormWindowState.Maximized;
+            dogadaj.Show();
+        }
+
+        private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRacun racun = new FrmRacun();
             racun.Show();
         }
 
-        private void btnKarta_Click(object sender, EventArgs e)
+        private void kartaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmKarta karta = new FrmKarta();
             karta.Show();
         }
 
-        private void btnUsluge_Click(object sender, EventArgs e)
+        private void popustiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
+            FrmCjenik cjenik = new FrmCjenik();
+            cjenik.MdiParent = this;
+            cjenik.WindowState = FormWindowState.Maximized;
+            cjenik.Show();
+        }
+
+        private void prikazUslugaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
             FrmUsluga usluga = new FrmUsluga();
+            usluga.MdiParent = this;
+            usluga.WindowState = FormWindowState.Maximized;
             usluga.Show();
         }
 
-        private void btnDogadaj_Click(object sender, EventArgs e)
+        private void odjavaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LogikaDogadaj logikaD = new LogikaDogadaj();
+            this.Close();
+            FrmPrijava novaPrijava = new FrmPrijava();
+            novaPrijava.Show();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

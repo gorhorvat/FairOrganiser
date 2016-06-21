@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -67,8 +69,26 @@
     <Compile Include="FrmPrijava.Designer.cs">
       <DependentUpon>FrmPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrijavaKorisnikaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrijavaKorisnikaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrijavaKorisnikaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrijavaKorisnikaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrijavaKorisnikaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrijavaKorisnikaModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zaposlenik.cs">
+      <DependentUpon>PrijavaKorisnikaModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +107,13 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="PrijavaKorisnikaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PrijavaKorisnikaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PrijavaKorisnikaModel.edmx.diagram">
+      <DependentUpon>PrijavaKorisnikaModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +151,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zv_logo_mali_hr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PrijavaKorisnikaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrijavaKorisnikaModel.edmx</DependentUpon>
+      <LastGenOutput>PrijavaKorisnikaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PrijavaKorisnikaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrijavaKorisnikaModel.edmx</DependentUpon>
+      <LastGenOutput>PrijavaKorisnikaModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

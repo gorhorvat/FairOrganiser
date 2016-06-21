@@ -107,6 +107,12 @@
     <Compile Include="Prostor.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProstorOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProstorOprema.Designer.cs">
+      <DependentUpon>ProstorOprema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Racun.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProstorOprema.resx">
+      <DependentUpon>ProstorOprema.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <EntityDeploy Include="KreiranjeDogadajaModel.edmx">

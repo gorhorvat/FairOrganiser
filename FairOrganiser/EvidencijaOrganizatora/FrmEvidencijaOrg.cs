@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace EvidencijaOrganizatora
 {
-    public partial class FrmEvidencija : Form
+    public partial class FrmEvidencijaOrg : Form
     {
-        public FrmEvidencija()
+        public FrmEvidencijaOrg()
         {
             InitializeComponent();
         }

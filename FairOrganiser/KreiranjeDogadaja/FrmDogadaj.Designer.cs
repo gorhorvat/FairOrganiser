@@ -158,7 +158,7 @@
             this.btnDodajDogadaj.Name = "btnDodajDogadaj";
             this.btnDodajDogadaj.Size = new System.Drawing.Size(220, 24);
             this.btnDodajDogadaj.TabIndex = 19;
-            this.btnDodajDogadaj.Text = "Dalje";
+            this.btnDodajDogadaj.Text = "Dodaj događaj";
             this.btnDodajDogadaj.UseVisualStyleBackColor = true;
             this.btnDodajDogadaj.Click += new System.EventHandler(this.btnDodajDogadaj_Click);
             // 

@@ -1,6 +1,6 @@
 ﻿namespace EvidencijaOrganizatora
 {
-    partial class FrmEvidencija
+    partial class FrmEvidencijaOrg
     {
         /// <summary>
         /// Required designer variable.
