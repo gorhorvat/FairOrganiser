@@ -33,7 +33,6 @@
             this.IzvjesceOrganizatoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._16057_IzvjescaDBDataSet = new GeneriranjeIzvjesca._16057_IzvjescaDBDataSet();
             this.rvPodaci = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnIspis = new System.Windows.Forms.Button();
             this.IzvjesceOrganizatoriTableAdapter = new GeneriranjeIzvjesca._16057_IzvjescaDBDataSetTableAdapters.IzvjesceOrganizatoriTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.IzvjesceOrganizatoriBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._16057_IzvjescaDBDataSet)).BeginInit();
@@ -57,18 +56,8 @@
             this.rvPodaci.LocalReport.ReportEmbeddedResource = "GeneriranjeIzvjesca.IzvjesceOrganiziraniDogadaji.rdlc";
             this.rvPodaci.Location = new System.Drawing.Point(12, 10);
             this.rvPodaci.Name = "rvPodaci";
-            this.rvPodaci.Size = new System.Drawing.Size(737, 539);
+            this.rvPodaci.Size = new System.Drawing.Size(737, 578);
             this.rvPodaci.TabIndex = 7;
-            // 
-            // btnIspis
-            // 
-            this.btnIspis.Location = new System.Drawing.Point(639, 555);
-            this.btnIspis.Name = "btnIspis";
-            this.btnIspis.Size = new System.Drawing.Size(110, 36);
-            this.btnIspis.TabIndex = 6;
-            this.btnIspis.Text = "Ispis";
-            this.btnIspis.UseVisualStyleBackColor = true;
-            this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
             // 
             // IzvjesceOrganizatoriTableAdapter
             // 
@@ -81,7 +70,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(761, 600);
             this.Controls.Add(this.rvPodaci);
-            this.Controls.Add(this.btnIspis);
             this.Name = "FrmIzvjesceOrganiziraniDogadaji";
             this.Text = "Izvješće o organiziranim događajima";
             this.Load += new System.EventHandler(this.FrmIzvjesceOrganiziraniDogadaji_Load);
@@ -94,7 +82,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rvPodaci;
-        private System.Windows.Forms.Button btnIspis;
         private System.Windows.Forms.BindingSource IzvjesceOrganizatoriBindingSource;
         private _16057_IzvjescaDBDataSet _16057_IzvjescaDBDataSet;
         private _16057_IzvjescaDBDataSetTableAdapters.IzvjesceOrganizatoriTableAdapter IzvjesceOrganizatoriTableAdapter;

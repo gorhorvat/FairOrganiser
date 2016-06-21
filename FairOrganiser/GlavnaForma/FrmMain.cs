@@ -29,13 +29,13 @@ namespace GlavnaForma
 
         private void btnOrganizatori_Click(object sender, EventArgs e)
         {
-            FrmOrganizator organizator = new FrmOrganizator();
+            EvidencijaOrganizatora.FrmEvidencija organizator = new EvidencijaOrganizatora.FrmEvidencija();
             organizator.Show();
         }
 
         private void btnSudionici_Click(object sender, EventArgs e)
         {
-            FrmSudionik sudionik = new FrmSudionik();
+            EvidencijaSudionika.FrmEvidencija sudionik = new EvidencijaSudionika.FrmEvidencija();
             sudionik.Show();
         }
 
@@ -65,8 +65,7 @@ namespace GlavnaForma
 
         private void btnDogadaj_Click(object sender, EventArgs e)
         {
-            FrmDogadaj dogadaj = new FrmDogadaj();
-            dogadaj.Show();
+            LogikaDogadaj logikaD = new LogikaDogadaj();
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)

@@ -22,10 +22,5 @@ namespace GeneriranjeIzvjesca
             this.IzvjesceBrojPosjetiteljaTableAdapter.BrojPosjetitelja(this._16057_IzvjescaDBDataSet.IzvjesceBrojPosjetitelja);
             this.rvPodaci.RefreshReport();
         }
-
-        private void btnIspis_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

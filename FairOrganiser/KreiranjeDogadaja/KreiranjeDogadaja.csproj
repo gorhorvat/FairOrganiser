@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -55,28 +57,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CjenikDogadaja.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dogadaj.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="FrmDogadaj.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDogadaj.Designer.cs">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImprovedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImprovedPanel.Designer.cs">
+      <DependentUpon>ImprovedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Karta.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreiranjeDogadajaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KreiranjeDogadajaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LogikaDogadaj.cs" />
+    <Compile Include="Organizator.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Prostor.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Racun.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sudionik.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipKarte.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipOrganizatora.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tse_dog_org.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usluga.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zaposlenik.cs">
+      <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmDogadaj.resx">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImprovedPanel.resx">
+      <DependentUpon>ImprovedPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
+    <EntityDeploy Include="KreiranjeDogadajaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KreiranjeDogadajaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KreiranjeDogadajaModel.edmx.diagram">
+      <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +157,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KreiranjeDogadajaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
+      <LastGenOutput>KreiranjeDogadajaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KreiranjeDogadajaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
+      <LastGenOutput>KreiranjeDogadajaModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

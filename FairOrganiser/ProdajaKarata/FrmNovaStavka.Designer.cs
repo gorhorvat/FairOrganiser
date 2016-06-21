@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 346);
+            this.ClientSize = new System.Drawing.Size(277, 346);
             this.Controls.Add(this.dgvUsluge);
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOdaberi);

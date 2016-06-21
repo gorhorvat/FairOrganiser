@@ -16,10 +16,5 @@ namespace GeneriranjeIzvjesca
         {
             InitializeComponent();
         }
-
-        private void btnIspis_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

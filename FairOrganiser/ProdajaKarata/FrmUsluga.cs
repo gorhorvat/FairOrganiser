@@ -43,7 +43,7 @@ namespace ProdajaKarata
             SetSourceUsluge();
         }
 
-        private void btnPotvrdi_Click(object sender, EventArgs e)
+        private void btnIzlaz_Click(object sender, EventArgs e)
         {
             Close();
         }
