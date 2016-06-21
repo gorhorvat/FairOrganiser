@@ -63,10 +63,22 @@ namespace KreiranjeDogadaja
 
         protected override void OnMouseClick(MouseEventArgs e)
         {
-
+            if(this.Available == false)
+            {
+                return;
+            }
             Selected = !Selected;
 
-            
+            if(this.Selected == true)
+            {
+                this.BackColor = Color.Blue;
+            }
+            else
+            {
+                this.BackColor = Color.Green;
+            }
+
+            LogikaDogadaj.RefreshForm();
 
             LogikaDogadaj.AddToList(this);
 
