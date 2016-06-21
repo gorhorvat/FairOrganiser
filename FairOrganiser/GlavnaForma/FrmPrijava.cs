@@ -18,6 +18,10 @@ namespace GlavnaForma
         PrijavaEntities podaci = new PrijavaEntities();
         private void btnPrijava_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FrmMain glavna = new FrmMain();
+            glavna.Show();
+            /*
             bool nadjen = false;
             foreach (var Zaposlenik in podaci.Zaposleniks)
             {
@@ -32,7 +36,7 @@ namespace GlavnaForma
             if(nadjen == false)
             {
                     MessageBox.Show("Molimo Vas provjerite vaše korisničko ime i lozinku.");
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
