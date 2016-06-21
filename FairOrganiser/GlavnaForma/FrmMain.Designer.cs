@@ -256,6 +256,7 @@
             this.IsMdiContainer = true;
             this.Name = "FrmMain";
             this.Text = "Glavni izbornik";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

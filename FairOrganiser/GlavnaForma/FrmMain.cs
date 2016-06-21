@@ -86,13 +86,13 @@ namespace GlavnaForma
 
         private void dodajDogađajToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             LogikaDogadaj log = new LogikaDogadaj();
             FrmDogadaj dogadaj = new FrmDogadaj(log);
             log.AddForm(dogadaj);
             dogadaj.MdiParent = this;
             dogadaj.WindowState = FormWindowState.Maximized;
             dogadaj.Show();
-            
         }
 
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,6 +130,11 @@ namespace GlavnaForma
             this.Close();
             FrmPrijava novaPrijava = new FrmPrijava();
             novaPrijava.Show();
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
