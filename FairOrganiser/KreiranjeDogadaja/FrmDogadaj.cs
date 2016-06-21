@@ -22,8 +22,8 @@ namespace KreiranjeDogadaja
             
             InitializeComponent();
 
-            
 
+            
 
 
         }
@@ -57,24 +57,28 @@ namespace KreiranjeDogadaja
         {
             float cijena;
             string naziv = txtNaziv.Text;
+            bool check = true;
             if (naziv == null || naziv == "")
             {
                 txtNaziv.BackColor = Color.Salmon;
                 timerNaziv.Start();
-                return;
+                check = false;
             }
 
             if (float.TryParse(txtCijenaKarte.Text, out cijena) == false)
             {
                 txtCijenaKarte.BackColor = Color.Salmon;
                 timerCijena.Start();
-                return;
+                check = false;
             }
 
             DateTime datumOd = dtpPocetak.Value;
             DateTime datumDo = dtpZavrsetak.Value;
 
-            LogikaDogadaj.CreateDogadaj(naziv, cijena, datumOd, datumDo);
+            if (check == true)
+            {
+                LogikaDogadaj.CreateDogadaj(naziv, cijena, datumOd, datumDo);
+            }
             
         }
 
