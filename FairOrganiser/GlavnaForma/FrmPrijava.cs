@@ -18,6 +18,7 @@ namespace GlavnaForma
         PrijavaEntities podaci = new PrijavaEntities();
         private void btnPrijava_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             FrmMain glavna = new FrmMain();
             glavna.Show();

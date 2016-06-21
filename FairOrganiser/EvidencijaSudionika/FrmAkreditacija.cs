@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using MessagingToolkit.QRCode.Codec;
-using MessagingToolkit.QRCode.Codec.Data;
-using System.IO;
+using QRCodeGenerator;
 
 namespace EvidencijaSudionika
 {
@@ -65,9 +60,9 @@ namespace EvidencijaSudionika
         /// <param name="e"></param>
         private void cmbAkreditacija_SelectedValueChanged(object sender, EventArgs e)
         {
-            QRCodeEncoder encoder = new QRCodeEncoder();
-            Bitmap qrcode = encoder.Encode(odabranisudionik.ime + odabranisudionik.prezime + odabranisudionik.dogadaj + cmbAkreditacija.SelectedItem);
-            pbQR.Image = qrcode as Image;
+            QRCodeGenerator.QRCode dlltest = new QRCode();
+            pbQR.Image = dlltest.generirajQR(odabranisudionik.ime, odabranisudionik.prezime, odabranisudionik.dogadaj, cmbAkreditacija.Text);
+           
         }
 
         private void dodajAkreditaciju()
