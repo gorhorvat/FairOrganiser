@@ -151,9 +151,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProstorOprema.resx">
-      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <EntityDeploy Include="KreiranjeDogadajaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
