@@ -48,6 +48,7 @@
             // 
             // btnPregledaj
             // 
+            this.btnPregledaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPregledaj.Location = new System.Drawing.Point(417, 250);
             this.btnPregledaj.Name = "btnPregledaj";
             this.btnPregledaj.Size = new System.Drawing.Size(98, 23);
@@ -60,6 +61,9 @@
             // 
             this.dgvPopisCjenika.AllowUserToAddRows = false;
             this.dgvPopisCjenika.AllowUserToDeleteRows = false;
+            this.dgvPopisCjenika.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPopisCjenika.AutoGenerateColumns = false;
             this.dgvPopisCjenika.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisCjenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -81,6 +85,7 @@
             // 
             // btnObrisiCjenik
             // 
+            this.btnObrisiCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiCjenik.Location = new System.Drawing.Point(336, 250);
             this.btnObrisiCjenik.Name = "btnObrisiCjenik";
             this.btnObrisiCjenik.Size = new System.Drawing.Size(75, 23);
@@ -91,6 +96,7 @@
             // 
             // btnDodajCjenik
             // 
+            this.btnDodajCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajCjenik.Location = new System.Drawing.Point(255, 250);
             this.btnDodajCjenik.Name = "btnDodajCjenik";
             this.btnDodajCjenik.Size = new System.Drawing.Size(75, 23);
@@ -130,6 +136,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // vrijediOdDataGridViewTextBoxColumn
             // 
@@ -179,6 +186,7 @@
             this.Controls.Add(this.lblCjenikKarata);
             this.Name = "FrmCjenik";
             this.Text = "Cjenici";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCjenik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).EndInit();

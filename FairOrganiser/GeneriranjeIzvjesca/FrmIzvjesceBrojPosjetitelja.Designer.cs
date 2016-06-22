@@ -50,6 +50,9 @@
             // 
             // rvPodaci
             // 
+            this.rvPodaci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "BrojPosjetitelja";
             reportDataSource1.Value = this.IzvjesceBrojPosjetiteljaBindingSource;
             this.rvPodaci.LocalReport.DataSources.Add(reportDataSource1);
@@ -71,6 +74,7 @@
             this.Controls.Add(this.rvPodaci);
             this.Name = "FrmIzvjesceBrojPosjetitelja";
             this.Text = "Izvješće o broju posjetitelja";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmIzvjesce_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IzvjesceBrojPosjetiteljaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._16057_IzvjescaDBDataSet)).EndInit();

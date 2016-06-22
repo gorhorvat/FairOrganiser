@@ -36,19 +36,20 @@
             this.txtOd = new System.Windows.Forms.TextBox();
             this.lblCjenik = new System.Windows.Forms.Label();
             this.dgvOdabraniCjenik = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iznosPopustaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKarteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdabraniCjenik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnObrisiTip
             // 
+            this.btnObrisiTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiTip.Location = new System.Drawing.Point(280, 231);
             this.btnObrisiTip.Name = "btnObrisiTip";
             this.btnObrisiTip.Size = new System.Drawing.Size(75, 23);
@@ -59,6 +60,7 @@
             // 
             // btnDodajTip
             // 
+            this.btnDodajTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajTip.Location = new System.Drawing.Point(199, 231);
             this.btnDodajTip.Name = "btnDodajTip";
             this.btnDodajTip.Size = new System.Drawing.Size(75, 23);
@@ -69,6 +71,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Location = new System.Drawing.Point(361, 231);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
@@ -79,6 +82,9 @@
             // 
             // txtDo
             // 
+            this.txtDo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDo.Location = new System.Drawing.Point(170, 7);
             this.txtDo.Name = "txtDo";
@@ -88,6 +94,9 @@
             // 
             // txtOd
             // 
+            this.txtOd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOd.Location = new System.Drawing.Point(74, 7);
             this.txtOd.Name = "txtOd";
@@ -108,6 +117,9 @@
             // 
             this.dgvOdabraniCjenik.AllowUserToAddRows = false;
             this.dgvOdabraniCjenik.AllowUserToDeleteRows = false;
+            this.dgvOdabraniCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOdabraniCjenik.AutoGenerateColumns = false;
             this.dgvOdabraniCjenik.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOdabraniCjenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -125,15 +137,6 @@
             this.dgvOdabraniCjenik.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOdabraniCjenik.Size = new System.Drawing.Size(429, 189);
             this.dgvOdabraniCjenik.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "do";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -172,6 +175,15 @@
             // 
             this.tipKarteBindingSource.DataSource = typeof(ProdajaKarata.TipKarte);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(136, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "do";
+            // 
             // FrmPregledCjenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +199,7 @@
             this.Controls.Add(this.dgvOdabraniCjenik);
             this.Name = "FrmPregledCjenika";
             this.Text = "Pregled cjenika";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPregledCjenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdabraniCjenik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).EndInit();

@@ -48,6 +48,7 @@
             // 
             // btnObrisiStavku
             // 
+            this.btnObrisiStavku.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiStavku.Location = new System.Drawing.Point(87, 479);
             this.btnObrisiStavku.Name = "btnObrisiStavku";
             this.btnObrisiStavku.Size = new System.Drawing.Size(67, 36);
@@ -58,6 +59,7 @@
             // 
             // btnDodajStavku
             // 
+            this.btnDodajStavku.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajStavku.Location = new System.Drawing.Point(12, 479);
             this.btnDodajStavku.Name = "btnDodajStavku";
             this.btnDodajStavku.Size = new System.Drawing.Size(69, 36);
@@ -68,6 +70,9 @@
             // 
             // dgvListaStavki
             // 
+            this.dgvListaStavki.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaStavki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaStavki.Location = new System.Drawing.Point(12, 110);
             this.dgvListaStavki.Name = "dgvListaStavki";
@@ -76,6 +81,7 @@
             // 
             // btnIspisi
             // 
+            this.btnIspisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIspisi.Location = new System.Drawing.Point(623, 479);
             this.btnIspisi.Name = "btnIspisi";
             this.btnIspisi.Size = new System.Drawing.Size(125, 36);
@@ -86,6 +92,9 @@
             // 
             // txtUkupno
             // 
+            this.txtUkupno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUkupno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUkupno.Location = new System.Drawing.Point(648, 453);
             this.txtUkupno.Name = "txtUkupno";
@@ -95,6 +104,9 @@
             // 
             // lblUkupno
             // 
+            this.lblUkupno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUkupno.AutoSize = true;
             this.lblUkupno.Location = new System.Drawing.Point(594, 453);
             this.lblUkupno.Name = "lblUkupno";
@@ -104,6 +116,9 @@
             // 
             // txtOTvrtci
             // 
+            this.txtOTvrtci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOTvrtci.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOTvrtci.Location = new System.Drawing.Point(516, 24);
             this.txtOTvrtci.Multiline = true;
@@ -114,6 +129,9 @@
             // 
             // txtNazivKupca
             // 
+            this.txtNazivKupca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNazivKupca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNazivKupca.Location = new System.Drawing.Point(151, 81);
             this.txtNazivKupca.Name = "txtNazivKupca";
@@ -123,6 +141,9 @@
             // 
             // lblNazivKupca
             // 
+            this.lblNazivKupca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNazivKupca.AutoSize = true;
             this.lblNazivKupca.Location = new System.Drawing.Point(63, 81);
             this.lblNazivKupca.Name = "lblNazivKupca";
@@ -132,6 +153,9 @@
             // 
             // txtOperater
             // 
+            this.txtOperater.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOperater.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOperater.Location = new System.Drawing.Point(388, 52);
             this.txtOperater.Name = "txtOperater";
@@ -141,6 +165,9 @@
             // 
             // txtVrijeme
             // 
+            this.txtVrijeme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVrijeme.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVrijeme.Location = new System.Drawing.Point(151, 52);
             this.txtVrijeme.Name = "txtVrijeme";
@@ -150,6 +177,9 @@
             // 
             // lblOperater
             // 
+            this.lblOperater.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOperater.AutoSize = true;
             this.lblOperater.Location = new System.Drawing.Point(331, 52);
             this.lblOperater.Name = "lblOperater";
@@ -159,6 +189,9 @@
             // 
             // lblDatumiVrijeme
             // 
+            this.lblDatumiVrijeme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatumiVrijeme.AutoSize = true;
             this.lblDatumiVrijeme.Location = new System.Drawing.Point(63, 52);
             this.lblDatumiVrijeme.Name = "lblDatumiVrijeme";
@@ -168,6 +201,9 @@
             // 
             // txtBrojRacuna
             // 
+            this.txtBrojRacuna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBrojRacuna.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBrojRacuna.Location = new System.Drawing.Point(151, 21);
             this.txtBrojRacuna.Name = "txtBrojRacuna";
@@ -177,6 +213,9 @@
             // 
             // lblBrojRacuna
             // 
+            this.lblBrojRacuna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBrojRacuna.AutoSize = true;
             this.lblBrojRacuna.Location = new System.Drawing.Point(63, 21);
             this.lblBrojRacuna.Name = "lblBrojRacuna";
@@ -207,6 +246,7 @@
             this.Controls.Add(this.lblBrojRacuna);
             this.Name = "FrmRacun";
             this.Text = "Račun";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRacun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).EndInit();
             this.ResumeLayout(false);

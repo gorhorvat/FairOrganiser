@@ -72,10 +72,10 @@ namespace GlavnaForma
             prodaneUsluge.ShowDialog();
         }
 
-        private void popunjenostKapacitetaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void izdaniRacuniOperateraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmIzvjescePopunjenostKapaciteta kapaciteti = new FrmIzvjescePopunjenostKapaciteta();
-            kapaciteti.ShowDialog();
+            FrmIspisIzdanihRacunaOperatera racuniOperatera = new FrmIspisIzdanihRacunaOperatera();
+            racuniOperatera.ShowDialog();
         }
 
         private void organiziraniDogađajiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,13 +97,19 @@ namespace GlavnaForma
 
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmRacun racun = new FrmRacun();
+            racun.MdiParent = this;
+            racun.WindowState = FormWindowState.Maximized;
             racun.Show();
         }
 
         private void kartaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            closeChildForm();
             FrmKarta karta = new FrmKarta();
+            karta.MdiParent = this;
+            karta.WindowState = FormWindowState.Maximized;
             karta.Show();
         }
 

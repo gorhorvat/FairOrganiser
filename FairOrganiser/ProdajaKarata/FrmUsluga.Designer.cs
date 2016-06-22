@@ -48,6 +48,9 @@
             // 
             this.dgvUsluge.AllowUserToAddRows = false;
             this.dgvUsluge.AllowUserToDeleteRows = false;
+            this.dgvUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsluge.AutoGenerateColumns = false;
             this.dgvUsluge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsluge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -74,6 +77,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -117,6 +121,7 @@
             // 
             // btnObrisiUslugu
             // 
+            this.btnObrisiUslugu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiUslugu.Location = new System.Drawing.Point(557, 302);
             this.btnObrisiUslugu.Name = "btnObrisiUslugu";
             this.btnObrisiUslugu.Size = new System.Drawing.Size(75, 23);
@@ -127,6 +132,7 @@
             // 
             // btnDodajUslugu
             // 
+            this.btnDodajUslugu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajUslugu.Location = new System.Drawing.Point(467, 302);
             this.btnDodajUslugu.Name = "btnDodajUslugu";
             this.btnDodajUslugu.Size = new System.Drawing.Size(84, 23);
@@ -137,6 +143,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Location = new System.Drawing.Point(638, 302);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
@@ -156,6 +163,7 @@
             this.Controls.Add(this.dgvUsluge);
             this.Name = "FrmUsluga";
             this.Text = "Usluge";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmUsluga_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).EndInit();
@@ -169,12 +177,12 @@
         private System.Windows.Forms.Button btnObrisiUslugu;
         private System.Windows.Forms.Button btnDodajUslugu;
         private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.BindingSource uslugaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaUslugeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn racunsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource uslugaBindingSource;
     }
 }
