@@ -185,9 +185,9 @@
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
       <LastGenOutput>KreiranjeDogadajaModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\pozornica.png" />
     <None Include="Resources\stolice.png" />
     <None Include="Resources\rasvjeta.png" />
-    <None Include="Resources\pozornica.png" />
     <None Include="Resources\prostor.png" />
   </ItemGroup>
   <ItemGroup>
