@@ -43,5 +43,10 @@ namespace GeneriranjeIzvjesca
                 dogadaji.ShowDialog();
             }
         }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

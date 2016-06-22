@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -55,25 +57,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dogadaj.cs">
+      <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvidencijaOrganizatoraModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvidencijaOrganizatoraModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvidencijaOrganizatoraModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvidencijaOrganizatoraModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvidencijaOrganizatoraModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="FrmNoviOrganizator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNoviOrganizator.Designer.cs">
       <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOrganizator.cs">
+    <Compile Include="FrmEvidencijaOrg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOrganizator.Designer.cs">
-      <DependentUpon>FrmOrganizator.cs</DependentUpon>
+    <Compile Include="FrmEvidencijaOrg.Designer.cs">
+      <DependentUpon>FrmEvidencijaOrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizator.cs">
+      <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipOrganizatora.cs">
+      <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tse_dog_org.cs">
+      <DependentUpon>EvidencijaOrganizatoraModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmNoviOrganizator.resx">
       <DependentUpon>FrmNoviOrganizator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrganizator.resx">
-      <DependentUpon>FrmOrganizator.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEvidencijaOrg.resx">
+      <DependentUpon>FrmEvidencijaOrg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,7 +115,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <EntityDeploy Include="EvidencijaOrganizatoraModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EvidencijaOrganizatoraModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EvidencijaOrganizatoraModel.edmx.diagram">
+      <DependentUpon>EvidencijaOrganizatoraModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Organizator.datasource" />
+    <None Include="Properties\DataSources\TipOrganizatora.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +134,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EvidencijaOrganizatoraModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EvidencijaOrganizatoraModel.edmx</DependentUpon>
+      <LastGenOutput>EvidencijaOrganizatoraModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EvidencijaOrganizatoraModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EvidencijaOrganizatoraModel.edmx</DependentUpon>
+      <LastGenOutput>EvidencijaOrganizatoraModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

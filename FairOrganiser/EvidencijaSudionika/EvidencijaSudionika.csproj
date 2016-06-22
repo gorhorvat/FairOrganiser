@@ -43,9 +43,12 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MessagingToolkit.QRCode, Version=1.0.3541.23206, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
+      <HintPath>Resources\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCodeGenerator">
+      <HintPath>Resources\QRCodeGenerator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -97,11 +100,11 @@
     <Compile Include="FrmNoviSudionik.Designer.cs">
       <DependentUpon>FrmNoviSudionik.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSudionik.cs">
+    <Compile Include="FrmEvidencija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSudionik.Designer.cs">
-      <DependentUpon>FrmSudionik.cs</DependentUpon>
+    <Compile Include="FrmEvidencija.Designer.cs">
+      <DependentUpon>FrmEvidencija.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,8 +120,8 @@
     <EmbeddedResource Include="FrmNoviSudionik.resx">
       <DependentUpon>FrmNoviSudionik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSudionik.resx">
-      <DependentUpon>FrmSudionik.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEvidencija.resx">
+      <DependentUpon>FrmEvidencija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +165,12 @@
       <DependentUpon>EvidencijaSudionikaModel.edmx</DependentUpon>
       <LastGenOutput>EvidencijaSudionikaModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\QRCodeGenerator.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\MessagingToolkit.QRCode.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="Resources\zv_logo_mali_hr.png" />
     <None Include="Resources\logo_holding %281%29.png" />
   </ItemGroup>

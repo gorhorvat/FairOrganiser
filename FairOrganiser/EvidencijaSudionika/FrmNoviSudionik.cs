@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace EvidencijaSudionika
@@ -14,6 +10,7 @@ namespace EvidencijaSudionika
         public FrmNoviSudionik()
         {
             InitializeComponent();
+            mtxtTelefon.Mask = "000-000-0009";
         }
         /// <summary>
         /// Dodavanje sudionika u bazu.
@@ -29,7 +26,7 @@ namespace EvidencijaSudionika
                     ime = txtImeSudionika.Text,
                     prezime = txtPrezimeSudionika.Text,
                     medijskaKuca = txtMedKuca.Text,
-                    telefon = txtTelefon.Text,
+                    telefon = mtxtTelefon.Text,
                     email = txtEmail.Text,
                     dogadaj = cmbDogadaj.Text,                  
                 };
@@ -52,6 +49,11 @@ namespace EvidencijaSudionika
                 listaDogadaja = new BindingList<Dogadaj>(db.Dogadajs.ToList());
             }
             dogadajBindingSource.DataSource = listaDogadaja;
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

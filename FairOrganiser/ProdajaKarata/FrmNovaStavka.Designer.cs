@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 346);
+            this.ClientSize = new System.Drawing.Size(277, 346);
             this.Controls.Add(this.dgvUsluge);
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOdaberi);
@@ -199,6 +199,7 @@
             this.Controls.Add(this.lblUsluga);
             this.Name = "FrmNovaStavka";
             this.Text = "Nova stavka";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmNovaStavka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).EndInit();

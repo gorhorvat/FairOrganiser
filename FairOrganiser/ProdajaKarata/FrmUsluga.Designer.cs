@@ -39,7 +39,7 @@
             this.uslugaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnObrisiUslugu = new System.Windows.Forms.Button();
             this.btnDodajUslugu = new System.Windows.Forms.Button();
-            this.btnPotvrdi = new System.Windows.Forms.Button();
+            this.btnIzlaz = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             // dgvUsluge
             // 
             this.dgvUsluge.AllowUserToAddRows = false;
+            this.dgvUsluge.AllowUserToDeleteRows = false;
             this.dgvUsluge.AutoGenerateColumns = false;
             this.dgvUsluge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsluge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -59,9 +60,11 @@
             this.racunsDataGridViewTextBoxColumn});
             this.dgvUsluge.DataSource = this.uslugaBindingSource;
             this.dgvUsluge.Location = new System.Drawing.Point(12, 12);
+            this.dgvUsluge.MultiSelect = false;
             this.dgvUsluge.Name = "dgvUsluge";
             this.dgvUsluge.ReadOnly = true;
             this.dgvUsluge.RowHeadersVisible = false;
+            this.dgvUsluge.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsluge.Size = new System.Drawing.Size(701, 284);
             this.dgvUsluge.TabIndex = 0;
             // 
@@ -71,6 +74,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Šifra";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -132,15 +136,15 @@
             this.btnDodajUslugu.UseVisualStyleBackColor = true;
             this.btnDodajUslugu.Click += new System.EventHandler(this.btnDodajUslugu_Click);
             // 
-            // btnPotvrdi
+            // btnIzlaz
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(638, 302);
-            this.btnPotvrdi.Name = "btnPotvrdi";
-            this.btnPotvrdi.Size = new System.Drawing.Size(75, 23);
-            this.btnPotvrdi.TabIndex = 14;
-            this.btnPotvrdi.Text = "Potvrdi";
-            this.btnPotvrdi.UseVisualStyleBackColor = true;
-            this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
+            this.btnIzlaz.Location = new System.Drawing.Point(638, 302);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
+            this.btnIzlaz.TabIndex = 14;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // FrmUsluga
             // 
@@ -149,10 +153,11 @@
             this.ClientSize = new System.Drawing.Size(725, 353);
             this.Controls.Add(this.btnObrisiUslugu);
             this.Controls.Add(this.btnDodajUslugu);
-            this.Controls.Add(this.btnPotvrdi);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.dgvUsluge);
             this.Name = "FrmUsluga";
             this.Text = "Usluge";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmUsluga_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugaBindingSource)).EndInit();
@@ -165,13 +170,13 @@
         private System.Windows.Forms.DataGridView dgvUsluge;
         private System.Windows.Forms.Button btnObrisiUslugu;
         private System.Windows.Forms.Button btnDodajUslugu;
-        private System.Windows.Forms.Button btnPotvrdi;
+        private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.BindingSource uslugaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaUslugeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn racunsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource uslugaBindingSource;
     }
 }
