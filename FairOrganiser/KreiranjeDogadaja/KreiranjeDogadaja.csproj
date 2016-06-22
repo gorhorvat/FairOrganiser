@@ -69,6 +69,12 @@
     <Compile Include="FrmDogadaj.Designer.cs">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProstorOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProstorOprema.Designer.cs">
+      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImprovedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,12 +119,6 @@
     <Compile Include="Prostor.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmProstorOprema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProstorOprema.Designer.cs">
-      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
-    </Compile>
     <Compile Include="Racun.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
@@ -139,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="FrmDogadaj.resx">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProstorOprema.resx">
+      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImprovedPanel.resx">
       <DependentUpon>ImprovedPanel.cs</DependentUpon>
