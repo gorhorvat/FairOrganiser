@@ -7,17 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProdajaKarata
+namespace GeneriranjeIzvjesca
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tse_dog_org
+    public partial class Racun
     {
-        public int Dogadajid { get; set; }
-        public int Organizatorid { get; set; }
+        public int id { get; set; }
+        public string operater { get; set; }
+        public Nullable<System.DateTime> vrijeme { get; set; }
+        public Nullable<double> ukupno { get; set; }
+        public string nazivKupca { get; set; }
+        public Nullable<int> Zaposlenikid { get; set; }
+        public Nullable<int> Dogadajid { get; set; }
     
         public virtual Dogadaj Dogadaj { get; set; }
-        public virtual Organizator Organizator { get; set; }
+        public virtual Zaposlenik Zaposlenik { get; set; }
     }
 }

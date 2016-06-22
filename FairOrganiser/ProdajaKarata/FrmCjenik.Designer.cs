@@ -31,23 +31,24 @@
             this.components = new System.ComponentModel.Container();
             this.btnPregledaj = new System.Windows.Forms.Button();
             this.dgvPopisCjenika = new System.Windows.Forms.DataGridView();
+            this.btnObrisiCjenik = new System.Windows.Forms.Button();
+            this.btnDodajCjenik = new System.Windows.Forms.Button();
+            this.dtpDo = new System.Windows.Forms.DateTimePicker();
+            this.dtpOd = new System.Windows.Forms.DateTimePicker();
+            this.lblCjenikKarata = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijediOdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijediDoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kartasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipKartesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cjenikDogadajaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnObrisiCjenik = new System.Windows.Forms.Button();
-            this.btnDodajCjenik = new System.Windows.Forms.Button();
-            this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            this.dtpOd = new System.Windows.Forms.DateTimePicker();
-            this.lblCjenikKarata = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisCjenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cjenikDogadajaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPregledaj
             // 
+            this.btnPregledaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPregledaj.Location = new System.Drawing.Point(417, 250);
             this.btnPregledaj.Name = "btnPregledaj";
             this.btnPregledaj.Size = new System.Drawing.Size(98, 23);
@@ -60,6 +61,9 @@
             // 
             this.dgvPopisCjenika.AllowUserToAddRows = false;
             this.dgvPopisCjenika.AllowUserToDeleteRows = false;
+            this.dgvPopisCjenika.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPopisCjenika.AutoGenerateColumns = false;
             this.dgvPopisCjenika.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisCjenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -78,6 +82,53 @@
             this.dgvPopisCjenika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPopisCjenika.Size = new System.Drawing.Size(503, 190);
             this.dgvPopisCjenika.TabIndex = 17;
+            // 
+            // btnObrisiCjenik
+            // 
+            this.btnObrisiCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnObrisiCjenik.Location = new System.Drawing.Point(336, 250);
+            this.btnObrisiCjenik.Name = "btnObrisiCjenik";
+            this.btnObrisiCjenik.Size = new System.Drawing.Size(75, 23);
+            this.btnObrisiCjenik.TabIndex = 16;
+            this.btnObrisiCjenik.Text = "Obriši cjenik";
+            this.btnObrisiCjenik.UseVisualStyleBackColor = true;
+            this.btnObrisiCjenik.Click += new System.EventHandler(this.btnObrisiCjenik_Click);
+            // 
+            // btnDodajCjenik
+            // 
+            this.btnDodajCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDodajCjenik.Location = new System.Drawing.Point(255, 250);
+            this.btnDodajCjenik.Name = "btnDodajCjenik";
+            this.btnDodajCjenik.Size = new System.Drawing.Size(75, 23);
+            this.btnDodajCjenik.TabIndex = 15;
+            this.btnDodajCjenik.Text = "Dodaj cjenik";
+            this.btnDodajCjenik.UseVisualStyleBackColor = true;
+            this.btnDodajCjenik.Click += new System.EventHandler(this.btnDodajCjenik_Click);
+            // 
+            // dtpDo
+            // 
+            this.dtpDo.CustomFormat = "";
+            this.dtpDo.Location = new System.Drawing.Point(373, 12);
+            this.dtpDo.Name = "dtpDo";
+            this.dtpDo.Size = new System.Drawing.Size(142, 20);
+            this.dtpDo.TabIndex = 14;
+            // 
+            // dtpOd
+            // 
+            this.dtpOd.CustomFormat = "";
+            this.dtpOd.Location = new System.Drawing.Point(203, 12);
+            this.dtpOd.Name = "dtpOd";
+            this.dtpOd.Size = new System.Drawing.Size(142, 20);
+            this.dtpOd.TabIndex = 13;
+            // 
+            // lblCjenikKarata
+            // 
+            this.lblCjenikKarata.AutoSize = true;
+            this.lblCjenikKarata.Location = new System.Drawing.Point(9, 38);
+            this.lblCjenikKarata.Name = "lblCjenikKarata";
+            this.lblCjenikKarata.Size = new System.Drawing.Size(69, 13);
+            this.lblCjenikKarata.TabIndex = 12;
+            this.lblCjenikKarata.Text = "Cjenik karata";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -120,51 +171,6 @@
             // cjenikDogadajaBindingSource
             // 
             this.cjenikDogadajaBindingSource.DataSource = typeof(ProdajaKarata.CjenikDogadaja);
-            // 
-            // btnObrisiCjenik
-            // 
-            this.btnObrisiCjenik.Location = new System.Drawing.Point(336, 250);
-            this.btnObrisiCjenik.Name = "btnObrisiCjenik";
-            this.btnObrisiCjenik.Size = new System.Drawing.Size(75, 23);
-            this.btnObrisiCjenik.TabIndex = 16;
-            this.btnObrisiCjenik.Text = "Obriši cjenik";
-            this.btnObrisiCjenik.UseVisualStyleBackColor = true;
-            this.btnObrisiCjenik.Click += new System.EventHandler(this.btnObrisiCjenik_Click);
-            // 
-            // btnDodajCjenik
-            // 
-            this.btnDodajCjenik.Location = new System.Drawing.Point(255, 250);
-            this.btnDodajCjenik.Name = "btnDodajCjenik";
-            this.btnDodajCjenik.Size = new System.Drawing.Size(75, 23);
-            this.btnDodajCjenik.TabIndex = 15;
-            this.btnDodajCjenik.Text = "Dodaj cjenik";
-            this.btnDodajCjenik.UseVisualStyleBackColor = true;
-            this.btnDodajCjenik.Click += new System.EventHandler(this.btnDodajCjenik_Click);
-            // 
-            // dtpDo
-            // 
-            this.dtpDo.CustomFormat = "";
-            this.dtpDo.Location = new System.Drawing.Point(373, 12);
-            this.dtpDo.Name = "dtpDo";
-            this.dtpDo.Size = new System.Drawing.Size(142, 20);
-            this.dtpDo.TabIndex = 14;
-            // 
-            // dtpOd
-            // 
-            this.dtpOd.CustomFormat = "";
-            this.dtpOd.Location = new System.Drawing.Point(203, 12);
-            this.dtpOd.Name = "dtpOd";
-            this.dtpOd.Size = new System.Drawing.Size(142, 20);
-            this.dtpOd.TabIndex = 13;
-            // 
-            // lblCjenikKarata
-            // 
-            this.lblCjenikKarata.AutoSize = true;
-            this.lblCjenikKarata.Location = new System.Drawing.Point(9, 38);
-            this.lblCjenikKarata.Name = "lblCjenikKarata";
-            this.lblCjenikKarata.Size = new System.Drawing.Size(69, 13);
-            this.lblCjenikKarata.TabIndex = 12;
-            this.lblCjenikKarata.Text = "Cjenik karata";
             // 
             // FrmCjenik
             // 

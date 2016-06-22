@@ -63,6 +63,9 @@
             // 
             // lblValuta
             // 
+            this.lblValuta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblValuta.AutoSize = true;
             this.lblValuta.Location = new System.Drawing.Point(360, 12);
             this.lblValuta.Name = "lblValuta";
@@ -72,15 +75,18 @@
             // 
             // txtSifraKarte
             // 
-            this.txtSifraKarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifraKarte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSifraKarte.Location = new System.Drawing.Point(106, 12);
             this.txtSifraKarte.Name = "txtSifraKarte";
             this.txtSifraKarte.ReadOnly = true;
-            this.txtSifraKarte.Size = new System.Drawing.Size(79, 20);
+            this.txtSifraKarte.Size = new System.Drawing.Size(79, 13);
             this.txtSifraKarte.TabIndex = 26;
             // 
             // lblSifra
             // 
+            this.lblSifra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSifra.AutoSize = true;
             this.lblSifra.Location = new System.Drawing.Point(18, 12);
             this.lblSifra.Name = "lblSifra";
@@ -91,6 +97,7 @@
             // dgvPopisTipova
             // 
             this.dgvPopisTipova.AllowUserToAddRows = false;
+            this.dgvPopisTipova.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPopisTipova.AutoGenerateColumns = false;
             this.dgvPopisTipova.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisTipova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -165,6 +172,7 @@
             // dgvPopisDogadaja
             // 
             this.dgvPopisDogadaja.AllowUserToAddRows = false;
+            this.dgvPopisDogadaja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPopisDogadaja.AutoGenerateColumns = false;
             this.dgvPopisDogadaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPopisDogadaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -247,6 +255,7 @@
             // 
             // btnIspisi
             // 
+            this.btnIspisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIspisi.Location = new System.Drawing.Point(386, 232);
             this.btnIspisi.Name = "btnIspisi";
             this.btnIspisi.Size = new System.Drawing.Size(100, 33);
@@ -266,6 +275,9 @@
             // 
             // lblCijenaKarte
             // 
+            this.lblCijenaKarte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCijenaKarte.AutoSize = true;
             this.lblCijenaKarte.Location = new System.Drawing.Point(231, 12);
             this.lblCijenaKarte.Name = "lblCijenaKarte";
@@ -275,24 +287,27 @@
             // 
             // txtCijenaKarte
             // 
-            this.txtCijenaKarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCijenaKarte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCijenaKarte.Location = new System.Drawing.Point(303, 12);
             this.txtCijenaKarte.Name = "txtCijenaKarte";
             this.txtCijenaKarte.ReadOnly = true;
-            this.txtCijenaKarte.Size = new System.Drawing.Size(51, 20);
+            this.txtCijenaKarte.Size = new System.Drawing.Size(51, 13);
             this.txtCijenaKarte.TabIndex = 18;
             // 
             // txtDatum
             // 
-            this.txtDatum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatum.Location = new System.Drawing.Point(106, 38);
             this.txtDatum.Name = "txtDatum";
             this.txtDatum.ReadOnly = true;
-            this.txtDatum.Size = new System.Drawing.Size(144, 20);
+            this.txtDatum.Size = new System.Drawing.Size(144, 13);
             this.txtDatum.TabIndex = 17;
             // 
             // lblDatum
             // 
+            this.lblDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatum.AutoSize = true;
             this.lblDatum.Location = new System.Drawing.Point(18, 38);
             this.lblDatum.Name = "lblDatum";
@@ -319,7 +334,6 @@
             this.Controls.Add(this.lblDatum);
             this.Name = "FrmKarta";
             this.Text = "Karta";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmKarta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisTipova)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipKarteBindingSource)).EndInit();

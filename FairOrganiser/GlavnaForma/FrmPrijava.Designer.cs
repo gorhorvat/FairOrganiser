@@ -155,6 +155,7 @@
             this.Controls.Add(this.lblKorisnickoIme);
             this.Name = "FrmPrijava";
             this.Text = "Prijava";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrijava_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

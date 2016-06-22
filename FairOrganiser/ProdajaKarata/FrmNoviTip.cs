@@ -30,7 +30,6 @@ namespace ProdajaKarata
             if (txtIznosPopusta.Text == "" || txtNazivTipa.Text == "")
             {
                 MessageBox.Show("Niste popunili sva polja!");
-                Close();
             }
 
             else

@@ -41,8 +41,11 @@
             // 
             // lblTipUsluge
             // 
+            this.lblTipUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipUsluge.AutoSize = true;
-            this.lblTipUsluge.Location = new System.Drawing.Point(19, 43);
+            this.lblTipUsluge.Location = new System.Drawing.Point(14, 38);
             this.lblTipUsluge.Name = "lblTipUsluge";
             this.lblTipUsluge.Size = new System.Drawing.Size(56, 13);
             this.lblTipUsluge.TabIndex = 14;
@@ -50,8 +53,11 @@
             // 
             // lvlNazivUsluge
             // 
+            this.lvlNazivUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvlNazivUsluge.AutoSize = true;
-            this.lvlNazivUsluge.Location = new System.Drawing.Point(19, 17);
+            this.lvlNazivUsluge.Location = new System.Drawing.Point(14, 12);
             this.lvlNazivUsluge.Name = "lvlNazivUsluge";
             this.lvlNazivUsluge.Size = new System.Drawing.Size(68, 13);
             this.lvlNazivUsluge.TabIndex = 13;
@@ -59,21 +65,28 @@
             // 
             // txtTipUsluge
             // 
-            this.txtTipUsluge.Location = new System.Drawing.Point(103, 40);
+            this.txtTipUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipUsluge.Location = new System.Drawing.Point(116, 38);
             this.txtTipUsluge.Name = "txtTipUsluge";
-            this.txtTipUsluge.Size = new System.Drawing.Size(126, 20);
+            this.txtTipUsluge.Size = new System.Drawing.Size(426, 20);
             this.txtTipUsluge.TabIndex = 12;
             // 
             // txtNazivUsluge
             // 
-            this.txtNazivUsluge.Location = new System.Drawing.Point(103, 14);
+            this.txtNazivUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNazivUsluge.Location = new System.Drawing.Point(116, 12);
             this.txtNazivUsluge.Name = "txtNazivUsluge";
-            this.txtNazivUsluge.Size = new System.Drawing.Size(126, 20);
+            this.txtNazivUsluge.Size = new System.Drawing.Size(426, 20);
             this.txtNazivUsluge.TabIndex = 11;
             // 
             // btnPotvrdi
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(22, 118);
+            this.btnPotvrdi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPotvrdi.Location = new System.Drawing.Point(335, 151);
             this.btnPotvrdi.Name = "btnPotvrdi";
             this.btnPotvrdi.Size = new System.Drawing.Size(207, 37);
             this.btnPotvrdi.TabIndex = 10;
@@ -83,8 +96,11 @@
             // 
             // lblNapomena
             // 
+            this.lblNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNapomena.AutoSize = true;
-            this.lblNapomena.Location = new System.Drawing.Point(19, 69);
+            this.lblNapomena.Location = new System.Drawing.Point(14, 64);
             this.lblNapomena.Name = "lblNapomena";
             this.lblNapomena.Size = new System.Drawing.Size(59, 13);
             this.lblNapomena.TabIndex = 16;
@@ -92,15 +108,22 @@
             // 
             // txtNapomena
             // 
-            this.txtNapomena.Location = new System.Drawing.Point(103, 66);
+            this.txtNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNapomena.Location = new System.Drawing.Point(116, 64);
+            this.txtNapomena.Multiline = true;
             this.txtNapomena.Name = "txtNapomena";
-            this.txtNapomena.Size = new System.Drawing.Size(126, 20);
+            this.txtNapomena.Size = new System.Drawing.Size(426, 55);
             this.txtNapomena.TabIndex = 15;
             // 
             // lblCijena
             // 
+            this.lblCijena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCijena.AutoSize = true;
-            this.lblCijena.Location = new System.Drawing.Point(19, 95);
+            this.lblCijena.Location = new System.Drawing.Point(12, 125);
             this.lblCijena.Name = "lblCijena";
             this.lblCijena.Size = new System.Drawing.Size(70, 13);
             this.lblCijena.TabIndex = 18;
@@ -108,16 +131,19 @@
             // 
             // txtCijenaUsluge
             // 
-            this.txtCijenaUsluge.Location = new System.Drawing.Point(103, 92);
+            this.txtCijenaUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCijenaUsluge.Location = new System.Drawing.Point(114, 125);
             this.txtCijenaUsluge.Name = "txtCijenaUsluge";
-            this.txtCijenaUsluge.Size = new System.Drawing.Size(126, 20);
+            this.txtCijenaUsluge.Size = new System.Drawing.Size(426, 20);
             this.txtCijenaUsluge.TabIndex = 17;
             // 
             // FrmNovaUsluga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 165);
+            this.ClientSize = new System.Drawing.Size(552, 198);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.txtCijenaUsluge);
             this.Controls.Add(this.lblNapomena);

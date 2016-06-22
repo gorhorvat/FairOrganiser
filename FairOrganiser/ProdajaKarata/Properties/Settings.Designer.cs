@@ -22,5 +22,16 @@ namespace ProdajaKarata.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=16057_DB;Persist Securit" +
+            "y Info=True;User ID=16057_User;Password=7yDsyGQs")]
+        public string _16057_DBConnectionString {
+            get {
+                return ((string)(this["_16057_DBConnectionString"]));
+            }
+        }
     }
 }

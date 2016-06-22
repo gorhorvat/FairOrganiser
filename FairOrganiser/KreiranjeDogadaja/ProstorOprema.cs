@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GeneriranjeIzvjesca
+namespace KreiranjeDogadaja
 {
-    public partial class FrmIzvjescePopunjenostKapaciteta : Form
+    public partial class ProstorOprema : Form
     {
-        public FrmIzvjescePopunjenostKapaciteta()
+        public ProstorOprema()
         {
             InitializeComponent();
         }

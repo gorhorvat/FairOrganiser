@@ -51,6 +51,7 @@ namespace EvidencijaSudionika
             FrmIzdanaAkreditacija izdanaAkredicatija = new FrmIzdanaAkreditacija(pbQR.Image, odabranisudionik, cmbAkreditacija.SelectedValue.ToString());
             izdanaAkredicatija.ShowDialog();
             dodajAkreditaciju();
+            this.Close();         
             
         }
         /// <summary>

@@ -48,6 +48,9 @@
             // 
             this.dgvUsluge.AllowUserToAddRows = false;
             this.dgvUsluge.AllowUserToDeleteRows = false;
+            this.dgvUsluge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsluge.AutoGenerateColumns = false;
             this.dgvUsluge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsluge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -118,6 +121,7 @@
             // 
             // btnObrisiUslugu
             // 
+            this.btnObrisiUslugu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiUslugu.Location = new System.Drawing.Point(557, 302);
             this.btnObrisiUslugu.Name = "btnObrisiUslugu";
             this.btnObrisiUslugu.Size = new System.Drawing.Size(75, 23);
@@ -128,6 +132,7 @@
             // 
             // btnDodajUslugu
             // 
+            this.btnDodajUslugu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajUslugu.Location = new System.Drawing.Point(467, 302);
             this.btnDodajUslugu.Name = "btnDodajUslugu";
             this.btnDodajUslugu.Size = new System.Drawing.Size(84, 23);
@@ -138,6 +143,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Location = new System.Drawing.Point(638, 302);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(75, 23);

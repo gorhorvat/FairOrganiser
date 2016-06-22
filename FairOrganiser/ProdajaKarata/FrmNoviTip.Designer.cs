@@ -37,8 +37,11 @@
             // 
             // lblIznosPopusta
             // 
+            this.lblIznosPopusta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIznosPopusta.AutoSize = true;
-            this.lblIznosPopusta.Location = new System.Drawing.Point(67, 41);
+            this.lblIznosPopusta.Location = new System.Drawing.Point(10, 37);
             this.lblIznosPopusta.Name = "lblIznosPopusta";
             this.lblIznosPopusta.Size = new System.Drawing.Size(73, 13);
             this.lblIznosPopusta.TabIndex = 9;
@@ -46,8 +49,11 @@
             // 
             // lvlNazivTipa
             // 
+            this.lvlNazivTipa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvlNazivTipa.AutoSize = true;
-            this.lvlNazivTipa.Location = new System.Drawing.Point(86, 15);
+            this.lvlNazivTipa.Location = new System.Drawing.Point(29, 11);
             this.lvlNazivTipa.Name = "lvlNazivTipa";
             this.lvlNazivTipa.Size = new System.Drawing.Size(54, 13);
             this.lvlNazivTipa.TabIndex = 8;
@@ -55,23 +61,30 @@
             // 
             // txtIznosPopusta
             // 
-            this.txtIznosPopusta.Location = new System.Drawing.Point(146, 38);
+            this.txtIznosPopusta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIznosPopusta.Location = new System.Drawing.Point(89, 34);
             this.txtIznosPopusta.Name = "txtIznosPopusta";
-            this.txtIznosPopusta.Size = new System.Drawing.Size(126, 20);
+            this.txtIznosPopusta.Size = new System.Drawing.Size(202, 20);
             this.txtIznosPopusta.TabIndex = 7;
             // 
             // txtNazivTipa
             // 
-            this.txtNazivTipa.Location = new System.Drawing.Point(146, 12);
+            this.txtNazivTipa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNazivTipa.Location = new System.Drawing.Point(89, 8);
             this.txtNazivTipa.Name = "txtNazivTipa";
-            this.txtNazivTipa.Size = new System.Drawing.Size(126, 20);
+            this.txtNazivTipa.Size = new System.Drawing.Size(202, 20);
             this.txtNazivTipa.TabIndex = 6;
             // 
             // btnPotvrdi
             // 
-            this.btnPotvrdi.Location = new System.Drawing.Point(146, 63);
+            this.btnPotvrdi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPotvrdi.Location = new System.Drawing.Point(89, 60);
             this.btnPotvrdi.Name = "btnPotvrdi";
-            this.btnPotvrdi.Size = new System.Drawing.Size(126, 23);
+            this.btnPotvrdi.Size = new System.Drawing.Size(202, 23);
             this.btnPotvrdi.TabIndex = 5;
             this.btnPotvrdi.Text = "Potvrdi";
             this.btnPotvrdi.UseVisualStyleBackColor = true;
@@ -81,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 103);
+            this.ClientSize = new System.Drawing.Size(303, 111);
             this.Controls.Add(this.lblIznosPopusta);
             this.Controls.Add(this.lvlNazivTipa);
             this.Controls.Add(this.txtIznosPopusta);

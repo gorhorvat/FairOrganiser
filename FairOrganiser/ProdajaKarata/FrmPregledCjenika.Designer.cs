@@ -49,6 +49,7 @@
             // 
             // btnObrisiTip
             // 
+            this.btnObrisiTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisiTip.Location = new System.Drawing.Point(280, 231);
             this.btnObrisiTip.Name = "btnObrisiTip";
             this.btnObrisiTip.Size = new System.Drawing.Size(75, 23);
@@ -59,6 +60,7 @@
             // 
             // btnDodajTip
             // 
+            this.btnDodajTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajTip.Location = new System.Drawing.Point(199, 231);
             this.btnDodajTip.Name = "btnDodajTip";
             this.btnDodajTip.Size = new System.Drawing.Size(75, 23);
@@ -69,6 +71,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Location = new System.Drawing.Point(361, 231);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
@@ -79,6 +82,9 @@
             // 
             // txtDo
             // 
+            this.txtDo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDo.Location = new System.Drawing.Point(170, 7);
             this.txtDo.Name = "txtDo";
@@ -88,6 +94,9 @@
             // 
             // txtOd
             // 
+            this.txtOd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOd.Location = new System.Drawing.Point(74, 7);
             this.txtOd.Name = "txtOd";
@@ -108,6 +117,9 @@
             // 
             this.dgvOdabraniCjenik.AllowUserToAddRows = false;
             this.dgvOdabraniCjenik.AllowUserToDeleteRows = false;
+            this.dgvOdabraniCjenik.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOdabraniCjenik.AutoGenerateColumns = false;
             this.dgvOdabraniCjenik.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOdabraniCjenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
