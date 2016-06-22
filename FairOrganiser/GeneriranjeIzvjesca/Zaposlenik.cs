@@ -7,29 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProdajaKarata
+namespace GeneriranjeIzvjesca
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Organizator
+    public partial class Zaposlenik
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Organizator()
+        public Zaposlenik()
         {
-            this.Dogadajs = new HashSet<Dogadaj>();
+            this.Racuns = new HashSet<Racun>();
         }
     
         public int id { get; set; }
-        public string naziv { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
         public string oib { get; set; }
         public string adresa { get; set; }
-        public string email { get; set; }
         public string brojTelefona { get; set; }
-        public Nullable<int> TipOrganizatoraid { get; set; }
+        public string email { get; set; }
+        public string tipZaposlenika { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
     
-        public virtual TipOrganizatora TipOrganizatora { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dogadaj> Dogadajs { get; set; }
+        public virtual ICollection<Racun> Racuns { get; set; }
     }
 }

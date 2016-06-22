@@ -24,7 +24,6 @@ namespace ProdajaKarata
             if (txtNazivUsluge.Text == "" || txtTipUsluge.Text == "" || txtNapomena.Text == "" || txtCijenaUsluge.Text == "")
             {
                 MessageBox.Show("Niste popunili sva polja!");
-                Close();
             }
 
             else

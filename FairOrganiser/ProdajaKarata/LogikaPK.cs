@@ -135,7 +135,7 @@ namespace ProdajaKarata
         }
 
         /// <summary>
-        /// Dohvaća listu svih usluga u kontekstu, te ih prikazuje u ComboBox-u na formi FrmNovaStavka.
+        /// Dohvaća listu svih usluga u kontekstu, te ih prikazuje u DataGridView-u na formi FrmNovaStavka.
         /// </summary>
         public BindingList<Usluga> PrikaziUsluge()
         {
@@ -225,6 +225,19 @@ namespace ProdajaKarata
                         db.SaveChanges();
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Dohvaća listu svih računa u kontekstu, te ih prikazuje u DataGridView-u na formi FrmRacuni.
+        /// </summary>
+        public BindingList<Racun> PrikaziRacune()
+        {
+            BindingList<Racun> popisRacuna = null;
+            using (var db = new ProdajaKarataEntities())
+            {
+                popisRacuna = new BindingList<Racun>(db.Racuns.ToList());
+                return popisRacuna;
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace ProdajaKarata
 {
-    partial class FrmRacun
+    partial class FrmPrikazRacuna
     {
         /// <summary>
         /// Required designer variable.
@@ -68,9 +68,15 @@
             // 
             // dgvListaStavki
             // 
+            this.dgvListaStavki.AllowUserToAddRows = false;
+            this.dgvListaStavki.AllowUserToDeleteRows = false;
+            this.dgvListaStavki.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaStavki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaStavki.Location = new System.Drawing.Point(12, 110);
             this.dgvListaStavki.Name = "dgvListaStavki";
+            this.dgvListaStavki.ReadOnly = true;
+            this.dgvListaStavki.RowHeadersVisible = false;
+            this.dgvListaStavki.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaStavki.Size = new System.Drawing.Size(736, 336);
             this.dgvListaStavki.TabIndex = 32;
             // 
@@ -95,6 +101,9 @@
             // 
             // lblUkupno
             // 
+            this.lblUkupno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUkupno.AutoSize = true;
             this.lblUkupno.Location = new System.Drawing.Point(594, 453);
             this.lblUkupno.Name = "lblUkupno";
@@ -123,6 +132,9 @@
             // 
             // lblNazivKupca
             // 
+            this.lblNazivKupca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNazivKupca.AutoSize = true;
             this.lblNazivKupca.Location = new System.Drawing.Point(63, 81);
             this.lblNazivKupca.Name = "lblNazivKupca";
@@ -150,6 +162,9 @@
             // 
             // lblOperater
             // 
+            this.lblOperater.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOperater.AutoSize = true;
             this.lblOperater.Location = new System.Drawing.Point(331, 52);
             this.lblOperater.Name = "lblOperater";
@@ -159,6 +174,9 @@
             // 
             // lblDatumiVrijeme
             // 
+            this.lblDatumiVrijeme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatumiVrijeme.AutoSize = true;
             this.lblDatumiVrijeme.Location = new System.Drawing.Point(63, 52);
             this.lblDatumiVrijeme.Name = "lblDatumiVrijeme";
@@ -177,6 +195,9 @@
             // 
             // lblBrojRacuna
             // 
+            this.lblBrojRacuna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBrojRacuna.AutoSize = true;
             this.lblBrojRacuna.Location = new System.Drawing.Point(63, 21);
             this.lblBrojRacuna.Name = "lblBrojRacuna";
@@ -184,7 +205,7 @@
             this.lblBrojRacuna.TabIndex = 18;
             this.lblBrojRacuna.Text = "Broj racuna:";
             // 
-            // FrmRacun
+            // FrmPrikazRacuna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,9 +226,10 @@
             this.Controls.Add(this.lblDatumiVrijeme);
             this.Controls.Add(this.txtBrojRacuna);
             this.Controls.Add(this.lblBrojRacuna);
-            this.Name = "FrmRacun";
-            this.Text = "Račun";
-            this.Load += new System.EventHandler(this.FrmRacun_Load);
+            this.Name = "FrmPrikazRacuna";
+            this.Text = "Prikaz računa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrikazRacuna_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

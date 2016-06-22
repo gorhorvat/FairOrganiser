@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProdajaKarata
+namespace GeneriranjeIzvjesca
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProdajaKarataEntities : DbContext
+    public partial class GeneriranjeIzvjescaEntities : DbContext
     {
-        public ProdajaKarataEntities()
-            : base("name=ProdajaKarataEntities")
+        public GeneriranjeIzvjescaEntities()
+            : base("name=GeneriranjeIzvjescaEntities")
         {
         }
     
@@ -25,15 +25,8 @@ namespace ProdajaKarata
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CjenikDogadaja> CjenikDogadajas { get; set; }
         public virtual DbSet<Dogadaj> Dogadajs { get; set; }
-        public virtual DbSet<Karta> Kartas { get; set; }
         public virtual DbSet<Racun> Racuns { get; set; }
         public virtual DbSet<Zaposlenik> Zaposleniks { get; set; }
-        public virtual DbSet<TipKarte> TipKartes { get; set; }
-        public virtual DbSet<Organizator> Organizators { get; set; }
-        public virtual DbSet<Usluga> Uslugas { get; set; }
-        public virtual DbSet<TipOrganizatora> TipOrganizatoras { get; set; }
-        public virtual DbSet<tse_dog_sud> tse_dog_sud { get; set; }
     }
 }

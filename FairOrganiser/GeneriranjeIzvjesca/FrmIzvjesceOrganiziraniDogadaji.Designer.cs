@@ -50,6 +50,9 @@
             // 
             // rvPodaci
             // 
+            this.rvPodaci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "OrganiziraniDogadaji";
             reportDataSource1.Value = this.IzvjesceOrganizatoriBindingSource;
             this.rvPodaci.LocalReport.DataSources.Add(reportDataSource1);
@@ -72,6 +75,7 @@
             this.Controls.Add(this.rvPodaci);
             this.Name = "FrmIzvjesceOrganiziraniDogadaji";
             this.Text = "Izvješće o organiziranim događajima";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmIzvjesceOrganiziraniDogadaji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IzvjesceOrganizatoriBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._16057_IzvjescaDBDataSet)).EndInit();
