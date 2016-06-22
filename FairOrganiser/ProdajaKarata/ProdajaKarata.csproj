@@ -103,11 +103,17 @@
     <Compile Include="FrmPregledCjenika.Designer.cs">
       <DependentUpon>FrmPregledCjenika.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRacun.cs">
+    <Compile Include="FrmPrikazRacuna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRacun.Designer.cs">
-      <DependentUpon>FrmRacun.cs</DependentUpon>
+    <Compile Include="FrmPrikazRacuna.Designer.cs">
+      <DependentUpon>FrmPrikazRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRacuni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRacuni.Designer.cs">
+      <DependentUpon>FrmRacuni.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsluga.cs">
       <SubType>Form</SubType>
@@ -148,9 +154,6 @@
     <Compile Include="TipOrganizatora.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="tse_dog_org.cs">
-      <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="tse_dog_sud.cs">
       <DependentUpon>ProdajaKarataModel.tt</DependentUpon>
     </Compile>
@@ -178,8 +181,11 @@
     <EmbeddedResource Include="FrmPregledCjenika.resx">
       <DependentUpon>FrmPregledCjenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRacun.resx">
-      <DependentUpon>FrmRacun.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPrikazRacuna.resx">
+      <DependentUpon>FrmPrikazRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRacuni.resx">
+      <DependentUpon>FrmRacuni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsluga.resx">
       <DependentUpon>FrmUsluga.cs</DependentUpon>
@@ -205,6 +211,7 @@
     </None>
     <None Include="Properties\DataSources\CjenikDogadaja.datasource" />
     <None Include="Properties\DataSources\Dogadaj.datasource" />
+    <None Include="Properties\DataSources\Racun.datasource" />
     <None Include="Properties\DataSources\TipKarte.datasource" />
     <None Include="Properties\DataSources\Usluga.datasource" />
     <None Include="Properties\Settings.settings">

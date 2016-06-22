@@ -17,17 +17,11 @@
         <AssociationConnector Association="DBModelProdajaKarata.FK_Racun_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Racun_Zaposlenik" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DBModelProdajaKarata.Organizator" Width="1.5" PointX="0.5" PointY="0.875" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.Usluga" Width="1.5" PointX="7" PointY="7.5" />
+        <EntityTypeShape EntityType="DBModelProdajaKarata.Usluga" Width="1.5" PointX="8.125" PointY="4.125" />
         <AssociationConnector Association="DBModelProdajaKarata.tse_usl_rac" />
         <EntityTypeShape EntityType="DBModelProdajaKarata.TipOrganizatora" Width="1.5" PointX="0.5" PointY="5" />
         <AssociationConnector Association="DBModelProdajaKarata.FK_Organizator_TipOrganizatora" />
-        <EntityTypeShape EntityType="DBModelProdajaKarata.tse_dog_org" Width="1.5" PointX="3.375" PointY="5" />
-        <AssociationConnector Association="DBModelProdajaKarata.FK_tse_dog_org_Dogadaj" />
-        <AssociationConnector Association="DBModelProdajaKarata.FK_tse_dog_org_Organizator" ManuallyRouted="true" >
-          <ConnectorPoint PointX="2" PointY="3.3720914713541665" />
-          <ConnectorPoint PointX="3.40625" PointY="3.3720914713541665" />
-          <ConnectorPoint PointX="3.40625" PointY="5" />
-        </AssociationConnector>
+        <AssociationConnector Association="DBModelProdajaKarata.tse_dog_org1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

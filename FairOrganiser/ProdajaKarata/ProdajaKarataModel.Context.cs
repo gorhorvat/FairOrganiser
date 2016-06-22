@@ -35,6 +35,5 @@ namespace ProdajaKarata
         public virtual DbSet<Usluga> Uslugas { get; set; }
         public virtual DbSet<TipOrganizatora> TipOrganizatoras { get; set; }
         public virtual DbSet<tse_dog_sud> tse_dog_sud { get; set; }
-        public virtual DbSet<tse_dog_org> tse_dog_org { get; set; }
     }
 }

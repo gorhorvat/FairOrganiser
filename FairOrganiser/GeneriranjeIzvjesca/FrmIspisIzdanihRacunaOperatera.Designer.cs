@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.IzvjesceIspisIzdanihRacunaZaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._16057_IzvjescaDBDataSet = new GeneriranjeIzvjesca._16057_IzvjescaDBDataSet();
             this.rvPodaci = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -55,9 +55,9 @@
             this.rvPodaci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "IspisIzdanihRacunaOperatera";
-            reportDataSource1.Value = this.IzvjesceIspisIzdanihRacunaZaposlenikBindingSource;
-            this.rvPodaci.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "IspisIzdanihRacunaOperatera";
+            reportDataSource2.Value = this.IzvjesceIspisIzdanihRacunaZaposlenikBindingSource;
+            this.rvPodaci.LocalReport.DataSources.Add(reportDataSource2);
             this.rvPodaci.LocalReport.ReportEmbeddedResource = "GeneriranjeIzvjesca.IzvjesceIspisIzdanihRacunaOperatera.rdlc";
             this.rvPodaci.Location = new System.Drawing.Point(12, 47);
             this.rvPodaci.Name = "rvPodaci";
@@ -75,10 +75,12 @@
             // 
             // txtZaposlenik
             // 
-            this.txtZaposlenik.Location = new System.Drawing.Point(140, 12);
+            this.txtZaposlenik.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtZaposlenik.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtZaposlenik.Location = new System.Drawing.Point(140, 15);
             this.txtZaposlenik.Name = "txtZaposlenik";
             this.txtZaposlenik.ReadOnly = true;
-            this.txtZaposlenik.Size = new System.Drawing.Size(84, 20);
+            this.txtZaposlenik.Size = new System.Drawing.Size(66, 13);
             this.txtZaposlenik.TabIndex = 10;
             // 
             // IzvjesceIspisIzdanihRacunaZaposlenikTableAdapter

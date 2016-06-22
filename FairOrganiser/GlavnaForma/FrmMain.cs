@@ -98,7 +98,7 @@ namespace GlavnaForma
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeChildForm();
-            FrmRacun racun = new FrmRacun();
+            FrmRacuni racun = new FrmRacuni();
             racun.MdiParent = this;
             racun.WindowState = FormWindowState.Maximized;
             racun.Show();

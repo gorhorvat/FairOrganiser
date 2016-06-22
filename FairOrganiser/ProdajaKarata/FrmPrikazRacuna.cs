@@ -1,7 +1,9 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
+using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -9,12 +11,19 @@ using System.Windows.Forms;
 
 namespace ProdajaKarata
 {
-    public partial class FrmRacun : Form
+    public partial class FrmPrikazRacuna : Form
     {
         LogikaPK logika = new LogikaPK();
 
-        public FrmRacun()
+        private Racun odabraniRacun;
+        private int racunID;
+        private string nazivKupca;
+
+        public FrmPrikazRacuna(Racun OdabraniRacun, int RacunID, string NazivKupca)
         {
+            odabraniRacun = OdabraniRacun;
+            racunID = RacunID;
+            nazivKupca = NazivKupca;
             InitializeComponent();
         }
 
@@ -23,13 +32,35 @@ namespace ProdajaKarata
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FrmRacun_Load(object sender, EventArgs e)
+        private void FrmPrikazRacuna_Load(object sender, EventArgs e)
         {
+            PrikaziStavkeRacuna(racunID);
+            txtNazivKupca.Text = nazivKupca;
             txtBrojRacuna.Text = DateTime.Now.Date.ToString("yyyyMMdd") + "/" + logika.GetSifraRacuna().ToString();
             txtVrijeme.Text = DateTime.Now.ToString();
             txtOTvrtci.Text = "Naziv: ZAGREBAČKI HOLDING d.o.o." + Environment.NewLine + Environment.NewLine + "Sjedište: Avenija Dubrovnik 15, 10020 Zagreb" + Environment.NewLine + Environment.NewLine + "OIB: 85584865987-024";
         }
-        
+
+        /// <summary>
+        /// Dohvaća listu svih stavki za aktualni račun, te ih prikazuje u DataGridView-u.
+        /// </summary>
+        public void PrikaziStavkeRacuna(int RacunID)
+        {
+            using (var context = new ProdajaKarataEntities())
+            {
+                /*Racun r = new Racun { id = 1 };
+                context.Racuns.Add(r);
+                context.Racuns.Attach(r);
+
+                var stavke = r.Uslugas.ToList();*/
+
+                var prikazStavki = context.Uslugas.SqlQuery("select Usluga.naziv, Usluga.tip, Usluga.napomena, Usluga.cijenaUsluge from Usluga join tse_usl_rac on Usluga.id = tse_usl_rac.Uslugaid join Racun on tse_usl_rac.Racunid = Racun.id where Racun.id = @RacunID;", new SqlParameter ("@RacunID", RacunID)).ToList();
+
+                //context.SaveChanges();
+                dgvListaStavki.DataSource = prikazStavki;
+            }
+        }
+
         /// <summary>
         /// Funkcija kojom se račun pretvara u pdf i sprema gdje korisnik odredi.
         /// </summary>
