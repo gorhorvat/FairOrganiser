@@ -24,7 +24,7 @@ namespace KreiranjeDogadaja
             
             InitializeComponent();
 
-            btnDodajOpremu.Visible = true;
+           
             
 
 

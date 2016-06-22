@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity.Core.Objects;
@@ -12,7 +14,7 @@ namespace KreiranjeDogadaja
 {
     public class LogikaDogadaj
     {
-        private static int id;
+        private static int dogadajId;
         public static List<int> selectedID;        
         private static FrmDogadaj form;
         private static FrmOrganizatorDogadaj formOrg;
@@ -42,7 +44,7 @@ namespace KreiranjeDogadaja
             using (var context = new KreiranjeDogadajaEntities())
             {
 
-                Dogadaj d = new Dogadaj { id = id };
+                Dogadaj d = new Dogadaj { id = dogadajId };
                 context.Dogadajs.Add(d);
                 context.Dogadajs.Attach(d);
 
@@ -87,6 +89,69 @@ namespace KreiranjeDogadaja
 
         }
 
+        internal void AddOprema(List<int> ids)
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+
+                Dogadaj d = (from dog in context.Dogadajs where dog.id == dogadajId select dog).FirstOrDefault();
+
+                context.Dogadajs.Attach(d);
+
+                Racun r = new Racun();
+                r.Dogadajid = d.id;
+                r.ukupno = 0;
+                double suma = 0;
+                foreach (var id in ids)
+                {
+                    Usluga u = (from usl in context.Uslugas where usl.id == id select usl).FirstOrDefault();
+                    
+                    context.Uslugas.Attach(u);
+                    r.Uslugas.Add(u);
+                    var cijena = u.cijenaUsluge ;
+                    suma += (double)cijena;
+                }
+
+                r.ukupno = suma;
+                r.nazivKupca = d.Organizators.FirstOrDefault().ToString();
+                r.vrijeme = DateTime.Now;
+                d.Racuns.Add(r);
+
+                context.SaveChanges();
+
+            }
+
+            MessageBox.Show("Usluge su dodane.");
+
+        }
+
+        internal void AddToPdf(Bitmap bmp)
+        {
+            var document = new Document(iTextSharp.text.PageSize.A4.Rotate());
+            
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.AddExtension = true;
+            sfd.DefaultExt = "pdf";
+            sfd.Filter = "PDF files | *.pdf";
+
+            DialogResult result = sfd.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                var fileStream = sfd.OpenFile();
+                PdfWriter.GetInstance(document, fileStream);
+                document.Open();
+                
+                iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(bmp, System.Drawing.Imaging.ImageFormat.Bmp);
+                document.Add(image);
+                document.Close();
+
+            }
+
+
+
+        }
+
         internal void DodajOpremu()
         {
             formOpr = new FrmProstorOprema(this);
@@ -103,7 +168,7 @@ namespace KreiranjeDogadaja
 
             foreach(ImprovedPanel ip in improvedPanels)
             {
-                ip.BackColor = Color.Red;
+                ip.BackColor = System.Drawing.Color.Red;
                 ip.Available = false;
                 
             }
@@ -114,7 +179,7 @@ namespace KreiranjeDogadaja
                 
                 ImprovedPanel ipAvail = improvedPanels.Where(e => e.ID == p.id).FirstOrDefault();
                
-                ipAvail.BackColor = Color.Green;
+                ipAvail.BackColor = System.Drawing.Color.Green;
                 ipAvail.Available = true;
                 
                 form.Refresh();
@@ -159,7 +224,7 @@ namespace KreiranjeDogadaja
                     foreach(Prostor p in update)
                     {
                         p.Dogadajid = newDogadaj.id;
-                        id = newDogadaj.id;
+                        dogadajId = newDogadaj.id;
                     }
 
                     context.SaveChanges();

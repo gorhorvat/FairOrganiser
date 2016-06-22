@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace KreiranjeDogadaja
 {
     public partial class FrmProstorOprema : Form
     {
+
+        private static List<int> id;
 
         private static LogikaDogadaj logic;
 
@@ -71,6 +75,7 @@ namespace KreiranjeDogadaja
             string imageName = e.Data.GetData(DataFormats.StringFormat).ToString();
 
             Bitmap bmp;
+            id = new List<int>();
 
             switch (imageName)
             {
@@ -78,18 +83,21 @@ namespace KreiranjeDogadaja
                 case "pozornica.png":
 
                     bmp = new Bitmap(Properties.Resources.pozornica);
+                    id.Add(11);
 
                     break;
 
                 case "rasvjeta.png":
 
                     bmp = new Bitmap(Properties.Resources.rasvjeta);
+                    id.Add(10);
 
                     break;
 
                 case "stolice.png":
 
                     bmp = new Bitmap(Properties.Resources.stolice);
+                    id.Add(3);
 
                     break;
 
@@ -106,6 +114,23 @@ namespace KreiranjeDogadaja
 
 
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            logic.AddOprema(id);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Bitmap bmp = new Bitmap(panelSlika.Width*2, panelSlika.Height);
+            System.Drawing.Rectangle r = panelSlika.ClientRectangle;
+            panelSlika.DrawToBitmap(bmp, r);
+            
+
+            logic.AddToPdf(bmp);
         }
     }
 }
