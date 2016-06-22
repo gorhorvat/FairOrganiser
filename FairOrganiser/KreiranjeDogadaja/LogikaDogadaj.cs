@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
@@ -11,9 +12,11 @@ namespace KreiranjeDogadaja
 {
     public class LogikaDogadaj
     {
-        public static List<int> selectedID;
-        public static Dogadaj newDogadaj;
+        private static int id;
+        public static List<int> selectedID;        
         private static FrmDogadaj form;
+        private static FrmOrganizatorDogadaj formOrg;
+        private static FrmProstorOprema formOpr;
 
         public LogikaDogadaj()
         {
@@ -24,6 +27,47 @@ namespace KreiranjeDogadaja
 
         }
 
+        internal BindingList<Organizator> GetOrganizatoriBindingList()
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+                var organizatori = context.Organizators.ToList();
+                BindingList<Organizator> org = new BindingList<Organizator>(organizatori);
+                return org;
+            }
+        }
+
+        internal void AddOrganizator(DataGridViewSelectedRowCollection selectedRows)
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+
+                Dogadaj d = new Dogadaj { id = id };
+                context.Dogadajs.Add(d);
+                context.Dogadajs.Attach(d);
+
+                foreach(DataGridViewRow row in selectedRows)
+                {
+
+                    var item = row.DataBoundItem as Organizator;
+
+                    Organizator o = new Organizator { id = item.id };
+                    context.Organizators.Add(o);
+                    context.Organizators.Attach(o);
+
+                    d.Organizators.Add(o);               
+                    
+                }                              
+                
+                context.SaveChanges();
+
+                formOrg.Close();
+                MessageBox.Show("Organizatori su dodani.");
+                
+            }
+            
+
+        }
 
         public static List<Prostor> GetAvailable(DateTime datumOd, DateTime datumDo)
         {
@@ -34,7 +78,7 @@ namespace KreiranjeDogadaja
                
                 var availableQuery =(from p in context.Prostors 
                                     join d in context.Dogadajs on p.Dogadajid equals d.id
-                                    where d.datumOd >= datumOd && d.datumDo <= datumDo
+                                    where d.datumOd <= datumDo && d.datumDo >= datumOd
                                     select p.id);
 
                 var available = context.Prostors.Where(x => !availableQuery.ToList().Contains(x.id)).ToList();
@@ -43,8 +87,14 @@ namespace KreiranjeDogadaja
 
         }
 
+        internal void DodajOpremu()
+        {
+            formOpr = new FrmProstorOprema(this);
+            formOpr.ShowDialog();
 
-       public void ColorPanel(DateTime datumOd, DateTime datumDo)
+        }
+
+        public void ColorPanel(DateTime datumOd, DateTime datumDo)
         {
                       
             var improvedPanels = form.GetAll();
@@ -82,6 +132,7 @@ namespace KreiranjeDogadaja
         internal static void CreateDogadaj(string naziv, float cijena, DateTime datumOd, DateTime datumDo)
         {
 
+            Dogadaj newDogadaj = new Dogadaj();
             if (selectedID.Count == 0)
             {
                 return;
@@ -90,7 +141,7 @@ namespace KreiranjeDogadaja
             {
 
 
-                newDogadaj = new Dogadaj();
+                
                 newDogadaj.naziv = naziv;
                 newDogadaj.cijenaKarte = cijena;
                 newDogadaj.datumOd = datumOd;
@@ -99,7 +150,7 @@ namespace KreiranjeDogadaja
 
                 using (var context = new KreiranjeDogadajaEntities())
                 {
-                    newDogadaj.id = context.Dogadajs.Count() + 1;
+                    
                     context.Dogadajs.Add(newDogadaj);
                     context.SaveChanges();
 
@@ -108,6 +159,7 @@ namespace KreiranjeDogadaja
                     foreach(Prostor p in update)
                     {
                         p.Dogadajid = newDogadaj.id;
+                        id = newDogadaj.id;
                     }
 
                     context.SaveChanges();
@@ -117,10 +169,20 @@ namespace KreiranjeDogadaja
                 
 
                 MessageBox.Show("Događaj je dodan.");
-                        
+
+
+                form.MakeButtonsVisible();
                 
 
             }
+        }
+
+        internal void DodajOrganizatore()
+        {
+
+            formOrg = new FrmOrganizatorDogadaj(this);
+            formOrg.ShowDialog();
+
         }
 
         public void AddForm(FrmDogadaj dogadaj)

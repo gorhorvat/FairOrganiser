@@ -14,7 +14,6 @@
         <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.Sudionik" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.TipKarte" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
         <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.TipOrganizatora" Width="1.5" PointX="1.5" PointY="20.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.tse_dog_org" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
         <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.Usluga" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="KreiranjeDogadajaDBModel.Zaposlenik" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Karta_CjenikDogadaja" ManuallyRouted="false" />
@@ -22,12 +21,11 @@
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Karta_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Prostor_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Racun_Dogadaj" ManuallyRouted="false" />
-        <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_tse_dog_org_Dogadaj" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Organizator_TipOrganizatora" ManuallyRouted="false" />
-        <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_tse_dog_org_Organizator" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.FK_Racun_Zaposlenik" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.tse_dog_sud" ManuallyRouted="false" />
         <AssociationConnector Association="KreiranjeDogadajaDBModel.tse_usl_rac" ManuallyRouted="false" />
+        <AssociationConnector Association="KreiranjeDogadajaDBModel.tse_dog_org1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -18,11 +18,13 @@ namespace KreiranjeDogadaja
         public FrmDogadaj(LogikaDogadaj log)
         {
 
+
+
             logic = log;
             
             InitializeComponent();
 
-
+            btnDodajOpremu.Visible = true;
             
 
 
@@ -90,6 +92,25 @@ namespace KreiranjeDogadaja
         private void timerCijena_Tick(object sender, EventArgs e)
         {
             txtCijenaKarte.BackColor = default(Color);
+        }
+
+        
+
+        private void btnDodajOrganizatore_Click(object sender, EventArgs e)
+        {
+            logic.DodajOrganizatore();
+        }
+
+        internal void MakeButtonsVisible()
+        {
+            btnDodajOrganizatore.Visible = true;
+            btnDodajOpremu.Visible = true;
+            
+        }
+
+        private void btnDodajOpremu_Click(object sender, EventArgs e)
+        {
+            logic.DodajOpremu();
         }
     }
 }

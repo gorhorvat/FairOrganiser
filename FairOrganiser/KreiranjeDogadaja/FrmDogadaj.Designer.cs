@@ -43,6 +43,8 @@
             this.pictureBoxTlocrt = new System.Windows.Forms.PictureBox();
             this.timerNaziv = new System.Windows.Forms.Timer(this.components);
             this.timerCijena = new System.Windows.Forms.Timer(this.components);
+            this.btnDodajOrganizatore = new System.Windows.Forms.Button();
+            this.btnDodajOpremu = new System.Windows.Forms.Button();
             this.improvedPanelP12 = new KreiranjeDogadaja.ImprovedPanel();
             this.improvedPanelP13 = new KreiranjeDogadaja.ImprovedPanel();
             this.improvedPanelP14 = new KreiranjeDogadaja.ImprovedPanel();
@@ -154,7 +156,7 @@
             // btnDodajDogadaj
             // 
             this.btnDodajDogadaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDodajDogadaj.Location = new System.Drawing.Point(339, 600);
+            this.btnDodajDogadaj.Location = new System.Drawing.Point(332, 601);
             this.btnDodajDogadaj.Name = "btnDodajDogadaj";
             this.btnDodajDogadaj.Size = new System.Drawing.Size(220, 24);
             this.btnDodajDogadaj.TabIndex = 19;
@@ -190,6 +192,30 @@
             // 
             this.timerCijena.Interval = 1000;
             this.timerCijena.Tick += new System.EventHandler(this.timerCijena_Tick);
+            // 
+            // btnDodajOrganizatore
+            // 
+            this.btnDodajOrganizatore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDodajOrganizatore.Location = new System.Drawing.Point(12, 601);
+            this.btnDodajOrganizatore.Name = "btnDodajOrganizatore";
+            this.btnDodajOrganizatore.Size = new System.Drawing.Size(217, 23);
+            this.btnDodajOrganizatore.TabIndex = 75;
+            this.btnDodajOrganizatore.Text = "Dodaj organizatore";
+            this.btnDodajOrganizatore.UseVisualStyleBackColor = true;
+            this.btnDodajOrganizatore.Visible = false;
+            this.btnDodajOrganizatore.Click += new System.EventHandler(this.btnDodajOrganizatore_Click);
+            // 
+            // btnDodajOpremu
+            // 
+            this.btnDodajOpremu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDodajOpremu.Location = new System.Drawing.Point(655, 601);
+            this.btnDodajOpremu.Name = "btnDodajOpremu";
+            this.btnDodajOpremu.Size = new System.Drawing.Size(217, 23);
+            this.btnDodajOpremu.TabIndex = 76;
+            this.btnDodajOpremu.Text = "Dodaj opremu";
+            this.btnDodajOpremu.UseVisualStyleBackColor = true;
+            this.btnDodajOpremu.Visible = false;
+            this.btnDodajOpremu.Click += new System.EventHandler(this.btnDodajOpremu_Click);
             // 
             // improvedPanelP12
             // 
@@ -547,6 +573,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 636);
+            this.Controls.Add(this.btnDodajOpremu);
+            this.Controls.Add(this.btnDodajOrganizatore);
             this.Controls.Add(this.improvedPanelP12);
             this.Controls.Add(this.improvedPanelP13);
             this.Controls.Add(this.improvedPanelP14);
@@ -598,7 +626,7 @@
             this.Controls.Add(this.dtpZavrsetak);
             this.Controls.Add(this.btnDodajDogadaj);
             this.Name = "FrmDogadaj";
-            this.Text = "Događaji";
+            this.Text = "=";
             this.ResizeEnd += new System.EventHandler(this.FrmDogadaj_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTlocrt)).EndInit();
             this.ResumeLayout(false);
@@ -660,6 +688,8 @@
         private ImprovedPanel improvedPanelP12;
         private System.Windows.Forms.Timer timerNaziv;
         private System.Windows.Forms.Timer timerCijena;
+        private System.Windows.Forms.Button btnDodajOrganizatore;
+        private System.Windows.Forms.Button btnDodajOpremu;
     }
 }
 

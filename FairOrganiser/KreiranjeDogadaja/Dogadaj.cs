@@ -20,8 +20,8 @@ namespace KreiranjeDogadaja
             this.Kartas = new HashSet<Karta>();
             this.Prostors = new HashSet<Prostor>();
             this.Racuns = new HashSet<Racun>();
-            this.tse_dog_org = new HashSet<tse_dog_org>();
             this.Sudioniks = new HashSet<Sudionik>();
+            this.Organizators = new HashSet<Organizator>();
         }
     
         public int id { get; set; }
@@ -37,8 +37,8 @@ namespace KreiranjeDogadaja
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Racun> Racuns { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tse_dog_org> tse_dog_org { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sudionik> Sudioniks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Organizator> Organizators { get; set; }
     }
 }
