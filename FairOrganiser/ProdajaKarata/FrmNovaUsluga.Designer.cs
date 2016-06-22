@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnPotvrdi);
             this.Name = "FrmNovaUsluga";
             this.Text = "Nova usluga";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

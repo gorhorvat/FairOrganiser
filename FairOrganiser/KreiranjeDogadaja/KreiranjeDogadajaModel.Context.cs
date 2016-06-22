@@ -34,7 +34,6 @@ namespace KreiranjeDogadaja
         public virtual DbSet<Sudionik> Sudioniks { get; set; }
         public virtual DbSet<TipKarte> TipKartes { get; set; }
         public virtual DbSet<TipOrganizatora> TipOrganizatoras { get; set; }
-        public virtual DbSet<tse_dog_org> tse_dog_org { get; set; }
         public virtual DbSet<Usluga> Uslugas { get; set; }
         public virtual DbSet<Zaposlenik> Zaposleniks { get; set; }
     }

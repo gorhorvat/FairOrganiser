@@ -234,19 +234,23 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tse_dog_org_Dogadaj">
-          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
+          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Dogadaj">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tse_dog_org">
-              <PropertyRef Name="Organizatorid" />
+              <PropertyRef Name="Dogadajid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tse_dog_org_Organizator">
-          <End Role="Organizator" Type="Self.Organizator" Multiplicity="1" />
+          <End Role="Organizator" Type="Self.Organizator" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Organizator">
@@ -399,8 +403,8 @@
           <NavigationProperty Name="Kartas" Relationship="Self.FK_Karta_Dogadaj" FromRole="Dogadaj" ToRole="Karta" />
           <NavigationProperty Name="Prostors" Relationship="Self.FK_Prostor_Dogadaj" FromRole="Dogadaj" ToRole="Prostor" />
           <NavigationProperty Name="Racuns" Relationship="Self.FK_Racun_Dogadaj" FromRole="Dogadaj" ToRole="Racun" />
-          <NavigationProperty Name="tse_dog_org" Relationship="Self.FK_tse_dog_org_Dogadaj" FromRole="Dogadaj" ToRole="tse_dog_org" />
           <NavigationProperty Name="Sudioniks" Relationship="Self.tse_dog_sud" FromRole="Dogadaj" ToRole="Sudionik" />
+          <NavigationProperty Name="Organizators" Relationship="KreiranjeDogadajaDBModel.tse_dog_org1" FromRole="Dogadaj" ToRole="Organizator" />
         </EntityType>
         <EntityType Name="Karta">
           <Key>
@@ -425,7 +429,7 @@
           <Property Name="brojTelefona" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="TipOrganizatoraid" Type="Int32" />
           <NavigationProperty Name="TipOrganizatora" Relationship="Self.FK_Organizator_TipOrganizatora" FromRole="Organizator" ToRole="TipOrganizatora" />
-          <NavigationProperty Name="tse_dog_org" Relationship="Self.FK_tse_dog_org_Organizator" FromRole="Organizator" ToRole="tse_dog_org" />
+          <NavigationProperty Name="Dogadajs" Relationship="KreiranjeDogadajaDBModel.tse_dog_org1" FromRole="Organizator" ToRole="Dogadaj" />
         </EntityType>
         <EntityType Name="Prostor">
           <Key>
@@ -485,16 +489,6 @@
           <Property Name="tip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Organizators" Relationship="Self.FK_Organizator_TipOrganizatora" FromRole="TipOrganizatora" ToRole="Organizator" />
-        </EntityType>
-        <EntityType Name="tse_dog_org">
-          <Key>
-            <PropertyRef Name="Dogadajid" />
-            <PropertyRef Name="Organizatorid" />
-          </Key>
-          <Property Name="Dogadajid" Type="Int32" Nullable="false" />
-          <Property Name="Organizatorid" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Dogadaj" Relationship="Self.FK_tse_dog_org_Dogadaj" FromRole="tse_dog_org" ToRole="Dogadaj" />
-          <NavigationProperty Name="Organizator" Relationship="Self.FK_tse_dog_org_Organizator" FromRole="tse_dog_org" ToRole="Organizator" />
         </EntityType>
         <EntityType Name="Usluga">
           <Key>
@@ -587,18 +581,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tse_dog_org_Dogadaj">
-          <End Role="Dogadaj" Type="Self.Dogadaj" Multiplicity="1" />
-          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Dogadaj">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="tse_dog_org">
-              <PropertyRef Name="Organizatorid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Organizator_TipOrganizatora">
           <End Role="TipOrganizatora" Type="Self.TipOrganizatora" Multiplicity="0..1" />
           <End Role="Organizator" Type="Self.Organizator" Multiplicity="*" />
@@ -608,18 +590,6 @@
             </Principal>
             <Dependent Role="Organizator">
               <PropertyRef Name="TipOrganizatoraid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tse_dog_org_Organizator">
-          <End Role="Organizator" Type="Self.Organizator" Multiplicity="1" />
-          <End Role="tse_dog_org" Type="Self.tse_dog_org" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organizator">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="tse_dog_org">
-              <PropertyRef Name="Organizatorid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -653,7 +623,6 @@
           <EntitySet Name="Sudioniks" EntityType="Self.Sudionik" />
           <EntitySet Name="TipKartes" EntityType="Self.TipKarte" />
           <EntitySet Name="TipOrganizatoras" EntityType="Self.TipOrganizatora" />
-          <EntitySet Name="tse_dog_org" EntityType="Self.tse_dog_org" />
           <EntitySet Name="Uslugas" EntityType="Self.Usluga" />
           <EntitySet Name="Zaposleniks" EntityType="Self.Zaposlenik" />
           <AssociationSet Name="FK_Karta_CjenikDogadaja" Association="Self.FK_Karta_CjenikDogadaja">
@@ -676,17 +645,9 @@
             <End Role="Dogadaj" EntitySet="Dogadajs" />
             <End Role="Racun" EntitySet="Racuns" />
           </AssociationSet>
-          <AssociationSet Name="FK_tse_dog_org_Dogadaj" Association="Self.FK_tse_dog_org_Dogadaj">
-            <End Role="Dogadaj" EntitySet="Dogadajs" />
-            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
-          </AssociationSet>
           <AssociationSet Name="FK_Organizator_TipOrganizatora" Association="Self.FK_Organizator_TipOrganizatora">
             <End Role="TipOrganizatora" EntitySet="TipOrganizatoras" />
             <End Role="Organizator" EntitySet="Organizators" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tse_dog_org_Organizator" Association="Self.FK_tse_dog_org_Organizator">
-            <End Role="Organizator" EntitySet="Organizators" />
-            <End Role="tse_dog_org" EntitySet="tse_dog_org" />
           </AssociationSet>
           <AssociationSet Name="FK_Racun_Zaposlenik" Association="Self.FK_Racun_Zaposlenik">
             <End Role="Zaposlenik" EntitySet="Zaposleniks" />
@@ -700,7 +661,15 @@
             <End Role="Racun" EntitySet="Racuns" />
             <End Role="Usluga" EntitySet="Uslugas" />
           </AssociationSet>
+          <AssociationSet Name="tse_dog_org1" Association="KreiranjeDogadajaDBModel.tse_dog_org1">
+            <End Role="Dogadaj" EntitySet="Dogadajs" />
+            <End Role="Organizator" EntitySet="Organizators" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="tse_dog_org1">
+          <End Type="KreiranjeDogadajaDBModel.Dogadaj" Role="Dogadaj" Multiplicity="*" />
+          <End Type="KreiranjeDogadajaDBModel.Organizator" Role="Organizator" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -807,14 +776,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tse_dog_org">
-            <EntityTypeMapping TypeName="KreiranjeDogadajaDBModel.tse_dog_org">
-              <MappingFragment StoreEntitySet="tse_dog_org">
-                <ScalarProperty Name="Dogadajid" ColumnName="Dogadajid" />
-                <ScalarProperty Name="Organizatorid" ColumnName="Organizatorid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Uslugas">
             <EntityTypeMapping TypeName="KreiranjeDogadajaDBModel.Usluga">
               <MappingFragment StoreEntitySet="Usluga">
@@ -856,6 +817,14 @@
             </EndProperty>
             <EndProperty Name="Usluga">
               <ScalarProperty Name="id" ColumnName="Uslugaid" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="tse_dog_org1" TypeName="KreiranjeDogadajaDBModel.tse_dog_org1" StoreEntitySet="tse_dog_org">
+            <EndProperty Name="Organizator">
+              <ScalarProperty Name="id" ColumnName="Organizatorid" />
+            </EndProperty>
+            <EndProperty Name="Dogadaj">
+              <ScalarProperty Name="id" ColumnName="Dogadajid" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

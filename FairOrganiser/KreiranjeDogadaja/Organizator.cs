@@ -17,7 +17,7 @@ namespace KreiranjeDogadaja
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Organizator()
         {
-            this.tse_dog_org = new HashSet<tse_dog_org>();
+            this.Dogadajs = new HashSet<Dogadaj>();
         }
     
         public int id { get; set; }
@@ -30,6 +30,6 @@ namespace KreiranjeDogadaja
     
         public virtual TipOrganizatora TipOrganizatora { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tse_dog_org> tse_dog_org { get; set; }
+        public virtual ICollection<Dogadaj> Dogadajs { get; set; }
     }
 }

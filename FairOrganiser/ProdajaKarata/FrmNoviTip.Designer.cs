@@ -102,6 +102,7 @@
             this.Controls.Add(this.btnPotvrdi);
             this.Name = "FrmNoviTip";
             this.Text = "Novi tip";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

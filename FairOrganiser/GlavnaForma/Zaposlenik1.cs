@@ -7,17 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KreiranjeDogadaja
+namespace GlavnaForma
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tse_dog_org
+    public partial class Zaposlenik
     {
-        public int Dogadajid { get; set; }
-        public int Organizatorid { get; set; }
-    
-        public virtual Dogadaj Dogadaj { get; set; }
-        public virtual Organizator Organizator { get; set; }
+        public int id { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public string oib { get; set; }
+        public string adresa { get; set; }
+        public string brojTelefona { get; set; }
+        public string email { get; set; }
+        public string tipZaposlenika { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }
