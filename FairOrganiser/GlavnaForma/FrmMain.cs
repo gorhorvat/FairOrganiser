@@ -149,5 +149,14 @@ namespace GlavnaForma
             FrmPrijava novaPrijava = new FrmPrijava();
             novaPrijava.Show();
         }
+
+        private void cjenikToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            FrmCjenik cjenik = new FrmCjenik();
+            cjenik.MdiParent = this;
+            cjenik.WindowState = FormWindowState.Maximized;
+            cjenik.Show();
+        }
     }
 }
