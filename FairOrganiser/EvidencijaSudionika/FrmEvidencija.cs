@@ -24,7 +24,7 @@ namespace EvidencijaSudionika
         /// <summary>
         /// Dohvaća listu sudionika te ih prikazuje u DGV-u.
         /// </summary>
-        private void PrikaziSudionike()
+        public void PrikaziSudionike()
         {
             BindingList<Sudionik> listaSudionika = null;
             using (var db = new EvidencijaSudionikaEntities())

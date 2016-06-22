@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnPotvrdi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDogadaj = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cmbAkreditacija = new System.Windows.Forms.ComboBox();
-            this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource();
+            this.tipAkreditacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipAkreditacijeBindingSource)).BeginInit();
@@ -105,9 +106,9 @@
             // pbQR
             // 
             this.pbQR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbQR.Location = new System.Drawing.Point(13, 20);
+            this.pbQR.Location = new System.Drawing.Point(17, 20);
             this.pbQR.Name = "pbQR";
-            this.pbQR.Size = new System.Drawing.Size(156, 139);
+            this.pbQR.Size = new System.Drawing.Size(147, 139);
             this.pbQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbQR.TabIndex = 15;
             this.pbQR.TabStop = false;
@@ -239,7 +240,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.Controls.Add(this.pbQR);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(264, 16);
+            this.panel1.Location = new System.Drawing.Point(266, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 185);
             this.panel1.TabIndex = 29;

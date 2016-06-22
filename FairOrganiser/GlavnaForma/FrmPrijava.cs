@@ -44,5 +44,10 @@ namespace GlavnaForma
             this.Close();
             Application.Exit();
         }
+
+        private void FrmPrijava_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

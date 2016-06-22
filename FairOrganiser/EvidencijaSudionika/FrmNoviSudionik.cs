@@ -35,6 +35,17 @@ namespace EvidencijaSudionika
                     dogadaj = cmbDogadaj.Text,                  
                 };
                 db.Sudioniks.Add(noviSudionik);
+
+                var test = cmbDogadaj.SelectedItem as Dogadaj;
+                var id = test.id;
+                Dogadaj d = new Dogadaj
+                {
+                    id = id
+                };
+                db.Dogadajs.Add(d);
+                db.Dogadajs.Attach(d);
+                d.Sudioniks.Add(noviSudionik);
+
                 db.SaveChanges();
             }
             Close();

@@ -37,6 +37,7 @@
             this.sudioniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajSudionikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.popisSudionikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ispisAkreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kartaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kartaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.računToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,7 +116,8 @@
             // 
             this.sudioniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajSudionikaToolStripMenuItem,
-            this.popisSudionikaToolStripMenuItem});
+            this.popisSudionikaToolStripMenuItem,
+            this.ispisAkreToolStripMenuItem});
             this.sudioniciToolStripMenuItem.Name = "sudioniciToolStripMenuItem";
             this.sudioniciToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.sudioniciToolStripMenuItem.Text = "Sudionici";
@@ -123,16 +125,23 @@
             // dodajSudionikaToolStripMenuItem
             // 
             this.dodajSudionikaToolStripMenuItem.Name = "dodajSudionikaToolStripMenuItem";
-            this.dodajSudionikaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.dodajSudionikaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.dodajSudionikaToolStripMenuItem.Text = "Dodaj sudionika";
             this.dodajSudionikaToolStripMenuItem.Click += new System.EventHandler(this.dodajSudionikaToolStripMenuItem_Click);
             // 
             // popisSudionikaToolStripMenuItem
             // 
             this.popisSudionikaToolStripMenuItem.Name = "popisSudionikaToolStripMenuItem";
-            this.popisSudionikaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.popisSudionikaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.popisSudionikaToolStripMenuItem.Text = "Popis sudionika";
             this.popisSudionikaToolStripMenuItem.Click += new System.EventHandler(this.popisSudionikaToolStripMenuItem_Click);
+            // 
+            // ispisAkreToolStripMenuItem
+            // 
+            this.ispisAkreToolStripMenuItem.Name = "ispisAkreToolStripMenuItem";
+            this.ispisAkreToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.ispisAkreToolStripMenuItem.Text = "Izvoz akreditacija";
+            this.ispisAkreToolStripMenuItem.Click += new System.EventHandler(this.ispisAkreToolStripMenuItem_Click);
             // 
             // kartaToolStripMenuItem
             // 
@@ -289,6 +298,7 @@
         private System.Windows.Forms.ToolStripMenuItem dodajUsluguToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikazUslugaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odjavaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ispisAkreToolStripMenuItem;
     }
 }
 

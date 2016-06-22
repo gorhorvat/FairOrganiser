@@ -42,7 +42,9 @@
             // 
             // txtImePrezime
             // 
+            this.txtImePrezime.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtImePrezime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtImePrezime.Enabled = false;
             this.txtImePrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtImePrezime.Location = new System.Drawing.Point(25, 75);
             this.txtImePrezime.Name = "txtImePrezime";
@@ -53,6 +55,7 @@
             // txtMedijskaKuca
             // 
             this.txtMedijskaKuca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMedijskaKuca.Enabled = false;
             this.txtMedijskaKuca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtMedijskaKuca.Location = new System.Drawing.Point(25, 101);
             this.txtMedijskaKuca.Name = "txtMedijskaKuca";
@@ -63,6 +66,7 @@
             // txtAkreditacija
             // 
             this.txtAkreditacija.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAkreditacija.Enabled = false;
             this.txtAkreditacija.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtAkreditacija.Location = new System.Drawing.Point(25, 163);
             this.txtAkreditacija.Name = "txtAkreditacija";
@@ -102,6 +106,7 @@
             // txtDogadaj
             // 
             this.txtDogadaj.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDogadaj.Enabled = false;
             this.txtDogadaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtDogadaj.Location = new System.Drawing.Point(25, 128);
             this.txtDogadaj.Name = "txtDogadaj";
@@ -122,7 +127,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbQRCode);
             this.Name = "FrmIzdanaAkreditacija";
-            this.Text = "FrmIzdanaAkreditacija";
+            this.Text = "Izdana akreditacija";
             this.Load += new System.EventHandler(this.FrmIzdanaAkreditacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

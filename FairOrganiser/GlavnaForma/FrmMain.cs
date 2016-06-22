@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Windows.Forms;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using ProdajaKarata;
 using EvidencijaOrganizatora;
 using EvidencijaSudionika;
@@ -16,13 +10,14 @@ namespace GlavnaForma
 {
     public partial class FrmMain : Form
     {
+        public bool provjera = false;
         public FrmMain()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
         /// <summary>
-        /// Zatvara formu djete ukoliko postoji.
+        /// Zatvara formu dijete ukoliko postoji.
         /// </summary>
         private void closeChildForm()
         {
@@ -128,13 +123,25 @@ namespace GlavnaForma
         private void odjavaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmPrijava novaPrijava = new FrmPrijava();
-            novaPrijava.Show();
+            if (provjera == false)
+            {
+                FrmPrijava novaPrijava = new FrmPrijava();
+                novaPrijava.Show();
+            }
+            
+        }
+        private void ispisAkreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LogikaES log = new LogikaES();
+            log.izvozAkreditacija();
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            provjera = true;
+            FrmPrijava novaPrijava = new FrmPrijava();
+            novaPrijava.Show();
         }
     }
 }
