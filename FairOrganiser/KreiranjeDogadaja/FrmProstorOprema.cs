@@ -21,22 +21,22 @@ namespace KreiranjeDogadaja
             InitializeComponent();
 
 
-            ///////
+            
         }
 
         private void FrmProstorOprema_Load(object sender, EventArgs e)
         {
 
-            ListViewItem item1 = new ListViewItem("Pozornica", 0);            
+            ListViewItem item1 = new ListViewItem("Pozornica", 0);
             ListViewItem item2 = new ListViewItem("Rasvjeta", 1);
             ListViewItem item3 = new ListViewItem("Stolice", 2);
 
 
-            
+
 
             lvSlike.Items.AddRange(new ListViewItem[] { item1, item2, item3 });
             panelSlika.AllowDrop = true;
-            
+
 
         }
 
@@ -48,13 +48,13 @@ namespace KreiranjeDogadaja
                 var image = selectedItem.ImageIndex;
                 DoDragDrop(ilSlike.Images.Keys[image].ToString(), DragDropEffects.Copy);
             }
-            
+
 
         }
 
         private void panelSlika_DragEnter(object sender, DragEventArgs e)
         {
-            if(e.Data.GetDataPresent(DataFormats.StringFormat))
+            if (e.Data.GetDataPresent(DataFormats.StringFormat))
             {
                 e.Effect = DragDropEffects.Copy;
             }
@@ -72,7 +72,7 @@ namespace KreiranjeDogadaja
 
             Bitmap bmp;
 
-            switch(imageName)
+            switch (imageName)
             {
 
                 case "pozornica.png":
@@ -93,9 +93,9 @@ namespace KreiranjeDogadaja
 
                     break;
 
-               default :
+                default:
                     return;
-                    
+
 
             }
 
@@ -103,8 +103,8 @@ namespace KreiranjeDogadaja
             p.Image = bmp;
             p.Location = panelSlika.PointToClient(new Point(e.X, e.Y));
             p.Parent = panelSlika;
-            
-    
+
+
 
         }
     }
