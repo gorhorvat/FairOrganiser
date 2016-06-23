@@ -43,6 +43,7 @@
             this.lblDatumiVrijeme = new System.Windows.Forms.Label();
             this.txtBrojRacuna = new System.Windows.Forms.TextBox();
             this.lblBrojRacuna = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStavki)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             this.txtUkupno.Location = new System.Drawing.Point(648, 453);
             this.txtUkupno.Name = "txtUkupno";
             this.txtUkupno.ReadOnly = true;
-            this.txtUkupno.Size = new System.Drawing.Size(100, 13);
+            this.txtUkupno.Size = new System.Drawing.Size(73, 13);
             this.txtUkupno.TabIndex = 30;
             // 
             // lblUkupno
@@ -205,12 +206,25 @@
             this.lblBrojRacuna.TabIndex = 18;
             this.lblBrojRacuna.Text = "Broj racuna:";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(726, 453);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "KN";
+            // 
             // FrmPrikazRacuna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(760, 527);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObrisiStavku);
             this.Controls.Add(this.btnDodajStavku);
             this.Controls.Add(this.dgvListaStavki);
@@ -253,5 +267,6 @@
         private System.Windows.Forms.Label lblDatumiVrijeme;
         private System.Windows.Forms.TextBox txtBrojRacuna;
         private System.Windows.Forms.Label lblBrojRacuna;
+        private System.Windows.Forms.Label label1;
     }
 }

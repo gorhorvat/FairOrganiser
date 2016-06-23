@@ -32,17 +32,17 @@
             this.dgvPopisRacuna = new System.Windows.Forms.DataGridView();
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.btnIzlaz = new System.Windows.Forms.Button();
-            this.uslugasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogadajDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogadajidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zaposlenikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivKupcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operaterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.racunBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operaterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivKupcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zaposlenikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogadajidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogadajDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uslugasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisRacuna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -99,73 +99,9 @@
             this.btnIzlaz.UseVisualStyleBackColor = true;
             this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
-            // uslugasDataGridViewTextBoxColumn
+            // racunBindingSource
             // 
-            this.uslugasDataGridViewTextBoxColumn.DataPropertyName = "Uslugas";
-            this.uslugasDataGridViewTextBoxColumn.HeaderText = "Uslugas";
-            this.uslugasDataGridViewTextBoxColumn.Name = "uslugasDataGridViewTextBoxColumn";
-            this.uslugasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uslugasDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // zaposlenikDataGridViewTextBoxColumn
-            // 
-            this.zaposlenikDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenik";
-            this.zaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
-            this.zaposlenikDataGridViewTextBoxColumn.Name = "zaposlenikDataGridViewTextBoxColumn";
-            this.zaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
-            this.zaposlenikDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dogadajDataGridViewTextBoxColumn
-            // 
-            this.dogadajDataGridViewTextBoxColumn.DataPropertyName = "Dogadaj";
-            this.dogadajDataGridViewTextBoxColumn.HeaderText = "Dogadaj";
-            this.dogadajDataGridViewTextBoxColumn.Name = "dogadajDataGridViewTextBoxColumn";
-            this.dogadajDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dogadajDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dogadajidDataGridViewTextBoxColumn
-            // 
-            this.dogadajidDataGridViewTextBoxColumn.DataPropertyName = "Dogadajid";
-            this.dogadajidDataGridViewTextBoxColumn.HeaderText = "Dogadajid";
-            this.dogadajidDataGridViewTextBoxColumn.Name = "dogadajidDataGridViewTextBoxColumn";
-            this.dogadajidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dogadajidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // zaposlenikidDataGridViewTextBoxColumn
-            // 
-            this.zaposlenikidDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenikid";
-            this.zaposlenikidDataGridViewTextBoxColumn.HeaderText = "Zaposlenikid";
-            this.zaposlenikidDataGridViewTextBoxColumn.Name = "zaposlenikidDataGridViewTextBoxColumn";
-            this.zaposlenikidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.zaposlenikidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nazivKupcaDataGridViewTextBoxColumn
-            // 
-            this.nazivKupcaDataGridViewTextBoxColumn.DataPropertyName = "nazivKupca";
-            this.nazivKupcaDataGridViewTextBoxColumn.HeaderText = "Naziv kupca";
-            this.nazivKupcaDataGridViewTextBoxColumn.Name = "nazivKupcaDataGridViewTextBoxColumn";
-            this.nazivKupcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ukupnoDataGridViewTextBoxColumn
-            // 
-            this.ukupnoDataGridViewTextBoxColumn.DataPropertyName = "ukupno";
-            this.ukupnoDataGridViewTextBoxColumn.HeaderText = "Ukupno";
-            this.ukupnoDataGridViewTextBoxColumn.Name = "ukupnoDataGridViewTextBoxColumn";
-            this.ukupnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vrijemeDataGridViewTextBoxColumn
-            // 
-            this.vrijemeDataGridViewTextBoxColumn.DataPropertyName = "vrijeme";
-            this.vrijemeDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
-            this.vrijemeDataGridViewTextBoxColumn.Name = "vrijemeDataGridViewTextBoxColumn";
-            this.vrijemeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // operaterDataGridViewTextBoxColumn
-            // 
-            this.operaterDataGridViewTextBoxColumn.DataPropertyName = "operater";
-            this.operaterDataGridViewTextBoxColumn.HeaderText = "Operater";
-            this.operaterDataGridViewTextBoxColumn.Name = "operaterDataGridViewTextBoxColumn";
-            this.operaterDataGridViewTextBoxColumn.ReadOnly = true;
+            this.racunBindingSource.DataSource = typeof(ProdajaKarata.Racun);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -175,9 +111,73 @@
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // racunBindingSource
+            // operaterDataGridViewTextBoxColumn
             // 
-            this.racunBindingSource.DataSource = typeof(ProdajaKarata.Racun);
+            this.operaterDataGridViewTextBoxColumn.DataPropertyName = "operater";
+            this.operaterDataGridViewTextBoxColumn.HeaderText = "Operater";
+            this.operaterDataGridViewTextBoxColumn.Name = "operaterDataGridViewTextBoxColumn";
+            this.operaterDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vrijemeDataGridViewTextBoxColumn
+            // 
+            this.vrijemeDataGridViewTextBoxColumn.DataPropertyName = "vrijeme";
+            this.vrijemeDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
+            this.vrijemeDataGridViewTextBoxColumn.Name = "vrijemeDataGridViewTextBoxColumn";
+            this.vrijemeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ukupnoDataGridViewTextBoxColumn
+            // 
+            this.ukupnoDataGridViewTextBoxColumn.DataPropertyName = "ukupno";
+            this.ukupnoDataGridViewTextBoxColumn.HeaderText = "Ukupno";
+            this.ukupnoDataGridViewTextBoxColumn.Name = "ukupnoDataGridViewTextBoxColumn";
+            this.ukupnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivKupcaDataGridViewTextBoxColumn
+            // 
+            this.nazivKupcaDataGridViewTextBoxColumn.DataPropertyName = "nazivKupca";
+            this.nazivKupcaDataGridViewTextBoxColumn.HeaderText = "Naziv kupca";
+            this.nazivKupcaDataGridViewTextBoxColumn.Name = "nazivKupcaDataGridViewTextBoxColumn";
+            this.nazivKupcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zaposlenikidDataGridViewTextBoxColumn
+            // 
+            this.zaposlenikidDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenikid";
+            this.zaposlenikidDataGridViewTextBoxColumn.HeaderText = "Zaposlenikid";
+            this.zaposlenikidDataGridViewTextBoxColumn.Name = "zaposlenikidDataGridViewTextBoxColumn";
+            this.zaposlenikidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zaposlenikidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dogadajidDataGridViewTextBoxColumn
+            // 
+            this.dogadajidDataGridViewTextBoxColumn.DataPropertyName = "Dogadajid";
+            this.dogadajidDataGridViewTextBoxColumn.HeaderText = "Dogadajid";
+            this.dogadajidDataGridViewTextBoxColumn.Name = "dogadajidDataGridViewTextBoxColumn";
+            this.dogadajidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dogadajidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dogadajDataGridViewTextBoxColumn
+            // 
+            this.dogadajDataGridViewTextBoxColumn.DataPropertyName = "Dogadaj";
+            this.dogadajDataGridViewTextBoxColumn.HeaderText = "Dogadaj";
+            this.dogadajDataGridViewTextBoxColumn.Name = "dogadajDataGridViewTextBoxColumn";
+            this.dogadajDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dogadajDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // zaposlenikDataGridViewTextBoxColumn
+            // 
+            this.zaposlenikDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenik";
+            this.zaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
+            this.zaposlenikDataGridViewTextBoxColumn.Name = "zaposlenikDataGridViewTextBoxColumn";
+            this.zaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zaposlenikDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // uslugasDataGridViewTextBoxColumn
+            // 
+            this.uslugasDataGridViewTextBoxColumn.DataPropertyName = "Uslugas";
+            this.uslugasDataGridViewTextBoxColumn.HeaderText = "Uslugas";
+            this.uslugasDataGridViewTextBoxColumn.Name = "uslugasDataGridViewTextBoxColumn";
+            this.uslugasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uslugasDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmRacuni
             // 
@@ -201,6 +201,7 @@
         private System.Windows.Forms.DataGridView dgvPopisRacuna;
         private System.Windows.Forms.Button btnOdaberi;
         private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.BindingSource racunBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn operaterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemeDataGridViewTextBoxColumn;
@@ -211,6 +212,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dogadajDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zaposlenikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uslugasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource racunBindingSource;
     }
 }
