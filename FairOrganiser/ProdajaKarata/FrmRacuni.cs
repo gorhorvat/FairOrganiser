@@ -13,9 +13,10 @@ namespace ProdajaKarata
     public partial class FrmRacuni : Form
     {
         LogikaPK logika = new LogikaPK();
-
-        public FrmRacuni()
+        string activeUser;
+        public FrmRacuni(string user)
         {
+            activeUser = user;
             InitializeComponent();
         }
 
@@ -34,7 +35,7 @@ namespace ProdajaKarata
             int RacunID = int.Parse(dgvPopisRacuna[0, dgvPopisRacuna.CurrentRow.Index].Value.ToString());
             string NazivKupca = dgvPopisRacuna[4, dgvPopisRacuna.CurrentRow.Index].Value.ToString();
             Racun odabraniRacun = (Racun)racunBindingSource.Current;
-            FrmPrikazRacuna prikaz = new FrmPrikazRacuna(odabraniRacun, RacunID, NazivKupca);
+            FrmPrikazRacuna prikaz = new FrmPrikazRacuna(odabraniRacun, RacunID, NazivKupca, activeUser);
             prikaz.ShowDialog();
         }
 

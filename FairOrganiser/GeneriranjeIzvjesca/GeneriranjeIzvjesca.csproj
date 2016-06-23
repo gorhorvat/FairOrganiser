@@ -144,6 +144,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="IzvjesceProdaneUsluge.rdlc" />
     <None Include="app.config" />
     <EntityDeploy Include="GeneriranjeIzvjescaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

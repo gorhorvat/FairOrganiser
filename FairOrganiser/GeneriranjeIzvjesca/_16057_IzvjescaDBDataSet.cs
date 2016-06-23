@@ -1,3 +1,7 @@
 ﻿namespace GeneriranjeIzvjesca
 {
 }
+
+namespace GeneriranjeIzvjesca
+{
+}

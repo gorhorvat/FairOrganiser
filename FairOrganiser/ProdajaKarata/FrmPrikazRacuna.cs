@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -18,9 +19,11 @@ namespace ProdajaKarata
         private Racun odabraniRacun;
         private int racunID;
         private string nazivKupca;
+        private string aktivniKorisnik;
 
-        public FrmPrikazRacuna(Racun OdabraniRacun, int RacunID, string NazivKupca)
+        public FrmPrikazRacuna(Racun OdabraniRacun, int RacunID, string NazivKupca, string AktivniKorisnik)
         {
+            aktivniKorisnik = AktivniKorisnik;
             odabraniRacun = OdabraniRacun;
             racunID = RacunID;
             nazivKupca = NazivKupca;
@@ -35,6 +38,15 @@ namespace ProdajaKarata
         private void FrmPrikazRacuna_Load(object sender, EventArgs e)
         {
             PrikaziStavkeRacuna(racunID);
+            txtOperater.Text = aktivniKorisnik;
+
+            float total = 0;
+            for (int i = 0; i < dgvListaStavki.Rows.Count; i++)
+            {
+                total += Convert.ToSingle(dgvListaStavki.Rows[i].Cells["Cijena_usluge"].Value);
+                txtUkupno.Text = total.ToString("N", CultureInfo.InvariantCulture);
+            }
+
             txtNazivKupca.Text = nazivKupca;
             txtBrojRacuna.Text = DateTime.Now.Date.ToString("yyyyMMdd") + "/" + logika.GetSifraRacuna().ToString();
             txtVrijeme.Text = DateTime.Now.ToString();
@@ -48,16 +60,18 @@ namespace ProdajaKarata
         {
             using (var context = new ProdajaKarataEntities())
             {
-                /*Racun r = new Racun { id = 1 };
+                Racun r = (from rac in context.Racuns where rac.id == RacunID select rac).FirstOrDefault();
+                //var prikazStavki = context.Uslugas.SqlQuery("select Usluga.naziv, Usluga.tip, Usluga.napomena, Usluga.cijenaUsluge from Usluga join tse_usl_rac on Usluga.id = tse_usl_rac.Uslugaid join Racun on tse_usl_rac.Racunid = Racun.id where Racun.id = @RacunID;", new SqlParameter ("@RacunID", RacunID)).ToList();
+
                 context.Racuns.Add(r);
                 context.Racuns.Attach(r);
 
-                var stavke = r.Uslugas.ToList();*/
+                var stavke = r.Uslugas.ToList();
+                context.SaveChanges();
 
-                var prikazStavki = context.Uslugas.SqlQuery("select Usluga.naziv, Usluga.tip, Usluga.napomena, Usluga.cijenaUsluge from Usluga join tse_usl_rac on Usluga.id = tse_usl_rac.Uslugaid join Racun on tse_usl_rac.Racunid = Racun.id where Racun.id = @RacunID;", new SqlParameter ("@RacunID", RacunID)).ToList();
-
-                //context.SaveChanges();
-                dgvListaStavki.DataSource = prikazStavki;
+                dgvListaStavki.AutoGenerateColumns = true;
+                dgvListaStavki.DataSource = stavke.Select(s => new { Naziv_usluge = s.naziv, Tip = s.tip, Napomena = s.napomena, Cijena_usluge = s.cijenaUsluge }).ToList();
+                dgvListaStavki.Refresh();
             }
         }
 
@@ -107,7 +121,7 @@ namespace ProdajaKarata
 
         private void btnDodajStavku_Click(object sender, EventArgs e)
         {
-            FrmNovaStavka novaStavka = new FrmNovaStavka();
+            FrmNovaStavka novaStavka = new FrmNovaStavka(racunID);
             novaStavka.ShowDialog();
         }
 

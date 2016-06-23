@@ -43,6 +43,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -68,6 +72,12 @@
     </Compile>
     <Compile Include="FrmDogadaj.Designer.cs">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProstorOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProstorOprema.Designer.cs">
+      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
     </Compile>
     <Compile Include="ImprovedPanel.cs">
       <SubType>Component</SubType>
@@ -113,12 +123,6 @@
     <Compile Include="Prostor.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmProstorOprema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProstorOprema.Designer.cs">
-      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
-    </Compile>
     <Compile Include="Racun.cs">
       <DependentUpon>KreiranjeDogadajaModel.tt</DependentUpon>
     </Compile>
@@ -140,6 +144,9 @@
     <EmbeddedResource Include="FrmDogadaj.resx">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProstorOprema.resx">
+      <DependentUpon>FrmProstorOprema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImprovedPanel.resx">
       <DependentUpon>ImprovedPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +163,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>KreiranjeDogadajaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="KreiranjeDogadajaModel.edmx.diagram">
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
     </None>
@@ -182,10 +192,18 @@
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
       <LastGenOutput>KreiranjeDogadajaModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\pozornica.png" />
-    <None Include="Resources\stolice.png" />
-    <None Include="Resources\rasvjeta.png" />
-    <None Include="Resources\prostor.png" />
+    <None Include="Resources\pozornica.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\stolice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\rasvjeta.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\prostor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

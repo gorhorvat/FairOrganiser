@@ -16,5 +16,11 @@ namespace GeneriranjeIzvjesca
         {
             InitializeComponent();
         }
+
+        private void FrmIzvjesceProdaneUsluge_Load(object sender, EventArgs e)
+        {
+            this.IzvjesceProdaneUslugeTableAdapter.Fill(this._16057_IzvjescaDBDataSet.IzvjesceProdaneUsluge);
+            this.rvPodaci.RefreshReport();
+        }
     }
 }

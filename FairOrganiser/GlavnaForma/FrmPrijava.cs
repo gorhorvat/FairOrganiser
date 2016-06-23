@@ -11,6 +11,8 @@ namespace GlavnaForma
 {
     public partial class FrmPrijava : Form
     {
+        public Zaposlenik aktivniZaposlenik;
+        string username;
         public FrmPrijava()
         {
             InitializeComponent();
@@ -18,25 +20,28 @@ namespace GlavnaForma
         PrijavaEntities podaci = new PrijavaEntities();
         private void btnPrijava_Click(object sender, EventArgs e)
         {
+            /*
             this.Hide();
             FrmMain glavna = new FrmMain();
             glavna.Show();
-            /*
+            */
             bool nadjen = false;
             foreach (var Zaposlenik in podaci.Zaposleniks)
             {
                 if(Zaposlenik.username.Replace(" ", "")  == txtKorisnickoIme.Text && Zaposlenik.password.Replace(" ", "") == txtLozinka.Text)
                 {
                     nadjen = true;
+                    aktivniZaposlenik = Zaposlenik;
+                    username = Zaposlenik.username;
                     this.Hide();
-                    FrmMain glavna = new FrmMain();
+                    FrmMain glavna = new FrmMain(username);
                     glavna.Show();
                 }
             }
             if(nadjen == false)
             {
                     MessageBox.Show("Molimo Vas provjerite vaše korisničko ime i lozinku.");
-            }*/
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

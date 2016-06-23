@@ -11,8 +11,10 @@ namespace GlavnaForma
     public partial class FrmMain : Form
     {
         public bool provjera = false;
-        public FrmMain()
+        string activeUser;
+        public FrmMain(string user)
         {
+            activeUser = user;
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
@@ -82,7 +84,7 @@ namespace GlavnaForma
         private void dodajDogađajToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeChildForm();
-            LogikaDogadaj log = new LogikaDogadaj();
+            LogikaDogadaj log = new LogikaDogadaj(activeUser);
             FrmDogadaj dogadaj = new FrmDogadaj(log);
             log.AddForm(dogadaj);
             dogadaj.MdiParent = this;
@@ -93,7 +95,7 @@ namespace GlavnaForma
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeChildForm();
-            FrmRacuni racun = new FrmRacuni();
+            FrmRacuni racun = new FrmRacuni(activeUser);
             racun.MdiParent = this;
             racun.WindowState = FormWindowState.Maximized;
             racun.Show();
@@ -148,6 +150,15 @@ namespace GlavnaForma
             provjera = true;
             FrmPrijava novaPrijava = new FrmPrijava();
             novaPrijava.Show();
+        }
+
+        private void cjenikToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            FrmCjenik cjenik = new FrmCjenik();
+            cjenik.MdiParent = this;
+            cjenik.WindowState = FormWindowState.Maximized;
+            cjenik.Show();
         }
     }
 }

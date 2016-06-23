@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace KreiranjeDogadaja
 {
     public partial class FrmProstorOprema : Form
     {
+
+        private static List<int> id =new List<int>();
 
         private static LogikaDogadaj logic;
 
@@ -21,22 +25,22 @@ namespace KreiranjeDogadaja
             InitializeComponent();
 
 
-            ///////
+            
         }
 
         private void FrmProstorOprema_Load(object sender, EventArgs e)
         {
 
-            ListViewItem item1 = new ListViewItem("Pozornica", 0);            
+            ListViewItem item1 = new ListViewItem("Pozornica", 0);
             ListViewItem item2 = new ListViewItem("Rasvjeta", 1);
             ListViewItem item3 = new ListViewItem("Stolice", 2);
 
 
-            
+
 
             lvSlike.Items.AddRange(new ListViewItem[] { item1, item2, item3 });
             panelSlika.AllowDrop = true;
-            
+
 
         }
 
@@ -48,13 +52,13 @@ namespace KreiranjeDogadaja
                 var image = selectedItem.ImageIndex;
                 DoDragDrop(ilSlike.Images.Keys[image].ToString(), DragDropEffects.Copy);
             }
-            
+
 
         }
 
         private void panelSlika_DragEnter(object sender, DragEventArgs e)
         {
-            if(e.Data.GetDataPresent(DataFormats.StringFormat))
+            if (e.Data.GetDataPresent(DataFormats.StringFormat))
             {
                 e.Effect = DragDropEffects.Copy;
             }
@@ -71,31 +75,35 @@ namespace KreiranjeDogadaja
             string imageName = e.Data.GetData(DataFormats.StringFormat).ToString();
 
             Bitmap bmp;
+            
 
-            switch(imageName)
+            switch (imageName)
             {
 
                 case "pozornica.png":
 
                     bmp = new Bitmap(Properties.Resources.pozornica);
+                    id.Add(11);
 
                     break;
 
                 case "rasvjeta.png":
 
                     bmp = new Bitmap(Properties.Resources.rasvjeta);
+                    id.Add(10);
 
                     break;
 
                 case "stolice.png":
 
                     bmp = new Bitmap(Properties.Resources.stolice);
+                    id.Add(3);
 
                     break;
 
-               default :
+                default:
                     return;
-                    
+
 
             }
 
@@ -103,9 +111,26 @@ namespace KreiranjeDogadaja
             p.Image = bmp;
             p.Location = panelSlika.PointToClient(new Point(e.X, e.Y));
             p.Parent = panelSlika;
-            
-    
 
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            logic.AddOprema(id);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Bitmap bmp = new Bitmap(panelSlika.Width*2, panelSlika.Height);
+            System.Drawing.Rectangle r = panelSlika.ClientRectangle;
+            panelSlika.DrawToBitmap(bmp, r);
+            
+
+            logic.AddToPdf(bmp);
         }
     }
 }
