@@ -19,14 +19,13 @@ namespace KreiranjeDogadaja
         private static FrmDogadaj form;
         private static FrmOrganizatorDogadaj formOrg;
         private static FrmProstorOprema formOpr;
+        private string activeUser;
 
-        public LogikaDogadaj()
+     
+        public LogikaDogadaj(string activeUser)
         {
+            this.activeUser = activeUser;
             selectedID = new List<int>();
-            
-
-            
-
         }
 
         internal BindingList<Organizator> GetOrganizatoriBindingList()
@@ -39,6 +38,10 @@ namespace KreiranjeDogadaja
             }
         }
 
+        /// <summary>
+        /// Dodavanje organizatora odabranih na formi u dogadaj.
+        /// </summary>
+        /// <param name="selectedRows">Odabrani redovi u DataGridView</param>
         internal void AddOrganizator(DataGridViewSelectedRowCollection selectedRows)
         {
             using (var context = new KreiranjeDogadajaEntities())
@@ -71,6 +74,13 @@ namespace KreiranjeDogadaja
 
         }
 
+
+        /// <summary>
+        /// Dohvacanje prostora za koje ne postoji dogadaj u zadanom vremenskom rasponu
+        /// </summary>
+        /// <param name="datumOd">Datum pocetka dogadaja</param>
+        /// <param name="datumDo">Datum zavrsetka dogadaja</param>
+        /// <returns></returns>
         public static List<Prostor> GetAvailable(DateTime datumOd, DateTime datumDo)
         {
 
@@ -80,7 +90,7 @@ namespace KreiranjeDogadaja
                
                 var availableQuery =(from p in context.Prostors 
                                     join d in context.Dogadajs on p.Dogadajid equals d.id
-                                    where d.datumOd <= datumDo && d.datumDo >= datumOd
+                                    where  !(d.datumOd <= datumDo && d.datumDo >= datumOd)
                                     select p.id);
 
                 var available = context.Prostors.Where(x => !availableQuery.ToList().Contains(x.id)).ToList();
@@ -89,6 +99,11 @@ namespace KreiranjeDogadaja
 
         }
 
+
+        /// <summary>
+        /// Dodavanje opreme na racun te dodavanje tog racuna u dogadaj
+        /// </summary>
+        /// <param name="ids">Lista identifikatora usluga iz baze</param>
         internal void AddOprema(List<int> ids)
         {
             using (var context = new KreiranjeDogadajaEntities())
@@ -96,16 +111,18 @@ namespace KreiranjeDogadaja
 
                 Dogadaj d = (from dog in context.Dogadajs where dog.id == dogadajId select dog).FirstOrDefault();
 
+                context.Dogadajs.Add(d);
                 context.Dogadajs.Attach(d);
 
                 Racun r = new Racun();
                 r.Dogadajid = d.id;
                 r.ukupno = 0;
+                r.operater = activeUser;
                 double suma = 0;
                 foreach (var id in ids)
                 {
                     Usluga u = (from usl in context.Uslugas where usl.id == id select usl).FirstOrDefault();
-                    
+                    context.Uslugas.Add(u);
                     context.Uslugas.Attach(u);
                     r.Uslugas.Add(u);
                     var cijena = u.cijenaUsluge ;
@@ -116,6 +133,7 @@ namespace KreiranjeDogadaja
                 r.nazivKupca = d.Organizators.FirstOrDefault().ToString();
                 r.vrijeme = DateTime.Now;
                 d.Racuns.Add(r);
+                context.Racuns.Add(r);
 
                 context.SaveChanges();
 
@@ -125,6 +143,12 @@ namespace KreiranjeDogadaja
 
         }
 
+
+
+        /// <summary>
+        /// Pohranjivanje generirane slike prostora u pdf datoteku
+        /// </summary>
+        /// <param name="bmp">Slika u bmp formatu koja se pohranjuje</param>
         internal void AddToPdf(Bitmap bmp)
         {
             var document = new Document(iTextSharp.text.PageSize.A4.Rotate());
@@ -159,6 +183,12 @@ namespace KreiranjeDogadaja
 
         }
 
+
+        /// <summary>
+        /// Postavljanje boje za svaki prostor ovisno o tome je li slobodan ili ne.
+        /// </summary>
+        /// <param name="datumOd">Datum pocetka</param>
+        /// <param name="datumDo">Datum zavrsetka</param>
         public void ColorPanel(DateTime datumOd, DateTime datumDo)
         {
                       
@@ -189,11 +219,21 @@ namespace KreiranjeDogadaja
             
         }
 
+
+
         internal static void RefreshForm()
         {
             form.Refresh();
         }
 
+
+        /// <summary>
+        /// Kreiranje novog dogadaja, nakon sto je dogadaj kreiran omoguceno je dodavanje organizatora i opreme
+        /// </summary>
+        /// <param name="naziv">Ime dogadaja</param>
+        /// <param name="cijena">Cijena karte za dogadaj</param>
+        /// <param name="datumOd">Datum pocetka</param>
+        /// <param name="datumDo">Datum zavrsetka</param>
         internal static void CreateDogadaj(string naziv, float cijena, DateTime datumOd, DateTime datumDo)
         {
 
@@ -255,6 +295,11 @@ namespace KreiranjeDogadaja
             form = dogadaj;
         }
 
+
+        /// <summary>
+        /// Spremanje odabranih prostora u listu
+        /// </summary>
+        /// <param name="sender">ImprovedPanel sa forme za kreiranje dogadaja</param>
         internal static void AddToList(object sender)
         {
             ImprovedPanel ip = sender as ImprovedPanel;

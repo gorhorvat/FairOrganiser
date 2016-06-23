@@ -15,7 +15,7 @@ namespace KreiranjeDogadaja
     public partial class FrmProstorOprema : Form
     {
 
-        private static List<int> id;
+        private static List<int> id =new List<int>();
 
         private static LogikaDogadaj logic;
 
@@ -75,7 +75,7 @@ namespace KreiranjeDogadaja
             string imageName = e.Data.GetData(DataFormats.StringFormat).ToString();
 
             Bitmap bmp;
-            id = new List<int>();
+            
 
             switch (imageName)
             {
