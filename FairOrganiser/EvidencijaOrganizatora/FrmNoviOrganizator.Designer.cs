@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mtxtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.btnDodajOrg = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tipOrganizatoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,23 +213,23 @@
             this.btnDodajOrg.UseVisualStyleBackColor = true;
             this.btnDodajOrg.Click += new System.EventHandler(this.btnDodajOrg_Click);
             // 
-            // button2
+            // btnOdustani
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(178, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Odustani";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOdustani.Location = new System.Drawing.Point(178, 217);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.TabIndex = 16;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmNoviOrganizator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 252);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodajOrg);
             this.Controls.Add(this.mtxtTelefon);
             this.Controls.Add(this.label2);
@@ -270,6 +270,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mtxtTelefon;
         private System.Windows.Forms.Button btnDodajOrg;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }
