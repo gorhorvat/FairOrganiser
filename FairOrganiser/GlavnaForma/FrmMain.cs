@@ -11,10 +11,8 @@ namespace GlavnaForma
     public partial class FrmMain : Form
     {
         public bool provjera = false;
-        Zaposlenik aktivni;
-        public FrmMain(Zaposlenik aktivniZaposlenik)
+        public FrmMain()
         {
-            aktivni = aktivniZaposlenik;
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
@@ -95,7 +93,7 @@ namespace GlavnaForma
         private void prikazRačunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeChildForm();
-            FrmRacuni racun = new FrmRacuni(aktivni);
+            FrmRacuni racun = new FrmRacuni();
             racun.MdiParent = this;
             racun.WindowState = FormWindowState.Maximized;
             racun.Show();

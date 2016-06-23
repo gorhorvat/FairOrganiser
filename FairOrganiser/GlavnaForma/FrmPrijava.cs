@@ -32,7 +32,7 @@ namespace GlavnaForma
                     nadjen = true;
                     aktivniZaposlenik = Zaposlenik;
                     this.Hide();
-                    FrmMain glavna = new FrmMain(aktivniZaposlenik);
+                    FrmMain glavna = new FrmMain();
                     glavna.Show();
                 }
             }
