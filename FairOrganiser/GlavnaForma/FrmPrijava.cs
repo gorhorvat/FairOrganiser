@@ -12,6 +12,7 @@ namespace GlavnaForma
     public partial class FrmPrijava : Form
     {
         public Zaposlenik aktivniZaposlenik;
+        string username;
         public FrmPrijava()
         {
             InitializeComponent();
@@ -31,8 +32,9 @@ namespace GlavnaForma
                 {
                     nadjen = true;
                     aktivniZaposlenik = Zaposlenik;
+                    username = Zaposlenik.username;
                     this.Hide();
-                    FrmMain glavna = new FrmMain();
+                    FrmMain glavna = new FrmMain(username);
                     glavna.Show();
                 }
             }

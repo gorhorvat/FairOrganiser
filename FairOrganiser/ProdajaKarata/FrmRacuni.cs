@@ -13,9 +13,10 @@ namespace ProdajaKarata
     public partial class FrmRacuni : Form
     {
         LogikaPK logika = new LogikaPK();
-
-        public FrmRacuni()
+        string activeUser;
+        public FrmRacuni(string user)
         {
+            activeUser = user;
             InitializeComponent();
         }
 
