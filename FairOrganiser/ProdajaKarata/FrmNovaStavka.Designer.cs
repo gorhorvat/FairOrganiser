@@ -33,7 +33,7 @@
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.lblCijena = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.dgvUsluge = new System.Windows.Forms.DataGridView();
@@ -83,12 +83,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Količina:";
             // 
-            // textBox1
+            // txtKolicina
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtKolicina.Location = new System.Drawing.Point(83, 210);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(156, 20);
+            this.txtKolicina.TabIndex = 4;
             // 
             // btnOdaberi
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.lblUsluga);
@@ -213,7 +213,7 @@
         private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.Label lblCijena;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.Button btnOdaberi;
         private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.DataGridView dgvUsluge;

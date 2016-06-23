@@ -13,9 +13,11 @@ namespace ProdajaKarata
     public partial class FrmNovaStavka : Form
     {
         LogikaPK logika = new LogikaPK();
+        private int racunID;
 
-        public FrmNovaStavka()
+        public FrmNovaStavka(int RacunID)
         {
+            racunID = RacunID;
             InitializeComponent();
         }
 
@@ -36,7 +38,7 @@ namespace ProdajaKarata
 
         private void btnOdaberi_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnIzlaz_Click(object sender, EventArgs e)
