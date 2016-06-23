@@ -65,7 +65,9 @@ namespace EvidencijaSudionika
             pbQR.Image = dlltest.generirajQR(odabranisudionik.ime, odabranisudionik.prezime, odabranisudionik.dogadaj, cmbAkreditacija.Text);
            
         }
-
+        /// <summary>
+        /// Zapisuje tip izdane akreditacije u bazu.
+        /// </summary>
         private void dodajAkreditaciju()
         {
             using(var db = new EvidencijaSudionikaEntities())

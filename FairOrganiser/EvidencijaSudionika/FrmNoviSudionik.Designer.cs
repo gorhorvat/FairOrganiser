@@ -57,7 +57,7 @@
             this.cmbDogadaj.FormattingEnabled = true;
             this.cmbDogadaj.Location = new System.Drawing.Point(108, 160);
             this.cmbDogadaj.Name = "cmbDogadaj";
-            this.cmbDogadaj.Size = new System.Drawing.Size(187, 21);
+            this.cmbDogadaj.Size = new System.Drawing.Size(185, 21);
             this.cmbDogadaj.TabIndex = 16;
             this.cmbDogadaj.ValueMember = "naziv";
             // 
@@ -73,9 +73,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(26, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Događaj";
+            this.label4.Text = "Događaj:";
             // 
             // txtPrezimeSudionika
             // 
@@ -84,7 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrezimeSudionika.Location = new System.Drawing.Point(108, 48);
             this.txtPrezimeSudionika.Name = "txtPrezimeSudionika";
-            this.txtPrezimeSudionika.Size = new System.Drawing.Size(187, 20);
+            this.txtPrezimeSudionika.Size = new System.Drawing.Size(185, 20);
             this.txtPrezimeSudionika.TabIndex = 14;
             // 
             // txtImeSudionika
@@ -94,7 +94,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtImeSudionika.Location = new System.Drawing.Point(108, 20);
             this.txtImeSudionika.Name = "txtImeSudionika";
-            this.txtImeSudionika.Size = new System.Drawing.Size(187, 20);
+            this.txtImeSudionika.Size = new System.Drawing.Size(185, 20);
             this.txtImeSudionika.TabIndex = 13;
             // 
             // label2
@@ -105,9 +105,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(26, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Prezime";
+            this.label2.Text = "Prezime:";
             // 
             // label1
             // 
@@ -117,14 +117,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Ime";
+            this.label1.Text = "Ime:";
             // 
             // btnDodajSudionika
             // 
             this.btnDodajSudionika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDodajSudionika.Location = new System.Drawing.Point(226, 194);
+            this.btnDodajSudionika.Location = new System.Drawing.Point(224, 201);
             this.btnDodajSudionika.Name = "btnDodajSudionika";
             this.btnDodajSudionika.Size = new System.Drawing.Size(95, 27);
             this.btnDodajSudionika.TabIndex = 10;
@@ -139,7 +139,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMedKuca.Location = new System.Drawing.Point(108, 76);
             this.txtMedKuca.Name = "txtMedKuca";
-            this.txtMedKuca.Size = new System.Drawing.Size(187, 20);
+            this.txtMedKuca.Size = new System.Drawing.Size(185, 20);
             this.txtMedKuca.TabIndex = 19;
             // 
             // label3
@@ -150,9 +150,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Medijska kuća";
+            this.label3.Text = "Medijska kuća:";
             // 
             // label6
             // 
@@ -162,9 +162,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(26, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Telefon";
+            this.label6.Text = "Telefon:";
             // 
             // label7
             // 
@@ -174,9 +174,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(26, 135);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Email";
+            this.label7.Text = "Email:";
             // 
             // txtEmail
             // 
@@ -185,7 +185,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(108, 132);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(187, 20);
+            this.txtEmail.Size = new System.Drawing.Size(185, 20);
             this.txtEmail.TabIndex = 24;
             // 
             // mtxtTelefon
@@ -195,13 +195,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtTelefon.Location = new System.Drawing.Point(108, 104);
             this.mtxtTelefon.Name = "mtxtTelefon";
-            this.mtxtTelefon.Size = new System.Drawing.Size(187, 20);
+            this.mtxtTelefon.Size = new System.Drawing.Size(185, 20);
             this.mtxtTelefon.TabIndex = 25;
             // 
             // btnOdustani
             // 
             this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOdustani.Location = new System.Drawing.Point(125, 194);
+            this.btnOdustani.Location = new System.Drawing.Point(123, 201);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(95, 27);
             this.btnOdustani.TabIndex = 26;
@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 233);
+            this.ClientSize = new System.Drawing.Size(331, 240);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.mtxtTelefon);
             this.Controls.Add(this.txtEmail);

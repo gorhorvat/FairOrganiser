@@ -44,7 +44,7 @@
             // btnPrijava
             // 
             this.btnPrijava.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrijava.Location = new System.Drawing.Point(368, 200);
+            this.btnPrijava.Location = new System.Drawing.Point(366, 196);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(90, 39);
             this.btnPrijava.TabIndex = 9;
@@ -59,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLozinka.Location = new System.Drawing.Point(269, 123);
             this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(166, 20);
+            this.txtLozinka.Size = new System.Drawing.Size(164, 20);
             this.txtLozinka.TabIndex = 8;
             this.txtLozinka.UseSystemPasswordChar = true;
             // 
@@ -82,7 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKorisnickoIme.Location = new System.Drawing.Point(269, 68);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(166, 20);
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(164, 20);
             this.txtKorisnickoIme.TabIndex = 6;
             // 
             // lblKorisnickoIme
@@ -121,7 +121,7 @@
             // btnIzlaz
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzlaz.Location = new System.Drawing.Point(272, 200);
+            this.btnIzlaz.Location = new System.Drawing.Point(270, 196);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(90, 39);
             this.btnIzlaz.TabIndex = 12;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 251);
+            this.ClientSize = new System.Drawing.Size(468, 247);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.pictureBox3);
