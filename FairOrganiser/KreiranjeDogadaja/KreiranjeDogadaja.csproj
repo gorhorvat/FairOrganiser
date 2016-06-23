@@ -163,6 +163,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>KreiranjeDogadajaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="KreiranjeDogadajaModel.edmx.diagram">
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
     </None>
@@ -189,10 +192,18 @@
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
       <LastGenOutput>KreiranjeDogadajaModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\pozornica.png" />
-    <None Include="Resources\stolice.png" />
-    <None Include="Resources\rasvjeta.png" />
-    <None Include="Resources\prostor.png" />
+    <None Include="Resources\pozornica.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\stolice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\rasvjeta.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\prostor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

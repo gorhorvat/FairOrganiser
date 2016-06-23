@@ -84,7 +84,7 @@ namespace GlavnaForma
         private void dodajDogađajToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeChildForm();
-            LogikaDogadaj log = new LogikaDogadaj();
+            LogikaDogadaj log = new LogikaDogadaj(activeUser);
             FrmDogadaj dogadaj = new FrmDogadaj(log);
             log.AddForm(dogadaj);
             dogadaj.MdiParent = this;

@@ -40,11 +40,11 @@
             this.dtpZavrsetak = new System.Windows.Forms.DateTimePicker();
             this.btnDodajDogadaj = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBoxTlocrt = new System.Windows.Forms.PictureBox();
             this.timerNaziv = new System.Windows.Forms.Timer(this.components);
             this.timerCijena = new System.Windows.Forms.Timer(this.components);
             this.btnDodajOrganizatore = new System.Windows.Forms.Button();
             this.btnDodajOpremu = new System.Windows.Forms.Button();
+            this.pictureBoxTlocrt = new System.Windows.Forms.PictureBox();
             this.improvedPanelP12 = new KreiranjeDogadaja.ImprovedPanel();
             this.improvedPanelP13 = new KreiranjeDogadaja.ImprovedPanel();
             this.improvedPanelP14 = new KreiranjeDogadaja.ImprovedPanel();
@@ -173,16 +173,6 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Odabir prostora";
             // 
-            // pictureBoxTlocrt
-            // 
-            this.pictureBoxTlocrt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxTlocrt.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTlocrt.Image")));
-            this.pictureBoxTlocrt.Location = new System.Drawing.Point(12, 85);
-            this.pictureBoxTlocrt.Name = "pictureBoxTlocrt";
-            this.pictureBoxTlocrt.Size = new System.Drawing.Size(860, 500);
-            this.pictureBoxTlocrt.TabIndex = 35;
-            this.pictureBoxTlocrt.TabStop = false;
-            // 
             // timerNaziv
             // 
             this.timerNaziv.Interval = 1000;
@@ -216,6 +206,16 @@
             this.btnDodajOpremu.UseVisualStyleBackColor = true;
             this.btnDodajOpremu.Visible = false;
             this.btnDodajOpremu.Click += new System.EventHandler(this.btnDodajOpremu_Click);
+            // 
+            // pictureBoxTlocrt
+            // 
+            this.pictureBoxTlocrt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxTlocrt.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTlocrt.Image")));
+            this.pictureBoxTlocrt.Location = new System.Drawing.Point(12, 85);
+            this.pictureBoxTlocrt.Name = "pictureBoxTlocrt";
+            this.pictureBoxTlocrt.Size = new System.Drawing.Size(860, 500);
+            this.pictureBoxTlocrt.TabIndex = 35;
+            this.pictureBoxTlocrt.TabStop = false;
             // 
             // improvedPanelP12
             // 
@@ -628,6 +628,7 @@
             this.Name = "FrmDogadaj";
             this.Text = "=";
             this.ResizeEnd += new System.EventHandler(this.FrmDogadaj_ResizeEnd);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDogadaj_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTlocrt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
