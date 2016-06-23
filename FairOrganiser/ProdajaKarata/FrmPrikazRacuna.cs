@@ -48,16 +48,16 @@ namespace ProdajaKarata
         {
             using (var context = new ProdajaKarataEntities())
             {
-                /*Racun r = new Racun { id = 1 };
+                //!!!!!!
+                Racun r = (from rac in context.Racuns where rac.id == RacunID select rac).FirstOrDefault();
+                //var prikazStavki = context.Uslugas.SqlQuery("select Usluga.naziv, Usluga.tip, Usluga.napomena, Usluga.cijenaUsluge from Usluga join tse_usl_rac on Usluga.id = tse_usl_rac.Uslugaid join Racun on tse_usl_rac.Racunid = Racun.id where Racun.id = @RacunID;", new SqlParameter ("@RacunID", RacunID)).ToList();
+
                 context.Racuns.Add(r);
                 context.Racuns.Attach(r);
 
-                var stavke = r.Uslugas.ToList();*/
-
-                var prikazStavki = context.Uslugas.SqlQuery("select Usluga.naziv, Usluga.tip, Usluga.napomena, Usluga.cijenaUsluge from Usluga join tse_usl_rac on Usluga.id = tse_usl_rac.Uslugaid join Racun on tse_usl_rac.Racunid = Racun.id where Racun.id = @RacunID;", new SqlParameter ("@RacunID", RacunID)).ToList();
-
-                //context.SaveChanges();
-                dgvListaStavki.DataSource = prikazStavki;
+                var stavke = r.Uslugas.ToList();
+                context.SaveChanges();
+                dgvListaStavki.DataSource = stavke;
             }
         }
 
