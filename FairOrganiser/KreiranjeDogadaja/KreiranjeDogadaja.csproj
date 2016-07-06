@@ -73,6 +73,18 @@
     <Compile Include="FrmDogadaj.Designer.cs">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIzmjeniDogadaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzmjeniDogadaj.Designer.cs">
+      <DependentUpon>FrmIzmjeniDogadaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrikazDogadaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrikazDogadaja.Designer.cs">
+      <DependentUpon>FrmPrikazDogadaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProstorOprema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,12 @@
     <EmbeddedResource Include="FrmDogadaj.resx">
       <DependentUpon>FrmDogadaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzmjeniDogadaj.resx">
+      <DependentUpon>FrmIzmjeniDogadaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrikazDogadaja.resx">
+      <DependentUpon>FrmPrikazDogadaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProstorOprema.resx">
       <DependentUpon>FrmProstorOprema.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +188,7 @@
       <DependentUpon>KreiranjeDogadajaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Dogadaj.datasource" />
     <None Include="Properties\DataSources\Organizator.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -19,7 +19,71 @@ namespace KreiranjeDogadaja
         private static FrmDogadaj form;
         private static FrmOrganizatorDogadaj formOrg;
         private static FrmProstorOprema formOpr;
+        private static FrmPrikazDogadaja formPrikaz;
         private string activeUser;
+
+        internal BindingList<Dogadaj> GetDogadajBingindList()
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+                var dogadaj = context.Dogadajs.ToList();
+
+                BindingList<Dogadaj> dogadaji = new BindingList<Dogadaj>(dogadaj);
+
+                return dogadaji;
+                
+            }
+        }
+
+        internal BindingList<Usluga> GetUslugaBindingList(int id)
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+                Dogadaj d = (from dog in context.Dogadajs where dog.id == id select dog).FirstOrDefault();
+
+                var racuni = d.Racuns.ToList();
+                if (racuni.Count !=0)
+                {
+                    var r = racuni[0] as Racun;
+
+                    var usluge = r.Uslugas.ToList();
+
+                    BindingList<Usluga> usluga = new BindingList<Usluga>(usluge);
+                    return usluga;
+                }
+                BindingList<Usluga> prazno = new BindingList<Usluga>();
+                return prazno;
+            }
+        }
+
+        internal static void UpdateFormPrikaz()
+        {
+            
+
+
+        }
+
+        internal BindingList<Prostor> GetProstorBindingList(int id)
+        {
+            using (var context = new KreiranjeDogadajaEntities())
+            {
+                Dogadaj d = (from dog in context.Dogadajs where dog.id == id select dog).FirstOrDefault();
+
+
+                var prostori = d.Prostors.ToList();
+                if(prostori.Count !=0)
+                {
+                    BindingList<Prostor> prostor = new BindingList<Prostor>(prostori);
+                    return prostor;
+                }
+
+                BindingList<Prostor> prazno = new BindingList<Prostor>();
+                return prazno;
+
+            }
+        }
+
+       
 
      
         public LogikaDogadaj(string activeUser)
@@ -290,9 +354,14 @@ namespace KreiranjeDogadaja
 
         }
 
-        public void AddForm(FrmDogadaj dogadaj)
+        public void AddFormDogadaj(FrmDogadaj dogadaj)
         {
             form = dogadaj;
+        }
+
+        public void AddFormPDogadaj(FrmPrikazDogadaja pDogadaj)
+        {
+            formPrikaz = pDogadaj;
         }
 
 

@@ -86,7 +86,7 @@ namespace GlavnaForma
             closeChildForm();
             LogikaDogadaj log = new LogikaDogadaj(activeUser);
             FrmDogadaj dogadaj = new FrmDogadaj(log);
-            log.AddForm(dogadaj);
+            log.AddFormDogadaj(dogadaj);
             dogadaj.MdiParent = this;
             dogadaj.WindowState = FormWindowState.Maximized;
             dogadaj.Show();
@@ -159,6 +159,18 @@ namespace GlavnaForma
             cjenik.MdiParent = this;
             cjenik.WindowState = FormWindowState.Maximized;
             cjenik.Show();
+        }
+
+        private void popisDogađajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            LogikaDogadaj log = new LogikaDogadaj(activeUser);
+            FrmPrikazDogadaja pDogadaj = new FrmPrikazDogadaja(log);
+            log.AddFormPDogadaj(pDogadaj);
+            pDogadaj.MdiParent = this;
+            pDogadaj.WindowState = FormWindowState.Maximized;
+            pDogadaj.Show();
+
         }
     }
 }
